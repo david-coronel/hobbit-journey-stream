@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hobbit Journey Stream</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cascadia+Code:wght@400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            color: #f4e4bc;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100vh;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            overflow: hidden;
+        }
+        
+        /* Scene Display */
+        .scene-panel {
+            background: linear-gradient(180deg, rgba(30,30,40,0.9) 0%, rgba(20,20,30,0.95) 100%);
+            border-radius: 12px;
+            border: 2px solid #8b7355;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        
+        .scene-image {
+            height: 45%;
+            background: linear-gradient(135deg, #2a3f2a 0%, #1a2a1a 50%, #0f1f0f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scene-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+        
+        .location-placeholder {
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .location-icon {
+            font-size: 64px;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+        
+        .location-name {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .scene-text {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: linear-gradient(180deg, rgba(40,35,30,0.8) 0%, rgba(30,25,20,0.9) 100%);
+        }
+        
+        .scene-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #5c4a3a;
+        }
+        
+        .scene-title {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #d4af37;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .scene-subtitle {
+            font-size: 14px;
+            color: #8b7355;
+            font-style: italic;
+        }
+        
+        .scene-subtitle.canonical {
+            color: #4a9;
+        }
+        
+        .scene-subtitle.generated {
+            color: #a94;
+        }
+        
+        .scene-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #e8dcc0;
+        }
+        
+        .scene-content p {
+            margin-bottom: 15px;
+        }
+        
+        /* Side Panel */
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .panel-box {
+            background: rgba(30,30,40,0.8);
+            border-radius: 10px;
+            border: 1px solid #5c4a3a;
+            padding: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .panel-title {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            color: #8b7355;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Map */
+        .map-container {
+            flex: 1;
+            min-height: 150px;
+            background: linear-gradient(180deg, #2a2a3a 0%, #1a1a2a 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .map-simple {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .map-path {
+            font-family: 'Cascadia Code', monospace;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .map-path .start { color: #4a4; }
+        .map-path .current { color: #d4af37; font-weight: bold; }
+        .map-path .future { color: #666; }
+        
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .info-item {
+            text-align: center;
+        }
+        
+        .info-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        
+        .info-value {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: #d4af37;
+        }
+        
+        .info-value.small {
+            font-size: 14px;
+        }
+        
+        /* Characters */
+        .character-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .character-tag {
+            background: rgba(139,115,85,0.2);
+            border: 1px solid #5c4a3a;
+            border-radius: 15px;
+            padding: 4px 12px;
+            font-size: 13px;
+            color: #c4b49c;
+        }
+        
+        .character-tag.leader {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+        
+        /* Countdown */
+        .countdown-bar {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .countdown-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4a9, #d4af37);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .countdown-text {
+            font-size: 12px;
+            color: #8b7355;
+            margin-top: 6px;
+        }
+        
+        /* Bottom HUD */
+        .hud-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            background: rgba(20,20,30,0.95);
+            border-radius: 12px;
+            border: 2px solid #5c4a3a;
+            padding: 15px 25px;
+        }
+        
+        .hud-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .hud-icon {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(139,115,85,0.2);
+            border-radius: 8px;
+            border: 1px solid #5c4a3a;
+        }
+        
+        .hud-content {
+            flex: 1;
+        }
+        
+        .hud-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hud-value {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: #f4e4bc;
+        }
+        
+        /* Controls */
+        .controls {
+            position: fixed;
+            bottom: 120px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .control-btn {
+            background: rgba(30,30,40,0.9);
+            border: 1px solid #8b7355;
+            color: #d4af37;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .control-btn:hover {
+            background: rgba(139,115,85,0.3);
+            transform: scale(1.1);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #5c4a3a;
+            border-radius: 4px;
+        }
+        
+        /* Loading */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 18px;
+            color: #8b7355;
+        }
+        
+        /* Typewriter effect */
+        .typing {
+            border-right: 2px solid #d4af37;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: #d4af37; }
+            51%, 100% { border-color: transparent; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .side-panel {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .side-panel .panel-box {
+                flex: 1;
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- Main Scene Display -->
+            <div class="scene-panel">
+                <div class="scene-image" id="sceneImage">
+                    <div class="location-placeholder">
+                        <div class="location-icon">🏔️</div>
+                        <div class="location-name" id="locationName">Loading...</div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <div class="scene-header">
+                        <div class="scene-title" id="sceneTitle">Loading Journey...</div>
+                        <div class="scene-subtitle" id="sceneSubtitle">Initializing</div>
+                    </div>
+                    <div class="scene-content" id="sceneContent">
+                        <div class="loading">📖 Preparing the tale...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Side Panel -->
+            <div class="side-panel">
+                <!-- Map -->
+                <div class="panel-box">
+                    <div class="panel-title">🗺️ Journey Path</div>
+                    <div class="map-container">
+                        <div class="map-simple">
+                            <div class="map-path" id="mapPath">
+                                <span class="start">● Shire</span><br>
+                                ↓<br>
+                                ○ Rivendell<br>
+                                ↓<br>
+                                <span class="current">● You Are Here</span><br>
+                                ↓<br>
+                                ○ Mirkwood<br>
+                                ↓<br>
+                                ○ Erebor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Info -->
+                <div class="panel-box">
+                    <div class="panel-title">📊 Journey Info</div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Day</div>
+                            <div class="info-value" id="journeyDay">-</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Progress</div>
+                            <div class="info-value small" id="progress">-/-</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Date</div>
+                            <div class="info-value small" id="sceneDate">-</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Time</div>
+                            <div class="info-value small" id="sceneTime">-</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Characters -->
+                <div class="panel-box">
+                    <div class="panel-title">👥 Present</div>
+                    <div class="character-list" id="characterList">
+                        <div class="character-tag">Loading...</div>
+                    </div>
+                </div>
+                
+                <!-- Countdown -->
+                <div class="panel-box">
+                    <div class="panel-title">⏱️ Next Event</div>
+                    <div id="countdownText" class="countdown-text">-</div>
+                    <div class="countdown-bar">
+                        <div class="countdown-fill" id="countdownFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom HUD -->
+        <div class="hud-bar">
+            <div class="hud-item">
+                <div class="hud-icon" id="hudDateIcon">📅</div>
+                <div class="hud-content">
+                    <div class="hud-label">In-Story Date</div>
+                    <div class="hud-value" id="hudDate">April 26, 2941</div>
+                </div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-icon" id="hudTimeIcon">🌄</div>
+                <div class="hud-content">
+                    <div class="hud-label">Time of Day</div>
+                    <div class="hud-value" id="hudTime">Morning</div>
+                </div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-icon">📍</div>
+                <div class="hud-content">
+                    <div class="hud-label">Location</div>
+                    <div class="hud-value" id="hudLocation">Hobbiton</div>
+                </div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-icon">🎯</div>
+                <div class="hud-content">
+                    <div class="hud-label">Next Canonical</div>
+                    <div class="hud-value" id="hudNext">The Unexpected Party</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controls -->
+    <div class="controls">
+        <button class="control-btn" onclick="prevScene()" title="Previous Scene">◀</button>
+        <button class="control-btn" onclick="toggleAutoPlay()" id="playBtn" title="Auto-play">▶</button>
+        <button class="control-btn" onclick="nextScene()" title="Next Scene">▶</button>
+    </div>
+
+    <script>
+        // Scene data will be loaded from JSON
+        let scenes = [];
+        let currentIndex = 0;
+        let autoPlay = false;
+        let autoPlayInterval = null;
+        const AUTO_PLAY_DELAY = 15000; // 15 seconds per scene
+        
+        // Location icons mapping
+        const locationIcons = {
+            'shire': '🏠', 'hobbiton': '🏠', 'bag end': '🏡',
+            'rivendell': '🏛️', 'elrond': '🏛️',
+            'mountain': '🏔️', 'misty mountains': '⛰️', 'goblin town': '🕳️',
+            'mirkwood': '🌲', 'forest': '🌲', 'wood': '🌲',
+            'lake': '💧', 'lake-town': '⚓', 'esgaroth': '⚓',
+            'dale': '🏘️', 'erebor': '⛰️', 'mountain': '⛰️',
+            'generic': '🗺️'
+        };
+        
+        // Load scene data
+        async function loadScenes() {
+            try {
+                // In production, this would fetch from the JSON file
+                // For now, we'll use sample data
+                const response = await fetch('stream_scenes.json');
+                if (response.ok) {
+                    scenes = await response.json();
+                } else {
+                    console.log('Using sample data - stream_scenes.json not found');
+                    scenes = getSampleScenes();
+                }
+                updateDisplay();
+            } catch (e) {
+                console.log('Error loading scenes:', e);
+                scenes = getSampleScenes();
+                updateDisplay();
+            }
+        }
+        
+        // Sample scenes for testing
+        function getSampleScenes() {
+            return [
+                {
+                    title: "The Unexpected Party",
+                    subtitle: "Chapter 1",
+                    content: "In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort.",
+                    location: "Bag End",
+                    date: "April 26, 2941",
+                    time: "Afternoon",
+                    time_icon: "🌤️",
+                    journey_day: 1,
+                    characters: ["Bilbo", "Gandalf"],
+                    is_canonical: true,
+                    next_canonical: {
+                        next_event: "The Dwarves Arrive",
+                        scenes_until: 3
+                    },
+                    progress: { current: 1, total: 150 }
+                },
+                {
+                    title: "Preparing for Visitors",
+                    subtitle: "Generated Scene",
+                    content: "Bilbo bustled about the kitchen, checking his pantry stores with a worried expression. 'I hope this Gandalf fellow doesn't expect a proper feast,' he muttered to himself, counting his seed cakes. 'I have enough for tea, certainly, but not for any... unexpected parties.' He straightened his waistcoat for the third time, peering out the round window at the garden path.",
+                    location: "Bag End",
+                    date: "April 26, 2941",
+                    time: "Evening",
+                    time_icon: "🌆",
+                    journey_day: 1,
+                    characters: ["Bilbo"],
+                    is_canonical: false,
+                    next_canonical: {
+                        next_event: "The Dwarves Arrive",
+                        scenes_until: 2
+                    },
+                    progress: { current: 2, total: 150 }
+                },
+                {
+                    title: "A Knock at the Door",
+                    subtitle: "Generated Scene",
+                    content: "The knock came precisely as Bilbo was sitting down to his own simple supper. 'Now who could that be?' he wondered, wiping his hands on his napkin. Through the peephole, he spotted a figure in grey. 'Drat,' said Bilbo, though he found himself somewhat excited despite his better judgment. Adventures, he suspected, were rather like visitors - they had a way of arriving whether invited or not.",
+                    location: "Bag End",
+                    date: "April 26, 2941",
+                    time: "Night",
+                    time_icon: "🌙",
+                    journey_day: 1,
+                    characters: ["Bilbo", "Gandalf"],
+                    is_canonical: false,
+                    next_canonical: {
+                        next_event: "The Dwarves Arrive",
+                        scenes_until: 1
+                    },
+                    progress: { current: 3, total: 150 }
+                }
+            ];
+        }
+        
+        function updateDisplay() {
+            if (scenes.length === 0) return;
+            
+            const scene = scenes[currentIndex];
+            
+            // Update scene content
+            document.getElementById('sceneTitle').textContent = scene.title;
+            document.getElementById('sceneSubtitle').textContent = scene.subtitle;
+            document.getElementById('sceneSubtitle').className = 'scene-subtitle ' + 
+                (scene.is_canonical ? 'canonical' : 'generated');
+            document.getElementById('sceneContent').innerHTML = '<p>' + scene.content + '</p>';
+            
+            // Update location
+            document.getElementById('locationName').textContent = scene.location;
+            document.getElementById('hudLocation').textContent = scene.location;
+            
+            // Find location icon
+            let icon = '🗺️';
+            const locLower = scene.location.toLowerCase();
+            for (const [key, val] of Object.entries(locationIcons)) {
+                if (locLower.includes(key)) {
+                    icon = val;
+                    break;
+                }
+            }
+            document.querySelector('.location-icon').textContent = icon;
+            
+            // Update side panel info
+            document.getElementById('journeyDay').textContent = scene.journey_day || '-';
+            document.getElementById('progress').textContent = 
+                `${scene.progress.current}/${scene.progress.total}`;
+            document.getElementById('sceneDate').textContent = scene.date;
+            document.getElementById('sceneTime').textContent = scene.time;
+            
+            // Update characters
+            const charList = document.getElementById('characterList');
+            charList.innerHTML = '';
+            (scene.characters || []).forEach(char => {
+                const tag = document.createElement('div');
+                tag.className = 'character-tag' + (['Thorin', 'Gandalf'].includes(char) ? ' leader' : '');
+                tag.textContent = char;
+                charList.appendChild(tag);
+            });
+            
+            // Update countdown
+            if (scene.next_canonical) {
+                const nc = scene.next_canonical;
+                document.getElementById('countdownText').textContent = 
+                    `${nc.scenes_until} scene${nc.scenes_until !== 1 ? 's' : ''} until: ${nc.next_event}`;
+                const percent = Math.max(0, Math.min(100, 100 - (nc.scenes_until * 10)));
+                document.getElementById('countdownFill').style.width = percent + '%';
+                document.getElementById('hudNext').textContent = nc.next_event;
+            }
+            
+            // Update HUD
+            document.getElementById('hudDate').textContent = scene.date;
+            document.getElementById('hudTime').textContent = scene.time;
+            document.getElementById('hudTimeIcon').textContent = scene.time_icon || '☀️';
+        }
+        
+        function nextScene() {
+            if (currentIndex < scenes.length - 1) {
+                currentIndex++;
+                updateDisplay();
+            }
+        }
+        
+        function prevScene() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateDisplay();
+            }
+        }
+        
+        function toggleAutoPlay() {
+            autoPlay = !autoPlay;
+            const btn = document.getElementById('playBtn');
+            if (autoPlay) {
+                btn.textContent = '⏸';
+                autoPlayInterval = setInterval(() => {
+                    if (currentIndex < scenes.length - 1) {
+                        nextScene();
+                    } else {
+                        toggleAutoPlay(); // Stop at end
+                    }
+                }, AUTO_PLAY_DELAY);
+            } else {
+                btn.textContent = '▶';
+                clearInterval(autoPlayInterval);
+            }
+        }
+        
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextScene();
+            if (e.key === 'ArrowLeft') prevScene();
+            if (e.key === ' ') {
+                e.preventDefault();
+                toggleAutoPlay();
+            }
+        });
+        
+        // Initialize
+        loadScenes();
+    </script>
+</body>
+</html>

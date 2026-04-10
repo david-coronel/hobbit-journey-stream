@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "timestamp": "2941-04-25T10:00:00",
+    "journey_day": 0,
+    "journey_minute": 600,
+    "season": "spring",
+    "daylight_hours": [6, 20],
+    "moon_phase": "waning_gibbous"
+  },
+  "global": {
+    "region": "The Shire",
+    "weather": {
+      "condition": "partly_cloudy",
+      "temperature_c": 14,
+      "wind": "light_breeze",
+      "precipitation": "none"
+    },
+    "active_flags": [
+      "quest_erebor_initiated",
+      "smaug_alive",
+      "necromancer_active",
+      "dragon_sickness_possible",
+      "battle_of_five_armies_pending"
+    ],
+    "known_rumors": [
+      "A dragon guards a vast hoard beneath the Lonely Mountain",
+      "The Necromancer troubles the south of Mirkwood"
+    ]
+  },
+  "company": {
+    "members": ["Bilbo"],
+    "leader": "Gandalf",
+    "destination": "The Lonely Mountain",
+    "current_pace_km_day": 0,
+    "morale": "uncertain",
+    "rations_days": 0,
+    "is_assembled": false
+  },
+  "characters": {
+    "Bilbo": {
+      "race": "hobbit",
+      "location": "Bag End, Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "content",
+      "is_visible": true,
+      "inventory": ["tobacco_pipe", "pocket_handkerchief"],
+      "knowledge_flags": ["hobbit_comforts"],
+      "relationships": {
+        "Gandalf": "respectful_curious",
+        "Thorin": "unaware"
+      }
+    },
+    "Gandalf": {
+      "race": "wizard",
+      "location": "The Hill, approaching Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "mischievous",
+      "is_visible": true,
+      "inventory": ["staff", "thralls_map", "erebor_key", "glamdring_later"],
+      "knowledge_flags": ["secret_door_location", "smaugs_weak_spot", "white_council_plans"],
+      "relationships": {
+        "Bilbo": "protective_expectant",
+        "Thorin": "old_friend"
+      }
+    },
+    "Thorin": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "proud",
+      "is_visible": true,
+      "inventory": ["golden_harp"],
+      "knowledge_flags": ["arkenstone_desire", "elf_grudge"],
+      "relationships": {
+        "Gandalf": "grateful",
+        "Bilbo": "unaware"
+      }
+    },
+    "Balin": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "steady",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Dwalin": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "gruff",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Fili": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "cheerful",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Kili": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "cheerful",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Dori": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "grumbling",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Nori": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "secretive",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Ori": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "polite",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Oin": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "deaf",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Gloin": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "fiery",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Bifur": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "silent",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Bofur": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "jovial",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Bombur": {
+      "race": "dwarf",
+      "location": "Road to Hobbiton",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "sleepy",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Gollum": {
+      "race": "creature",
+      "location": "Misty Mountains, beneath Goblin-town",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "wretched",
+      "mood": "obsessive",
+      "is_visible": true,
+      "inventory": ["the_ring"],
+      "knowledge_flags": ["ring_habit", "riddle_love"],
+      "relationships": {}
+    },
+    "Smaug": {
+      "race": "dragon",
+      "location": "Erebor, The Lonely Mountain",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "arrogant",
+      "is_visible": false,
+      "inventory": ["arkenstone", "dwarf_hoard"],
+      "knowledge_flags": ["knows_dwarves_returning"],
+      "relationships": {}
+    },
+    "The_Elvenking": {
+      "race": "elf",
+      "location": "Elvenking's Halls, Mirkwood",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "suspicious",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": ["distrusts_dwarves"],
+      "relationships": {
+        "Thorin": "hostile"
+      }
+    },
+    "Bard": {
+      "race": "man",
+      "location": "Lake-town, Esgaroth",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "grim",
+      "is_visible": true,
+      "inventory": ["black_arrow"],
+      "knowledge_flags": ["descendant_of_girion"],
+      "relationships": {}
+    },
+    "Beorn": {
+      "race": "skin-changer",
+      "location": "Beorn's House, between Misty Mountains and Mirkwood",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "watchful",
+      "is_visible": true,
+      "inventory": ["beehives", "animal_servants"],
+      "knowledge_flags": ["distrusts_strangers"],
+      "relationships": {}
+    },
+    "Elrond": {
+      "race": "elf",
+      "location": "Rivendell, Last Homely House",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "wise",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": ["reads_moon_letters", "knows_map_secrets"],
+      "relationships": {
+        "Gandalf": "old_friend",
+        "Thorin": "neutral"
+      }
+    },
+    "Dain": {
+      "race": "dwarf",
+      "location": "Iron Hills",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "pragmatic",
+      "is_visible": true,
+      "inventory": ["iron_hills_army"],
+      "knowledge_flags": ["heir_to_erebor"],
+      "relationships": {
+        "Thorin": "cousin"
+      }
+    },
+    "The_Master": {
+      "race": "man",
+      "location": "Lake-town, Esgaroth",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "calculating",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "Roac": {
+      "race": "raven",
+      "location": "Erebor, The Lonely Mountain",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "ancient",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": ["remembers_thrain"],
+      "relationships": {}
+    },
+    "The_Great_Goblin": {
+      "race": "goblin",
+      "location": "Goblin-town, Misty Mountains",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "cruel",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": [],
+      "relationships": {}
+    },
+    "The_Lord_of_the_Eagles": {
+      "race": "eagle",
+      "location": "The Eyrie, Misty Mountains",
+      "is_alive": true,
+      "is_with_company": false,
+      "status": "active",
+      "health": "healthy",
+      "mood": "noble",
+      "is_visible": true,
+      "inventory": [],
+      "knowledge_flags": ["owes_gandalf_debt"],
+      "relationships": {
+        "Gandalf": "respectful"
+      }
+    }
+  },
+  "factions": {
+    "wood_elves": {
+      "location": "Northern Mirkwood",
+      "status": "active",
+      "attitude_to_company": "neutral_wary",
+      "strength": "strong",
+      "leader": "The_Elvenking"
+    },
+    "goblins": {
+      "location": "Misty Mountains, Goblin-town",
+      "status": "active",
+      "attitude_to_company": "hostile",
+      "strength": "numerous",
+      "leader": "The_Great_Goblin"
+    },
+    "wargs": {
+      "location": "Eastern Misty Mountains",
+      "status": "active",
+      "attitude_to_company": "hostile",
+      "strength": "numerous",
+      "leader": null
+    },
+    "eagles": {
+      "location": "The Eyrie, Misty Mountains",
+      "status": "active",
+      "attitude_to_company": "neutral",
+      "strength": "few_but_mighty",
+      "leader": "The_Lord_of_the_Eagles"
+    },
+    "lake_men": {
+      "location": "Esgaroth, Long Lake",
+      "status": "active",
+      "attitude_to_company": "neutral",
+      "strength": "moderate",
+      "leader": "The_Master"
+    },
+    "ravens_of_erebor": {
+      "location": "Erebor, The Lonely Mountain",
+      "status": "dormant",
+      "attitude_to_company": "sympathetic",
+      "strength": "few",
+      "leader": "Roac"
+    }
+  },
+  "items": {
+    "the_ring": {
+      "holder": "Gollum",
+      "location": "Misty Mountains, beneath Goblin-town",
+      "is_known_to_exist": false,
+      "properties": ["invisibility", "corruption"]
+    },
+    "arkenstone": {
+      "holder": "Smaug",
+      "location": "Erebor, The Lonely Mountain",
+      "is_known_to_exist": true,
+      "properties": ["royal_claim", "dragon_sickness"]
+    },
+    "thralls_map": {
+      "holder": "Gandalf",
+      "location": "The Hill, approaching Hobbiton",
+      "is_known_to_exist": true,
+      "properties": ["moon_letters", "secret_door"]
+    },
+    "erebor_key": {
+      "holder": "Gandalf",
+      "location": "The Hill, approaching Hobbiton",
+      "is_known_to_exist": true,
+      "properties": ["opens_secret_door"]
+    },
+    "sting": {
+      "holder": null,
+      "location": "Troll-hoard, The Trollshaws",
+      "is_known_to_exist": false,
+      "properties": ["goblin_bane", "blue_glow"]
+    },
+    "glamdring": {
+      "holder": null,
+      "location": "Troll-hoard, The Trollshaws",
+      "is_known_to_exist": false,
+      "properties": ["elf_blade", "goblin_bane"]
+    },
+    "orcrist": {
+      "holder": null,
+      "location": "Troll-hoard, The Trollshaws",
+      "is_known_to_exist": false,
+      "properties": ["elf_blade", "goblin_bane"]
+    },
+    "black_arrow": {
+      "holder": "Bard",
+      "location": "Lake-town, Esgaroth",
+      "is_known_to_exist": true,
+      "properties": ["dragon_slaying", "heirloom_of_girion"]
+    }
+  }
+}

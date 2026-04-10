@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "book": "The Hobbit; Or There and Back Again",
+    "author": "J.R.R. Tolkien",
+    "total_chapters": 3,
+    "total_scenes": 15,
+    "total_words": 78448,
+    "total_characters": 417153,
+    "extraction_method": "EPUB paragraph-based with manual scene boundaries"
+  },
+  "scenes": [
+    {
+      "id": "over_hill_and_under_hill_scene_1",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 1,
+      "title": "Climbing the Mountains",
+      "paragraph_count": 30,
+      "word_count": 1924,
+      "char_count": 10371
+    },
+    {
+      "id": "over_hill_and_under_hill_scene_2",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 2,
+      "title": "The Storm and Cave",
+      "paragraph_count": 30,
+      "word_count": 2061,
+      "char_count": 11349
+    },
+    {
+      "id": "over_hill_and_under_hill_scene_3",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 3,
+      "title": "Captured by Goblins",
+      "paragraph_count": 30,
+      "word_count": 2010,
+      "char_count": 10485
+    },
+    {
+      "id": "over_hill_and_under_hill_scene_4",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 4,
+      "title": "The Great Goblin",
+      "paragraph_count": 30,
+      "word_count": 666,
+      "char_count": 3645
+    },
+    {
+      "id": "over_hill_and_under_hill_scene_5",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 5,
+      "title": "Gandalf Rescues",
+      "paragraph_count": 108,
+      "word_count": 4284,
+      "char_count": 22886
+    },
+    {
+      "id": "out_of_the_frying-pan_into_the_fire_scene_1",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 1,
+      "title": "Reunion and Journey",
+      "paragraph_count": 30,
+      "word_count": 1528,
+      "char_count": 8147
+    },
+    {
+      "id": "out_of_the_frying-pan_into_the_fire_scene_2",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 2,
+      "title": "The Wargs Attack",
+      "paragraph_count": 30,
+      "word_count": 2053,
+      "char_count": 10907
+    },
+    {
+      "id": "out_of_the_frying-pan_into_the_fire_scene_3",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 3,
+      "title": "Trapped in Trees",
+      "paragraph_count": 40,
+      "word_count": 2368,
+      "char_count": 12763
+    },
+    {
+      "id": "out_of_the_frying-pan_into_the_fire_scene_4",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 4,
+      "title": "The Eagles",
+      "paragraph_count": 30,
+      "word_count": 1921,
+      "char_count": 9936
+    },
+    {
+      "id": "out_of_the_frying-pan_into_the_fire_scene_5",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 5,
+      "title": "Rescue",
+      "paragraph_count": 695,
+      "word_count": 44910,
+      "char_count": 238336
+    },
+    {
+      "id": "the_gathering_of_the_clouds_scene_1",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 1,
+      "title": "News of Smaug's Death",
+      "paragraph_count": 25,
+      "word_count": 1164,
+      "char_count": 6105
+    },
+    {
+      "id": "the_gathering_of_the_clouds_scene_2",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 2,
+      "title": "Roac the Raven",
+      "paragraph_count": 25,
+      "word_count": 989,
+      "char_count": 5331
+    },
+    {
+      "id": "the_gathering_of_the_clouds_scene_3",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 3,
+      "title": "Thorin's Pride",
+      "paragraph_count": 25,
+      "word_count": 882,
+      "char_count": 4620
+    },
+    {
+      "id": "the_gathering_of_the_clouds_scene_4",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 4,
+      "title": "Armies Gather",
+      "paragraph_count": 25,
+      "word_count": 1316,
+      "char_count": 6841
+    },
+    {
+      "id": "the_gathering_of_the_clouds_scene_5",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 5,
+      "title": "The Siege Begins",
+      "paragraph_count": 228,
+      "word_count": 10372,
+      "char_count": 55431
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "count": 15,
+  "scenes": [
+    {
+      "text": "Night found them in Wilderland. Wandering streams lay behind.\n\nThe company was tending gear.\n\nBilbo mended a cloak.\n\nSoon enough, it was time to resume their journey.",
+      "type": "activity",
+      "chapter": "Chapter II",
+      "days": 1,
+      "between": [
+        "2941-05-09",
+        "2941-05-10"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Evening found them in Wilderland. Wandering streams lay behind.\n\nBilbo paused, looking about.\n\nThe Wilderland stretched out in all directions.\n\nHow far they had come, and how far yet to go.\n\nSoon enough, it was time to resume their journey.",
+      "type": "observation",
+      "chapter": "Chapter XVIII",
+      "days": 1,
+      "between": [
+        "2941-11-20",
+        "2941-11-21"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo"
+      ]
+    },
+    {
+      "text": "Midday found them in Wilderland. Rolling grasslands loomed ahead.\n\nBilbo and Thorin gathered by a small fire.\n\n\"Is there no end to this wilderness? My stomach thinks my throat's been cut.,\" said Bilbo.\n\nThorin nodded thoughtfully.\n\n\"We are Durin's folk. We do not falter while breath remains.,\" Thorin replied.\n\nSoon enough, it was time to resume their journey.",
+      "type": "conversation",
+      "chapter": "Chapter XV",
+      "days": 1,
+      "between": [
+        "2941-11-04",
+        "2941-11-05"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Morning found them in Wilderland. Distant hills lay behind.\n\nBilbo and Gandalf sat together.\n\n\"If only Gandalf were here, he would know what to do.,\" said Bilbo.\n\nGandalf nodded thoughtfully.\n\n\"Trust your burglar. He has more in him than you know.,\" Gandalf replied.\n\nSoon enough, it was time to move on.",
+      "type": "conversation",
+      "chapter": "Chapter II",
+      "days": 1,
+      "between": [
+        "2941-04-27",
+        "2941-04-28"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Gandalf"
+      ]
+    },
+    {
+      "text": "Midday found them in Wilderland. Rolling grasslands surrounded them.\n\nThe company was making camp.\n\nBilbo mended a cloak.\n\nSoon enough, it was time to move on.",
+      "type": "activity",
+      "chapter": "Chapter XIX",
+      "days": 2,
+      "between": [
+        "2942-06-11",
+        "2942-06-13"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo"
+      ]
+    },
+    {
+      "text": "Midday found them in Wilderland. Wandering streams surrounded them.\n\nThe company was resting briefly.\n\nBombur sharpened a blade.\n\nSoon enough, it was time to continue.",
+      "type": "activity",
+      "chapter": "Chapter II",
+      "days": 1,
+      "between": [
+        "2941-05-23",
+        "2941-05-24"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bombur"
+      ]
+    },
+    {
+      "text": "Morning found them in Wilderland. Wandering streams surrounded them.\n\nBilbo paused, sitting apart.\n\nThe Wilderland stretched out in all directions.\n\nHow far they had come, and how far yet to go.\n\nSoon enough, it was time to resume their journey.",
+      "type": "observation",
+      "chapter": "Chapter IV",
+      "days": 1,
+      "between": [
+        "2941-06-21",
+        "2941-06-22"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Fili"
+      ]
+    },
+    {
+      "text": "Night found them in Wilderland. Rolling grasslands surrounded them.\n\nThe company was resting briefly.\n\nThorin checked provisions.\n\nSoon enough, it was time to move on.",
+      "type": "activity",
+      "chapter": "Chapter XVIII",
+      "days": 1,
+      "between": [
+        "2941-11-15",
+        "2941-11-16"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Evening found them in Wilderland. Distant hills surrounded them.\n\nThe company was making camp.\n\nBalin mended a cloak.\n\nSoon enough, it was time to resume their journey.",
+      "type": "activity",
+      "chapter": "Chapter VIII",
+      "days": 1,
+      "between": [
+        "2941-08-04",
+        "2941-08-05"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Balin"
+      ]
+    },
+    {
+      "text": "Evening found them in Wilderland. Wandering streams loomed ahead.\n\nThe company was tending gear.\n\nBilbo mended a cloak.\n\nSoon enough, it was time to resume their journey.",
+      "type": "activity",
+      "chapter": "Chapter IV",
+      "days": 1,
+      "between": [
+        "2941-07-12",
+        "2941-07-13"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo",
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Night found them in Wilderland. Distant hills lay behind.\n\nThe company was tending gear.\n\nThorin sharpened a blade.\n\nSoon enough, it was time to continue.",
+      "type": "conversation",
+      "chapter": "Chapter X",
+      "days": 1,
+      "between": [
+        "2941-09-30",
+        "2941-10-01"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Morning found them in the Misty Mountains. Precarious paths loomed ahead.\n\nThe company was making camp.\n\nThorin mended a cloak.\n\nSoon enough, it was time to continue.",
+      "type": "conversation",
+      "chapter": "Chapter IV",
+      "days": 1,
+      "between": [
+        "2941-07-09",
+        "2941-07-10"
+      ],
+      "location": "misty_mountains",
+      "characters": [
+        "Thorin"
+      ]
+    },
+    {
+      "text": "Morning found them in Wilderland. Wandering streams lay behind.\n\nBilbo paused, scanning the distance.\n\nThe Wilderland stretched out in all directions.\n\nHow far they had come, and how far yet to go.\n\nSoon enough, it was time to continue.",
+      "type": "observation",
+      "chapter": "Chapter VIII",
+      "days": 1,
+      "between": [
+        "2941-07-26",
+        "2941-07-27"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo"
+      ]
+    },
+    {
+      "text": "Morning found them in Wilderland. Wandering streams lay behind.\n\nBilbo paused, looking about.\n\nThe Wilderland stretched out in all directions.\n\nHow far they had come, and how far yet to go.\n\nSoon enough, it was time to resume their journey.",
+      "type": "observation",
+      "chapter": "Chapter IV",
+      "days": 1,
+      "between": [
+        "2941-07-05",
+        "2941-07-06"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bilbo"
+      ]
+    },
+    {
+      "text": "Evening found them in Wilderland. Wandering streams lay behind.\n\nKili paused, sitting apart.\n\nThe Wilderland stretched out in all directions.\n\nHow far they had come, and how far yet to go.\n\nSoon enough, it was time to move on.",
+      "type": "observation",
+      "chapter": "Chapter XI",
+      "days": 1,
+      "between": [
+        "2941-10-13",
+        "2941-10-14"
+      ],
+      "location": "wilderland",
+      "characters": [
+        "Bombur",
+        "Kili"
+      ]
+    }
+  ]
+}

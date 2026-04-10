@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype B — Speedrun HUD</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; font-family: 'Segoe UI', 'Georgia', serif; background: #0f0f0f; color: #e0d0b0; }
+
+/* Background */
+.bg-image {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2568&auto=format&fit=crop') center/cover no-repeat;
+    filter: brightness(0.28);
+    z-index: 0;
+}
+
+/* Layout grid */
+.hud {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    grid-template-rows: 64px 1fr 220px 42px;
+    z-index: 10;
+}
+
+/* Top bar spanning full width */
+.top-bar {
+    grid-column: 1 / -1;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10,10,10,0.85);
+    border-bottom: 1px solid #3a3530;
+    padding: 0 24px;
+}
+.canon-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(212,175,55,0.18);
+    border: 1px solid #d4af37; color: #d4af37;
+    padding: 5px 12px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+}
+.canon-badge.gap { border-color: #5a9a3d; color: #5a9a3d; background: rgba(90,154,61,0.18); }
+.chapter-center {
+    font-size: 15px; color: #c0b0a0; text-align: center;
+}
+.chapter-center span { color: #d4af37; font-weight: bold; }
+.meta-right {
+    display: flex; gap: 18px; font-size: 13px; color: #a09070;
+}
+.meta-right span { color: #e0d0b0; }
+
+/* Left sidebar: SPLITS (scrollable) */
+.splits-panel {
+    grid-row: 2 / 4;
+    background: rgba(10,10,10,0.82);
+    border-right: 1px solid #3a3530;
+    display: flex; flex-direction: column;
+}
+.panel-header {
+    padding: 14px 16px; font-size: 11px; color: #8b7355; letter-spacing: 1px;
+    border-bottom: 1px solid #2a2520; text-transform: uppercase;
+}
+.splits-scroll {
+    flex: 1; overflow-y: auto; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px;
+}
+.split-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 7px 10px; border-radius: 4px; font-size: 12px; color: #a09070;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+}
+.split-item.done { color: #5a9a3d; }
+.split-item.current { background: rgba(212,175,55,0.18); border-color: #d4af37; color: #d4af37; }
+.split-name { display: flex; align-items: center; gap: 6px; }
+.split-time { font-size: 10px; color: #8b7355; }
+
+/* Center: empty for immersion, text sits in bottom-center cell */
+.center-void {
+    grid-row: 2 / 3; grid-column: 2 / 3;
+    position: relative;
+}
+
+/* Right sidebar: STATS + MAP + CHARACTERS */
+.right-panel {
+    grid-row: 2 / 4;
+    background: rgba(10,10,10,0.82);
+    border-left: 1px solid #3a3530;
+    display: flex; flex-direction: column; overflow-y: auto;
+}
+.stats-block {
+    padding: 16px; border-bottom: 1px solid #2a2520;
+}
+.stat-row { display: flex; justify-content: space-between; font-size: 12px; color: #a09070; margin-bottom: 8px; }
+.stat-row b { color: #d4af37; }
+
+.map-block {
+    padding: 16px; border-bottom: 1px solid #2a2520; text-align: center;
+}
+.map-box {
+    width: 100%; height: 120px; background: #1a2015; border: 1px solid #3a3530; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.map-box::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 40% 60%, rgba(212,175,55,0.22) 0%, transparent 55%);
+}
+.map-label { position: relative; z-index: 1; font-size: 11px; color: #5a5045; }
+.map-label span { display: block; color: #d4af37; font-size: 15px; margin-top: 4px; }
+
+.characters-block {
+    padding: 16px;
+}
+.char-tag {
+    display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #c0b0a0; margin: 3px;
+}
+
+/* Bottom-center: TEXT as cinematic subtitles + next event */
+.text-stage {
+    grid-row: 3 / 4; grid-column: 2 / 3;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 60px 24px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+}
+.next-event-bar {
+    display: flex; align-items: center; gap: 12px; font-size: 12px; color: #a09070; margin-bottom: 12px;
+}
+.next-event-bar b { color: #d4af37; }
+.countdown-pill {
+    background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35);
+    padding: 3px 10px; border-radius: 12px; color: #d4af37; font-size: 11px;
+}
+.subtitle-text {
+    font-size: 22px; line-height: 1.55; color: #f0e8d8; text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Bottom timeline bar */
+.timeline-bar-container {
+    grid-column: 1 / -1;
+    background: rgba(10,10,10,0.9);
+    border-top: 1px solid #3a3530;
+    display: flex; align-items: center; gap: 16px; padding: 0 24px;
+}
+.timeline-label { font-size: 10px; color: #8b7355; white-space: nowrap; }
+.timeline-track { flex: 1; height: 6px; background: #2a2520; border-radius: 3px; overflow: hidden; }
+.timeline-fill { height: 100%; background: linear-gradient(90deg, #8b6914, #d4af37); width: 13.5%; }
+.timeline-meta { font-size: 10px; color: #a09070; white-space: nowrap; }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #4a453d; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="bg-image"></div>
+
+<div class="hud">
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="canon-badge" id="canon-badge"><span>●</span> Canon Moment</div>
+        <div class="chapter-center">Capítulo <span id="chapter">3 — A Short Rest</span></div>
+        <div class="meta-right">
+            <div>📅 <span id="date">Apr 28, 2941</span></div>
+            <div>📍 <span id="location">Rivendell</span></div>
+            <div>🌄 <span id="time-of-day">Late Morning</span></div>
+        </div>
+    </div>
+
+    <!-- LEFT: SPLITS -->
+    <div class="splits-panel">
+        <div class="panel-header">Canon Splits</div>
+        <div class="splits-scroll" id="splits-scroll">
+            <div class="split-item done"><span class="split-name">✓ Party</span><span class="split-time">2:04</span></div>
+            <div class="split-item done"><span class="split-name">✓ Mutton</span><span class="split-time">1:33</span></div>
+            <div class="split-item current"><span class="split-name">▶ Rest</span><span class="split-time">—</span></div>
+            <div class="split-item"><span class="split-name">Hill</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Riddles</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Frying-Pan</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Lodgings</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Spiders</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Barrels</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Welcome</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Doorstep</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Information</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Not at Home</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Fire &amp; Water</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Gathering</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Thief</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Clouds Burst</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Return</span><span class="split-time"></span></div>
+            <div class="split-item"><span class="split-name">Last Stage</span><span class="split-time"></span></div>
+        </div>
+    </div>
+
+    <!-- CENTER VOID -->
+    <div class="center-void"></div>
+
+    <!-- RIGHT: STATS + MAP + CHARACTERS -->
+    <div class="right-panel">
+        <div class="stats-block">
+            <div class="panel-header" style="border-bottom:none; padding:0 0 10px 0;">Statistics</div>
+            <div class="stat-row">Scenes seen <b>23</b></div>
+            <div class="stat-row">Journey day <b>Day 4</b></div>
+            <div class="stat-row">Stream time <b>6h 12m</b></div>
+            <div class="stat-row">Canon / Gap <b>14 / 9</b></div>
+            <div class="stat-row">Words read <b>8,420</b></div>
+            <div class="stat-row">Total progress <b>13.5%</b></div>
+        </div>
+        <div class="map-block">
+            <div class="panel-header" style="border-bottom:none; padding:0 0 10px 0;">Map</div>
+            <div class="map-box">
+                <div class="map-label">CURRENT LOCATION<br><span>Rivendell</span></div>
+            </div>
+        </div>
+        <div class="characters-block">
+            <div class="panel-header" style="border-bottom:none; padding:0 0 10px 0;">Present</div>
+            <div id="characters">
+                <span class="char-tag">🧙‍♂️ Gandalf</span>
+                <span class="char-tag">🧝 Elrond</span>
+                <span class="char-tag">🧔‍♂️ Thorin</span>
+                <span class="char-tag">🍃 Bilbo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM-CENTER: TEXT + NEXT EVENT -->
+    <div class="text-stage">
+        <div class="next-event-bar">
+            <b>NEXT EVENT:</b> Crossing the Misty Mountains
+            <span class="countdown-pill">in 3h 45m</span>
+        </div>
+        <div class="subtitle-text" id="story-text">
+            The valley of Rivendell opened before them like a secret kept by the mountains.
+        </div>
+    </div>
+
+    <!-- TIMELINE BAR -->
+    <div class="timeline-bar-container">
+        <div class="timeline-label">JOURNEY TIMELINE</div>
+        <div class="timeline-track"><div class="timeline-fill"></div></div>
+        <div class="timeline-meta">Scene 23 / 170 · 13.5%</div>
+    </div>
+</div>
+
+<script>
+const texts = [
+    "The valley of Rivendell opened before them like a secret kept by the mountains.",
+    "Waterfalls sang in the distance, and the air smelled of pine and old magic.",
+    "Elrond stood at the threshold of the Last Homely House, his eyes holding the memory of ages.",
+    "'Welcome,' he said, and the word felt like a shield against the wilderness beyond."
+];
+let idx=0;
+setInterval(()=>{
+    idx = (idx+1)%texts.length;
+    document.getElementById('story-text').textContent = texts[idx];
+}, 6000);
+
+const badge = document.getElementById('canon-badge');
+let gap = false;
+setInterval(()=>{
+    gap = !gap;
+    if(gap){
+        badge.classList.add('gap');
+        badge.innerHTML = '<span>○</span> Non-Canon Gap';
+        document.getElementById('chapter').textContent = 'Gap — Preparations';
+    } else {
+        badge.classList.remove('gap');
+        badge.innerHTML = '<span>●</span> Canon Moment';
+        document.getElementById('chapter').textContent = '3 — A Short Rest';
+    }
+}, 12000);
+</script>
+</body>
+</html>

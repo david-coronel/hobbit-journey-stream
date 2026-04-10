@@ -1,0 +1,52 @@
+{
+  "images": {
+    "enabled": false,
+    "provider": "openai",
+    "model": "dall-e-3",
+    "size": "1024x1024",
+    "quality": "standard",
+    "style": "vivid",
+    "cache_dir": "output/media/images",
+    "scene_prompt_template": "Fantasy illustration of a scene from The Hobbit by J.R.R. Tolkien.\nScene: {title}\nSetting: {location}\nTime: {time_of_day}\nAtmosphere: {atmosphere}\nCharacters present: {characters}\nKey moment: {description}\n\nStyle: Richly detailed fantasy art in the style of Alan Lee, atmospheric lighting, \ncinematic composition, watercolor and ink, Middle-earth aesthetic."
+  },
+  "audio": {
+    "enabled": false,
+    "provider": "local",
+    "ambient_enabled": true,
+    "ambient_volume": 0.3,
+    "effects_enabled": true,
+    "effects_volume": 0.5,
+    "cache_dir": "output/media/audio",
+    "location_ambient": {
+      "forest": "Gentle forest ambience with rustling leaves, distant birdsong, peaceful woodland atmosphere",
+      "mountain": "Windy mountain peaks howling gusts, rocky terrain, vast open skies",
+      "cave": "Dark cave ambience with dripping water, echoing depths, mysterious underground",
+      "hobbiton": "Peaceful countryside with birds chirping, gentle breeze, idyllic Shire atmosphere",
+      "lake": "Calm lake waters lapping shore, gentle ripples, serene waterfront",
+      "dungeon": "Dark dungeon with chains rattling, dripping water, ominous echoing",
+      "battle": "Distant clashing swords, battle cries, dramatic tension",
+      "dragon": "Heavy breathing, fire crackling, massive creature presence, gold coins shifting",
+      "travel": "Walking on various terrain, backpack sounds, journey ambience"
+    }
+  },
+  "voice": {
+    "enabled": false,
+    "provider": "elevenlabs",
+    "default_voice": "narrator",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "cache_dir": "output/media/voice",
+    "character_voices": {
+      "narrator": "XB0fDUnXU5powFXDhCwa",
+      "bilbo": "XB0fDUnXU5powFXDhCwa",
+      "gandalf": "TX3AEvVoIzMeN6YzH2bZ",
+      "thorin": "TxGEqnHWrfWFTfGW9XjX",
+      "gollum": "XB0fDUnXU5powFXDhCwa",
+      "smaug": "XB0fDUnXU5powFXDhCwa"
+    }
+  },
+  "auto_generate": false,
+  "cache_enabled": true,
+  "max_cache_size_mb": 1000
+}

@@ -1,0 +1,70 @@
+{
+  "pacing_mode": {
+    "description": "Scene display pacing mode",
+    "value": "dramatic",
+    "options": [
+      "compressed",
+      "dramatic",
+      "synced",
+      "realtime"
+    ]
+  },
+  "pacing": {
+    "description": "Speed multiplier (for compressed/dramatic modes)",
+    "value": 0.2,
+    "min": 0.25,
+    "max": 3.0,
+    "unit": "multiplier"
+  },
+  "base_delay": {
+    "description": "Base delay per scene in milliseconds",
+    "value": 10000,
+    "min": 1000,
+    "max": 60000,
+    "unit": "milliseconds"
+  },
+  "word_count_factor": {
+    "description": "Additional delay per word",
+    "value": 0.02,
+    "min": 0,
+    "max": 0.1,
+    "unit": "ms/word"
+  },
+  "min_scene_duration": {
+    "description": "Minimum time to display a scene",
+    "value": 3000,
+    "min": 1000,
+    "max": 10000,
+    "unit": "milliseconds"
+  },
+  "max_scene_duration": {
+    "description": "Maximum time to display a scene",
+    "value": 60000,
+    "min": 10000,
+    "max": 300000,
+    "unit": "milliseconds"
+  },
+  "narrative": {
+    "description": "Narrative display settings",
+    "style": {
+      "description": "Narrative style for scene descriptions",
+      "value": "immersive",
+      "options": [
+        "immersive",
+        "cinematic",
+        "literary",
+        "minimal",
+        "character_pov"
+      ]
+    },
+    "show_narrative": {
+      "description": "Show narrative text instead of raw content",
+      "value": true
+    }
+  },
+  "show_countdown": {
+    "description": "Whether to show countdown timer",
+    "value": true
+  },
+  "version": "2.0.0"
+}

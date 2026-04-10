@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "The Hobbit World State",
+  "description": "Single source of truth for the procedural simulation engine. Updated every simulated minute.",
+  "type": "object",
+  "required": ["meta", "global", "company", "characters", "factions", "items"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "schema_version": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "journey_day": { "type": "integer", "minimum": 0 },
+        "journey_minute": { "type": "integer", "minimum": 0 },
+        "season": { "enum": ["spring", "summer", "autumn", "winter"] },
+        "daylight_hours": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer" }
+        },
+        "moon_phase": { "type": "string" }
+      }
+    },
+    "global": {
+      "type": "object",
+      "properties": {
+        "region": { "type": "string" },
+        "weather": {
+          "type": "object",
+          "properties": {
+            "condition": { "type": "string" },
+            "temperature_c": { "type": "number" },
+            "wind": { "type": "string" },
+            "precipitation": { "type": "string" }
+          }
+        },
+        "active_flags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "known_rumors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "members": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "leader": { "type": "string" },
+        "destination": { "type": "string" },
+        "current_pace_km_day": { "type": "number" },
+        "morale": { "type": "string" },
+        "rations_days": { "type": "number" },
+        "is_assembled": { "type": "boolean" }
+      }
+    },
+    "characters": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Za-z_]+$": {
+          "type": "object",
+          "properties": {
+            "race": { "type": "string" },
+            "location": { "type": "string" },
+            "is_alive": { "type": "boolean" },
+            "is_with_company": { "type": "boolean" },
+            "status": {
+              "enum": ["active", "imprisoned", "wounded", "asleep", "dead", "missing"]
+            },
+            "health": { "type": "string" },
+            "mood": { "type": "string" },
+            "is_visible": { "type": "boolean" },
+            "inventory": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "knowledge_flags": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "relationships": {
+              "type": "object",
+              "patternProperties": {
+                "^[A-Za-z_]+$": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "factions": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "object",
+          "properties": {
+            "location": { "type": "string" },
+            "status": { "enum": ["active", "dormant", "defeated"] },
+            "attitude_to_company": { "type": "string" },
+            "strength": { "type": "string" },
+            "leader": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "object",
+          "properties": {
+            "holder": { "type": ["string", "null"] },
+            "location": { "type": "string" },
+            "is_known_to_exist": { "type": "boolean" },
+            "properties": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

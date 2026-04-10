@@ -1,0 +1,84 @@
+{
+  "count": 5,
+  "scenes": [
+    {
+      "type": "generated_scene",
+      "scene_type": "activity",
+      "text": "Night found them in the Lonely Mountain. the Desolation provided some shelter.\n\nThe company was tending to their gear and provisions.\n\nBilbo sharpened a blade.\n\nIt was tedious work, but it passed the time. When all was ready, they prepared for what might come.",
+      "gap": {
+        "chapter": "Chapter II",
+        "gap_days": 1,
+        "before_date": "2941-04-27",
+        "after_date": "2941-04-28",
+        "characters": [
+          "Bilbo",
+          "Gandalf",
+          "Oin"
+        ],
+        "location": "erebor"
+      }
+    },
+    {
+      "type": "generated_scene",
+      "scene_type": "activity",
+      "text": "Morning found them in Wilderland. wandering streams were visible nearby.\n\nThe company was occupied with various tasks.\n\nOri and Thorin argued quietly about the route.\n\nIt was tedious work, but it passed the time. When all was ready, they prepared for what might come.",
+      "gap": {
+        "chapter": "Chapter IV",
+        "gap_days": 1,
+        "before_date": "2941-06-18",
+        "after_date": "2941-06-19",
+        "characters": [
+          "Thorin",
+          "Ori"
+        ],
+        "location": "wilderland"
+      }
+    },
+    {
+      "type": "generated_scene",
+      "scene_type": "activity",
+      "text": "It was midday in Wilderland. open sky marked their surroundings.\n\nThe company was tending to their gear and provisions.\n\nBilbo mended a torn cloak.\n\nIt was necessary work, but it passed the time. When all was ready, they moved on.",
+      "gap": {
+        "chapter": "Chapter VIII",
+        "gap_days": 1,
+        "before_date": "2941-07-26",
+        "after_date": "2941-07-27",
+        "characters": [
+          "Bilbo"
+        ],
+        "location": "wilderland"
+      }
+    },
+    {
+      "type": "generated_scene",
+      "scene_type": "observation",
+      "text": "Midday light spread across the Lonely Mountain. Ruins of Dale stood silent.\n\nThorin paused, sitting apart from the others. The the Lonely Mountain stretched out in all directions, the Front Gate marking the landscape.\n\nHow far they had come, and how far yet to go.\n\nAfter a time, Thorin rejoined the company, saying nothing of what had passed through their mind.",
+      "gap": {
+        "chapter": "Chapter XI",
+        "gap_days": 1,
+        "before_date": "2941-10-11",
+        "after_date": "2941-10-12",
+        "characters": [
+          "Bilbo",
+          "Thorin"
+        ],
+        "location": "erebor"
+      }
+    },
+    {
+      "type": "generated_scene",
+      "scene_type": "observation",
+      "text": "Evening light spread across Wilderland. Open sky stood silent.\n\nBilbo paused, turning slowly in place. The Wilderland stretched out in all directions, open sky marking the landscape.\n\nHow far they had come, and how far yet to go.\n\nAfter a time, Bilbo rejoined the company, saying nothing of what had passed through their mind.",
+      "gap": {
+        "chapter": "Chapter XV",
+        "gap_days": 1,
+        "before_date": "2941-10-26",
+        "after_date": "2941-10-27",
+        "characters": [
+          "Bilbo"
+        ],
+        "location": "wilderland"
+      }
+    }
+  ]
+}

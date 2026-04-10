@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "book": "The Hobbit; Or There and Back Again",
+    "author": "J.R.R. Tolkien",
+    "total_chapters": 19,
+    "total_scenes": 96,
+    "total_words": 94103,
+    "extraction_date": "2024"
+  },
+  "scenes": [
+    {
+      "id": "ch01_sc01",
+      "chapter": "An Unexpected Party",
+      "scene_number": 1,
+      "title": "The Unexpected Party Begins",
+      "word_count": 916
+    },
+    {
+      "id": "ch01_sc02",
+      "chapter": "An Unexpected Party",
+      "scene_number": 2,
+      "title": "Gandalf's Visit",
+      "word_count": 1013
+    },
+    {
+      "id": "ch01_sc03",
+      "chapter": "An Unexpected Party",
+      "scene_number": 3,
+      "title": "Thorin Arrives",
+      "word_count": 426
+    },
+    {
+      "id": "ch01_sc04",
+      "chapter": "An Unexpected Party",
+      "scene_number": 4,
+      "title": "The Dwarves Gather",
+      "word_count": 1276
+    },
+    {
+      "id": "ch01_sc05",
+      "chapter": "An Unexpected Party",
+      "scene_number": 5,
+      "title": "The Feast and Song",
+      "word_count": 824
+    },
+    {
+      "id": "ch01_sc06",
+      "chapter": "An Unexpected Party",
+      "scene_number": 6,
+      "title": "Planning the Quest",
+      "word_count": 692
+    },
+    {
+      "id": "ch01_sc07",
+      "chapter": "An Unexpected Party",
+      "scene_number": 7,
+      "title": "Bilbo Decides to Go",
+      "word_count": 3419
+    },
+    {
+      "id": "ch02_sc01",
+      "chapter": "Roast Mutton",
+      "scene_number": 1,
+      "title": "Camping in the Trollshaws",
+      "word_count": 1094
+    },
+    {
+      "id": "ch02_sc02",
+      "chapter": "Roast Mutton",
+      "scene_number": 2,
+      "title": "Bilbo Tries to Steal",
+      "word_count": 504
+    },
+    {
+      "id": "ch02_sc03",
+      "chapter": "Roast Mutton",
+      "scene_number": 3,
+      "title": "Captured by Trolls",
+      "word_count": 948
+    },
+    {
+      "id": "ch02_sc04",
+      "chapter": "Roast Mutton",
+      "scene_number": 4,
+      "title": "Thorin's Arrival",
+      "word_count": 965
+    },
+    {
+      "id": "ch02_sc05",
+      "chapter": "Roast Mutton",
+      "scene_number": 5,
+      "title": "Gandalf's Rescue",
+      "word_count": 1663
+    },
+    {
+      "id": "ch03_sc01",
+      "chapter": "A Short Rest",
+      "scene_number": 1,
+      "title": "Journey to Rivendell",
+      "word_count": 605
+    },
+    {
+      "id": "ch03_sc02",
+      "chapter": "A Short Rest",
+      "scene_number": 2,
+      "title": "The Last Homely House",
+      "word_count": 487
+    },
+    {
+      "id": "ch03_sc03",
+      "chapter": "A Short Rest",
+      "scene_number": 3,
+      "title": "Elrond's Counsel",
+      "word_count": 1743
+    },
+    {
+      "id": "ch04_sc01",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 1,
+      "title": "Climbing the Mountains",
+      "word_count": 708
+    },
+    {
+      "id": "ch04_sc02",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 2,
+      "title": "The Storm and Cave",
+      "word_count": 704
+    },
+    {
+      "id": "ch04_sc03",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 3,
+      "title": "Captured by Goblins",
+      "word_count": 394
+    },
+    {
+      "id": "ch04_sc04",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 4,
+      "title": "The Great Goblin",
+      "word_count": 914
+    },
+    {
+      "id": "ch04_sc05",
+      "chapter": "Over Hill and Under Hill",
+      "scene_number": 5,
+      "title": "Gandalf Rescues Them",
+      "word_count": 1262
+    },
+    {
+      "id": "ch05_sc01",
+      "chapter": "Riddles in the Dark",
+      "scene_number": 1,
+      "title": "Bilbo Wakes Alone",
+      "word_count": 904
+    },
+    {
+      "id": "ch05_sc02",
+      "chapter": "Riddles in the Dark",
+      "scene_number": 2,
+      "title": "Finding the Ring",
+      "word_count": 1216
+    },
+    {
+      "id": "ch05_sc03",
+      "chapter": "Riddles in the Dark",
+      "scene_number": 3,
+      "title": "Meeting Gollum",
+      "word_count": 1037
+    },
+    {
+      "id": "ch05_sc04",
+      "chapter": "Riddles in the Dark",
+      "scene_number": 4,
+      "title": "The Riddle Game",
+      "word_count": 1829
+    },
+    {
+      "id": "ch05_sc05",
+      "chapter": "Riddles in the Dark",
+      "scene_number": 5,
+      "title": "Escaping the Goblins",
+      "word_count": 1777
+    },
+    {
+      "id": "ch06_sc01",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 1,
+      "title": "Reunion and Journey",
+      "word_count": 1059
+    },
+    {
+      "id": "ch06_sc02",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 2,
+      "title": "The Wargs Attack",
+      "word_count": 1152
+    },
+    {
+      "id": "ch06_sc03",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 3,
+      "title": "Trapped in Trees",
+      "word_count": 1539
+    },
+    {
+      "id": "ch06_sc04",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 4,
+      "title": "The Lord of the Eagles",
+      "word_count": 1378
+    },
+    {
+      "id": "ch06_sc05",
+      "chapter": "Out of the Frying-Pan into the Fire",
+      "scene_number": 5,
+      "title": "Rescue and the Carrock",
+      "word_count": 1445
+    },
+    {
+      "id": "ch07_sc01",
+      "chapter": "Queer Lodgings",
+      "scene_number": 1,
+      "title": "Approaching Beorn's House",
+      "word_count": 867
+    },
+    {
+      "id": "ch07_sc02",
+      "chapter": "Queer Lodgings",
+      "scene_number": 2,
+      "title": "Meeting Beorn",
+      "word_count": 1182
+    },
+    {
+      "id": "ch07_sc03",
+      "chapter": "Queer Lodgings",
+      "scene_number": 3,
+      "title": "The Night",
+      "word_count": 1774
+    },
+    {
+      "id": "ch07_sc04",
+      "chapter": "Queer Lodgings",
+      "scene_number": 4,
+      "title": "Beorn's Stories",
+      "word_count": 1296
+    },
+    {
+      "id": "ch07_sc05",
+      "chapter": "Queer Lodgings",
+      "scene_number": 5,
+      "title": "Provisions and Departure",
+      "word_count": 1622
+    },
+    {
+      "id": "ch07_sc06",
+      "chapter": "Queer Lodgings",
+      "scene_number": 6,
+      "title": "Into Mirkwood",
+      "word_count": 2189
+    },
+    {
+      "id": "ch08_sc01",
+      "chapter": "Flies and Spiders",
+      "scene_number": 1,
+      "title": "Entering Mirkwood",
+      "word_count": 791
+    },
+    {
+      "id": "ch08_sc02",
+      "chapter": "Flies and Spiders",
+      "scene_number": 2,
+      "title": "The Enchanted Lights",
+      "word_count": 1229
+    },
+    {
+      "id": "ch08_sc03",
+      "chapter": "Flies and Spiders",
+      "scene_number": 3,
+      "title": "Bombur's Fall",
+      "word_count": 970
+    },
+    {
+      "id": "ch08_sc04",
+      "chapter": "Flies and Spiders",
+      "scene_number": 4,
+      "title": "Bombur's Dream",
+      "word_count": 1172
+    },
+    {
+      "id": "ch08_sc05",
+      "chapter": "Flies and Spiders",
+      "scene_number": 5,
+      "title": "Starlight and Black Butterflies",
+      "word_count": 923
+    },
+    {
+      "id": "ch08_sc06",
+      "chapter": "Flies and Spiders",
+      "scene_number": 6,
+      "title": "Spiders Attack",
+      "word_count": 1354
+    },
+    {
+      "id": "ch08_sc07",
+      "chapter": "Flies and Spiders",
+      "scene_number": 7,
+      "title": "Bilbo Rescues the Dwarves",
+      "word_count": 1777
+    },
+    {
+      "id": "ch08_sc08",
+      "chapter": "Flies and Spiders",
+      "scene_number": 8,
+      "title": "Captured by Wood-elves",
+      "word_count": 1861
+    },
+    {
+      "id": "ch09_sc01",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 1,
+      "title": "Prisoner of the Elves",
+      "word_count": 860
+    },
+    {
+      "id": "ch09_sc02",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 2,
+      "title": "Bilbo Finds the Dwarves",
+      "word_count": 854
+    },
+    {
+      "id": "ch09_sc03",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 3,
+      "title": "The Escape Plan",
+      "word_count": 773
+    },
+    {
+      "id": "ch09_sc04",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 4,
+      "title": "The Water Gate",
+      "word_count": 889
+    },
+    {
+      "id": "ch09_sc05",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 5,
+      "title": "Floating Downriver",
+      "word_count": 1412
+    },
+    {
+      "id": "ch09_sc06",
+      "chapter": "Barrels Out of Bond",
+      "scene_number": 6,
+      "title": "Lake-town",
+      "word_count": 952
+    },
+    {
+      "id": "ch10_sc01",
+      "chapter": "A Warm Welcome",
+      "scene_number": 1,
+      "title": "Arrival at Lake-town",
+      "word_count": 1038
+    },
+    {
+      "id": "ch10_sc02",
+      "chapter": "A Warm Welcome",
+      "scene_number": 2,
+      "title": "The Master's Feast",
+      "word_count": 1444
+    },
+    {
+      "id": "ch10_sc03",
+      "chapter": "A Warm Welcome",
+      "scene_number": 3,
+      "title": "Departure for the Mountain",
+      "word_count": 1403
+    },
+    {
+      "id": "ch11_sc01",
+      "chapter": "On the Doorstep",
+      "scene_number": 1,
+      "title": "The Desolation of Smaug",
+      "word_count": 281
+    },
+    {
+      "id": "ch11_sc02",
+      "chapter": "On the Doorstep",
+      "scene_number": 2,
+      "title": "Camping on the Mountain",
+      "word_count": 584
+    },
+    {
+      "id": "ch11_sc03",
+      "chapter": "On the Doorstep",
+      "scene_number": 3,
+      "title": "Searching for the Door",
+      "word_count": 682
+    },
+    {
+      "id": "ch11_sc04",
+      "chapter": "On the Doorstep",
+      "scene_number": 4,
+      "title": "The Thrush",
+      "word_count": 492
+    },
+    {
+      "id": "ch11_sc05",
+      "chapter": "On the Doorstep",
+      "scene_number": 5,
+      "title": "The Secret Door Opens",
+      "word_count": 905
+    },
+    {
+      "id": "ch12_sc01",
+      "chapter": "Inside Information",
+      "scene_number": 1,
+      "title": "Entering Erebor",
+      "word_count": 685
+    },
+    {
+      "id": "ch12_sc02",
+      "chapter": "Inside Information",
+      "scene_number": 2,
+      "title": "Meeting Smaug",
+      "word_count": 993
+    },
+    {
+      "id": "ch12_sc03",
+      "chapter": "Inside Information",
+      "scene_number": 3,
+      "title": "The Cup Theft",
+      "word_count": 677
+    },
+    {
+      "id": "ch12_sc04",
+      "chapter": "Inside Information",
+      "scene_number": 4,
+      "title": "Conversation with Smaug",
+      "word_count": 1076
+    },
+    {
+      "id": "ch12_sc05",
+      "chapter": "Inside Information",
+      "scene_number": 5,
+      "title": "Smaug's Suspicion",
+      "word_count": 1650
+    },
+    {
+      "id": "ch12_sc06",
+      "chapter": "Inside Information",
+      "scene_number": 6,
+      "title": "The Weak Spot Revealed",
+      "word_count": 1948
+    },
+    {
+      "id": "ch13_sc01",
+      "chapter": "Not at Home",
+      "scene_number": 1,
+      "title": "Smaug Attacks Lake-town",
+      "word_count": 559
+    },
+    {
+      "id": "ch13_sc02",
+      "chapter": "Not at Home",
+      "scene_number": 2,
+      "title": "Exploring the Mountain",
+      "word_count": 684
+    },
+    {
+      "id": "ch13_sc03",
+      "chapter": "Not at Home",
+      "scene_number": 3,
+      "title": "Finding the Arkenstone",
+      "word_count": 627
+    },
+    {
+      "id": "ch13_sc04",
+      "chapter": "Not at Home",
+      "scene_number": 4,
+      "title": "Bilbo Takes the Stone",
+      "word_count": 1084
+    },
+    {
+      "id": "ch13_sc05",
+      "chapter": "Not at Home",
+      "scene_number": 5,
+      "title": "Smaug's Death",
+      "word_count": 868
+    },
+    {
+      "id": "ch14_sc01",
+      "chapter": "Fire and Water",
+      "scene_number": 1,
+      "title": "The Dragon's Attack",
+      "word_count": 917
+    },
+    {
+      "id": "ch14_sc02",
+      "chapter": "Fire and Water",
+      "scene_number": 2,
+      "title": "Bard Learns of the Weak Spot",
+      "word_count": 506
+    },
+    {
+      "id": "ch14_sc03",
+      "chapter": "Fire and Water",
+      "scene_number": 3,
+      "title": "The Black Arrow",
+      "word_count": 866
+    },
+    {
+      "id": "ch14_sc04",
+      "chapter": "Fire and Water",
+      "scene_number": 4,
+      "title": "Smaug is Killed",
+      "word_count": 883
+    },
+    {
+      "id": "ch15_sc01",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 1,
+      "title": "News of Smaug's Death",
+      "word_count": 565
+    },
+    {
+      "id": "ch15_sc02",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 2,
+      "title": "Roac the Raven",
+      "word_count": 827
+    },
+    {
+      "id": "ch15_sc03",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 3,
+      "title": "Thorin's Pride",
+      "word_count": 303
+    },
+    {
+      "id": "ch15_sc04",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 4,
+      "title": "Armies Gather",
+      "word_count": 462
+    },
+    {
+      "id": "ch15_sc05",
+      "chapter": "The Gathering of the Clouds",
+      "scene_number": 5,
+      "title": "The Siege Begins",
+      "word_count": 1162
+    },
+    {
+      "id": "ch16_sc01",
+      "chapter": "A Thief in the Night",
+      "scene_number": 1,
+      "title": "Bilbo's Burden",
+      "word_count": 535
+    },
+    {
+      "id": "ch16_sc02",
+      "chapter": "A Thief in the Night",
+      "scene_number": 2,
+      "title": "Taking the Arkenstone",
+      "word_count": 248
+    },
+    {
+      "id": "ch16_sc03",
+      "chapter": "A Thief in the Night",
+      "scene_number": 3,
+      "title": "Parley with Bard",
+      "word_count": 536
+    },
+    {
+      "id": "ch16_sc04",
+      "chapter": "A Thief in the Night",
+      "scene_number": 4,
+      "title": "Dain Arrives",
+      "word_count": 821
+    },
+    {
+      "id": "ch17_sc01",
+      "chapter": "The Clouds Burst",
+      "scene_number": 1,
+      "title": "Battle Joined",
+      "word_count": 733
+    },
+    {
+      "id": "ch17_sc02",
+      "chapter": "The Clouds Burst",
+      "scene_number": 2,
+      "title": "The Eagles Come",
+      "word_count": 516
+    },
+    {
+      "id": "ch17_sc03",
+      "chapter": "The Clouds Burst",
+      "scene_number": 3,
+      "title": "Beorn Arrives",
+      "word_count": 482
+    },
+    {
+      "id": "ch17_sc04",
+      "chapter": "The Clouds Burst",
+      "scene_number": 4,
+      "title": "Victory",
+      "word_count": 753
+    },
+    {
+      "id": "ch17_sc05",
+      "chapter": "The Clouds Burst",
+      "scene_number": 5,
+      "title": "Thorin's Death",
+      "word_count": 724
+    },
+    {
+      "id": "ch17_sc06",
+      "chapter": "The Clouds Burst",
+      "scene_number": 6,
+      "title": "Bilbo's Farewell",
+      "word_count": 673
+    },
+    {
+      "id": "ch18_sc01",
+      "chapter": "The Return Journey",
+      "scene_number": 1,
+      "title": "Dain Becomes King",
+      "word_count": 390
+    },
+    {
+      "id": "ch18_sc02",
+      "chapter": "The Return Journey",
+      "scene_number": 2,
+      "title": "Leaving Erebor",
+      "word_count": 610
+    },
+    {
+      "id": "ch18_sc03",
+      "chapter": "The Return Journey",
+      "scene_number": 3,
+      "title": "Staying with Beorn",
+      "word_count": 417
+    },
+    {
+      "id": "ch18_sc04",
+      "chapter": "The Return Journey",
+      "scene_number": 4,
+      "title": "Rivendell Again",
+      "word_count": 692
+    },
+    {
+      "id": "ch18_sc05",
+      "chapter": "The Return Journey",
+      "scene_number": 5,
+      "title": "Homeward Bound",
+      "word_count": 686
+    },
+    {
+      "id": "ch19_sc01",
+      "chapter": "The Last Stage",
+      "scene_number": 1,
+      "title": "The Road Home",
+      "word_count": 631
+    },
+    {
+      "id": "ch19_sc02",
+      "chapter": "The Last Stage",
+      "scene_number": 2,
+      "title": "The Auction",
+      "word_count": 937
+    },
+    {
+      "id": "ch19_sc03",
+      "chapter": "The Last Stage",
+      "scene_number": 3,
+      "title": "Home at Last",
+      "word_count": 908
+    }
+  ]
+}

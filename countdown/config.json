@@ -1,0 +1,57 @@
+{
+  "start_date": "2026-04-26T11:00:00",
+  "timezone": "local",
+  "title": "The Hobbit: An Unexpected Journey",
+  "subtitle": "Until The Unexpected Party",
+  "twitch": {
+    "enabled": true,
+    "url": "rtmp://live.twitch.tv/app",
+    "stream_key": "${TWITCH_STREAM_KEY}"
+  },
+  "output": {
+    "resolution": "1920x1080",
+    "fps": 30,
+    "bitrate": "4500k",
+    "maxrate": "4500k",
+    "bufsize": "9000k",
+    "preset": "ultrafast",
+    "tune": "stillimage"
+  },
+  "assets": {
+    "background": "countdown/assets/background.png",
+    "audio": "countdown/assets/shire_ambient.mp3",
+    "font": "Cinzel"
+  },
+  "quotes": [
+    "In a hole in the ground there lived a hobbit...",
+    "There is nothing like looking, if you want to find something.",
+    "The world is not in your books and maps. It's out there.",
+    "There are no safe paths in this part of the world.",
+    "May the hair on your toes never fall out!",
+    "Where there's life there's hope, and need of vittles.",
+    "It does not do to leave a live dragon out of your calculations.",
+    "If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.",
+    "The road goes ever on and on...",
+    "I think I'm quite ready for another adventure.",
+    "He charged the ranks of the goblins of Mount Gram in the Battle of the Green Fields, and knocked their king Golfibul's head clean off with a wooden club.",
+    "A box without hinges, key, or lid, yet golden treasure inside is hid.",
+    "Never laugh at live dragons, Bilbo you fool!",
+    "What has roots as nobody sees, is taller than trees...",
+    "Alive without breath, as cold as death; never thirsty, ever drinking, all in mail never clinking.",
+    "A distant light kindled in the east, and the darkness fled from the sky.",
+    "So comes snow after fire, and even dragons have their ending!"
+  ],
+  "quote_rotation_minutes": 60,
+  "progress_bar": {
+    "width": 40,
+    "filled_char": "▓",
+    "empty_char": "░"
+  },
+  "colors": {
+    "countdown": "#d4af37",
+    "subtitle": "#a09070",
+    "progress": "#8b7355",
+    "quote": "#e0d0b0",
+    "shadow": "#1a1510"
+  }
+}

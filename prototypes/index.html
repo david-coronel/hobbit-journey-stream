@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hobbit Stream — Layout Prototypes</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: #0f0f0f;
+    color: #e0d0b0;
+    padding: 40px;
+}
+h1 {
+    color: #d4af37;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.subtitle {
+    color: #8b7355;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+.card {
+    background: #1a1712;
+    border: 1px solid #3a3530;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #5a5045;
+}
+.card-header {
+    padding: 18px 20px;
+    background: #16130f;
+    border-bottom: 1px solid #2a2520;
+}
+.card-header h2 {
+    font-size: 18px;
+    color: #d4af37;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+.card-header p {
+    font-size: 13px;
+    color: #a09070;
+}
+.preview {
+    aspect-ratio: 16/9;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+.preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.actions {
+    padding: 14px 20px;
+    display: flex; gap: 10px;
+}
+.btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #e0d0b0;
+    background: #2a2520;
+    border: 1px solid #3a3530;
+    transition: all 0.15s;
+}
+.btn:hover {
+    background: #3a3530;
+    border-color: #5a5045;
+}
+.btn-primary {
+    background: rgba(212,175,55,0.12);
+    border-color: #d4af37;
+    color: #d4af37;
+}
+.btn-primary:hover {
+    background: rgba(212,175,55,0.22);
+}
+.elements {
+    padding: 14px 20px;
+    border-top: 1px solid #2a2520;
+    font-size: 12px;
+    color: #8b7355;
+    line-height: 1.6;
+}
+.elements strong {
+    color: #a09070;
+}
+</style>
+</head>
+<body>
+<h1>🎬 The Hobbit Stream — Layout Prototypes</h1>
+<p class="subtitle">Tres arquetipos de pantalla principal. Todos incluyen los 12 elementos candidatos.</p>
+
+<div class="grid">
+    <div class="card">
+        <div class="card-header">
+            <h2>A. Cinematic</h2>
+            <p>Texto centrado sobre ilustración a pantalla completa. Elementos secundarios en cajón inferior.</p>
+        </div>
+        <div class="preview">
+            <iframe src="layout_cinematic.html" loading="lazy"></iframe>
+        </div>
+        <div class="actions">
+            <a class="btn btn-primary" href="layout_cinematic.html" target="_blank">Abrir en pestaña</a>
+        </div>
+        <div class="elements">
+            <strong>Elementos visibles:</strong> Indicador canon, capítulo, fecha, locación, imagen de fondo, texto centrado, personajes, estadísticas, countdown al próximo evento, mapa miniatura, splits scroll horizontal, timeline.
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>B. Speedrun HUD</h2>
+            <p>Información perimetral constante. Splits a la izquierda, texto como subtítulos en la parte inferior.</p>
+        </div>
+        <div class="preview">
+            <iframe src="layout_speedrun.html" loading="lazy"></iframe>
+        </div>
+        <div class="actions">
+            <a class="btn btn-primary" href="layout_speedrun.html" target="_blank">Abrir en pestaña</a>
+        </div>
+        <div class="elements">
+            <strong>Elementos visibles:</strong> Indicador canon, capítulo, fecha, locación, imagen de fondo, subtítulos/texto, personajes, estadísticas, countdown al próximo evento, mapa, splits scroll vertical, timeline.
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>C. Libro Iluminado</h2>
+            <p>Pantalla dividida en tres columnas. Texto legible como libro, imágen y mapa a la izquierda, splits y stats a la derecha.</p>
+        </div>
+        <div class="preview">
+            <iframe src="layout_book.html" loading="lazy"></iframe>
+        </div>
+        <div class="actions">
+            <a class="btn btn-primary" href="layout_book.html" target="_blank">Abrir en pestaña</a>
+        </div>
+        <div class="elements">
+            <strong>Elementos visibles:</strong> Indicador canon, capítulo, fecha, locación, imagen, mapa, texto scrollable, personajes, estadísticas, countdown al próximo evento, splits scroll vertical, timeline.
+        </div>
+    </div>
+</div>
+</body>
+</html>

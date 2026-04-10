@@ -1,0 +1,32 @@
+{
+  "count": 3,
+  "objects": {
+    "Arkenstone": {
+      "name": "Arkenstone",
+      "mentions": 19,
+      "contexts": [
+        "From that the talk turned to the great hoard itself and to the things that Thorin and Balin remembered. They wondered if they were still lying there .unharmed in the hall below: the spears that were made for the armies of the great King Bladorthin (long since dead), each had a thrice-forged head and their shafts were inlaid with cunning gold, but they were never delivered or paid for; shields made for warriors long dead; the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels; coats of mail gilded and silvered and impenetrable; the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son in a coat of dwarf-linked rings the like of which had never been made before, for it was wrought of pure silver to the power and strength of triple steel. But fairest of all was the great white gem, which the dwarves had found beneath the roots of the Mountain, the Heart of the Mountain, the Arkenstone of Thrain.",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\"",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\""
+      ]
+    },
+    "the Arkenstone": {
+      "name": "the Arkenstone",
+      "mentions": 17,
+      "contexts": [
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\"",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\"",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\""
+      ]
+    },
+    "the Arkenstone of Thrain": {
+      "name": "the Arkenstone of Thrain",
+      "mentions": 4,
+      "contexts": [
+        "From that the talk turned to the great hoard itself and to the things that Thorin and Balin remembered. They wondered if they were still lying there .unharmed in the hall below: the spears that were made for the armies of the great King Bladorthin (long since dead), each had a thrice-forged head and their shafts were inlaid with cunning gold, but they were never delivered or paid for; shields made for warriors long dead; the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels; coats of mail gilded and silvered and impenetrable; the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son in a coat of dwarf-linked rings the like of which had never been made before, for it was wrought of pure silver to the power and strength of triple steel. But fairest of all was the great white gem, which the dwarves had found beneath the roots of the Mountain, the Heart of the Mountain, the Arkenstone of Thrain.",
+        "Now the days passed slowly and wearily. Many of the dwarves spent their time piling and ordering the treasure; and now Thorin spoke of the Arkenstone of Thrain, and bade them eagerly to look for it in every comer.",
+        "\"This is the Arkenstone of Thrain,\" said Bilbo, \"the Heart of the Mountain; and it is also the heart of Thorin. He values it above a river of gold. I give it to you. It will aid you in your bargaining.\" Then Bilbo, not without a shudder, not without a glance of longing, handed the marvellous stone to Bard, and he held it in his hand, as though dazed."
+      ]
+    }
+  }
+}

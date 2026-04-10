@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hobbit: An Unexpected Journey — Stream</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; font-family: 'Georgia', 'Cinzel', serif; background: #14120f; color: #e8e0d5; }
+
+/* Loading overlay */
+.loading {
+    position: fixed; inset: 0; background: #0f0f0f; z-index: 9999;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.loading.hidden { display: none !important; }
+.spinner {
+    width: 50px; height: 50px; border: 3px solid #2a2520; border-top-color: #d4af37;
+    border-radius: 50%; animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { color: #d4af37; margin-top: 20px; font-size: 16px; }
+
+/* Three-column layout */
+.book-layout {
+    display: grid;
+    grid-template-columns: 22% 1fr 24%;
+    grid-template-rows: 56px 1fr;
+    height: 100vh;
+}
+
+/* Top bar */
+.top-bar {
+    grid-column: 1 / -1;
+    display: flex; align-items: center; justify-content: space-between;
+    background: #1a1712;
+    border-bottom: 1px solid #3a3530;
+    padding: 0 28px;
+}
+.canon-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(212,175,55,0.12); border: 1px solid #d4af37; color: #d4af37;
+    padding: 5px 12px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+}
+.canon-badge.gap { border-color: #5a9a3d; color: #5a9a3d; background: rgba(90,154,61,0.12); }
+.chapter-title {
+    font-size: 16px; color: #d4af37; font-weight: normal; letter-spacing: 1px;
+    max-width: 40vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.meta-right {
+    display: flex; gap: 20px; font-size: 13px; color: #a09070;
+}
+.meta-right span { color: #e8e0d5; }
+
+/* Play/Pause button in top bar */
+.play-btn {
+    background: rgba(212,175,55,0.15); border: 1px solid #d4af37; color: #d4af37;
+    padding: 5px 14px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; display: flex; align-items: center; gap: 6px;
+}
+.play-btn:hover { background: rgba(212,175,55,0.25); }
+
+/* LEFT COLUMN */
+.left-col {
+    background: #1a1712;
+    border-right: 1px solid #2a2520;
+    display: flex; flex-direction: column;
+    overflow-y: auto;
+}
+.image-block {
+    height: 180px; background: #0f0f0f; position: relative;
+    background-size: cover; background-position: center;
+}
+.image-block.has-image { border-bottom: 1px solid #2a2520; }
+.image-placeholder {
+    height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #5a5045; font-size: 12px; gap: 8px;
+}
+.image-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+    padding: 10px 14px; font-size: 11px; color: #8b7355; text-transform: uppercase; letter-spacing: 1px;
+}
+.map-block {
+    padding: 16px; border-bottom: 1px solid #2a2520;
+}
+.map-header {
+    font-size: 11px; color: #8b7355; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;
+}
+.map-box {
+    width: 100%; aspect-ratio: 4/3; background: #0f150f; border: 1px solid #3a3530; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.map-box::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 40% 60%, rgba(212,175,55,0.2) 0%, transparent 55%);
+}
+.map-label { position: relative; z-index: 1; text-align: center; font-size: 11px; color: #5a5045; }
+.map-label span { display: block; color: #d4af37; font-size: 14px; margin-top: 4px; }
+
+.characters-block {
+    padding: 16px; border-bottom: 1px solid #2a2520;
+}
+.char-header { font-size: 11px; color: #8b7355; letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+.char-tag {
+    display: inline-block; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #c0b0a0; margin: 3px 2px;
+}
+
+.nextevent-block {
+    padding: 16px;
+}
+.nextevent-header { font-size: 11px; color: #8b7355; letter-spacing: 1px; margin-bottom: 6px; text-transform: uppercase; }
+.nextevent-title { font-size: 13px; color: #d4af37; margin-bottom: 4px; }
+.nextevent-time { font-size: 12px; color: #a09070; }
+
+/* CENTER COLUMN */
+.center-col {
+    background: #16130f;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+.text-scroll {
+    flex: 1; overflow-y: auto; padding: 36px 50px 50px;
+}
+.scene-header {
+    margin-bottom: 24px;
+}
+.scene-label {
+    font-size: 11px; color: #8b7355; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+}
+.scene-title {
+    font-size: 24px; color: #d4af37; font-weight: normal; margin-bottom: 6px;
+}
+.scene-sub {
+    font-size: 14px; color: #a09070; font-style: italic;
+}
+.story-text {
+    font-size: 17px; line-height: 1.72; color: #f0ebe3;
+}
+.story-text p { margin-bottom: 1.1em; }
+
+.beat-container {
+    position: relative; min-height: 120px;
+}
+.typewriter-cursor {
+    display: inline-block; width: 2px; height: 1em; background: #d4af37;
+    margin-left: 3px; animation: blink 1s step-end infinite; vertical-align: text-bottom;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.timeline-footer {
+    padding: 12px 20px; background: #1a1712; border-top: 1px solid #2a2520;
+}
+.timeline-label { font-size: 10px; color: #8b7355; margin-bottom: 6px; display: flex; justify-content: space-between; }
+.timeline-track { height: 6px; background: #2a2520; border-radius: 3px; overflow: hidden; position: relative; }
+.timeline-fill { height: 100%; background: linear-gradient(90deg, #8b6914, #d4af37); width: 0%; transition: width 0.2s linear; }
+.timeline-bar .marker {
+    position: absolute; top: -2px; width: 10px; height: 10px; background: #5a5045; border-radius: 50%;
+    transform: translateX(-50%); cursor: pointer; transition: all 0.2s;
+}
+.timeline-bar .marker.canonical { background: #d4af37; }
+.timeline-bar .marker.generated { background: #5a9a3d; }
+.timeline-bar .marker.current { transform: translateX(-50%) scale(1.4); box-shadow: 0 0 8px #d4af37; }
+/* RIGHT COLUMN */
+.right-col {
+    background: #1a1712;
+    border-left: 1px solid #2a2520;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+.splits-panel {
+    flex: 1; display: flex; flex-direction: column; overflow: hidden;
+}
+.panel-header {
+    padding: 12px 16px; font-size: 11px; color: #8b7355; letter-spacing: 1px; text-transform: uppercase;
+    border-bottom: 1px solid #2a2520; background: #16130f;
+}
+.splits-scroll {
+    flex: 1; overflow-y: auto; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px;
+}
+.split-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 5px 10px; border-radius: 4px; font-size: 12px; color: #a09070;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+}
+.split-item.done { color: #5a9a3d; }
+.split-item.current { background: rgba(212,175,55,0.15); border-color: #d4af37; color: #d4af37; }
+.split-name { display: flex; align-items: center; gap: 6px; }
+.split-time { font-size: 10px; color: #8b7355; }
+
+.stats-panel {
+    padding: 12px 14px; border-top: 1px solid #2a2520; background: #16130f;
+}
+.stat-row { display: flex; justify-content: space-between; font-size: 12px; color: #a09070; margin-bottom: 5px; }
+.stat-row b { color: #d4af37; }
+
+/* Audio indicator */
+.audio-indicator {
+    position: fixed; bottom: 14px; left: 14px;
+    background: rgba(20,20,20,0.9); border: 1px solid #3a3530;
+    padding: 8px 12px; border-radius: 6px; font-size: 11px; color: #a09070;
+    z-index: 100; display: flex; align-items: center; gap: 8px;
+}
+.audio-indicator.playing { border-color: #5a9a3d; color: #5a9a3d; }
+.audio-indicator .dot {
+    width: 7px; height: 7px; background: #5a5045; border-radius: 50%;
+}
+.audio-indicator.playing .dot { background: #5a9a3d; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-thumb { background: #3a3530; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="loading" id="loading"><div class="spinner"></div><div class="loading-text">Loading Middle-earth...</div></div>
+
+<div class="book-layout" id="app" style="opacity:0; transition:opacity .5s;">
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div style="display:flex; align-items:center; gap:14px;">
+            <div class="canon-badge" id="canon-badge"><span id="canon-dot">●</span> <span id="canon-text">Canon</span></div>
+            <button class="play-btn" id="play-btn" onclick="togglePlay()">
+                <span id="play-icon">▶</span> <span id="play-text">PLAY</span>
+            </button>
+        </div>
+        <div class="chapter-title" id="chapter-title">Loading...</div>
+        <div class="meta-right">
+            <div>📅 <span id="meta-date">—</span></div>
+            <div>📍 <span id="meta-location">—</span></div>
+            <div>🌄 <span id="meta-time">—</span></div>
+        </div>
+    </div>
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+        <div class="image-block" id="image-block">
+            <div class="image-placeholder" id="image-placeholder">
+                <span style="font-size:28px; opacity:.5;">🖼️</span>
+                <span>Scene illustration will appear here</span>
+            </div>
+            <div class="image-label">Scene Illustration</div>
+        </div>
+        <div class="map-block">
+            <div class="map-header">Current Location</div>
+            <div class="map-box"><div class="map-label">MAP<br><span id="map-location">—</span></div></div>
+        </div>
+        <div class="characters-block">
+            <div class="char-header">Present</div>
+            <div id="characters"><span class="char-tag">Loading...</span></div>
+        </div>
+        <div class="nextevent-block">
+            <div class="nextevent-header">Next Canon Event</div>
+            <div class="nextevent-title" id="nextevent-title">—</div>
+            <div class="nextevent-time" id="nextevent-time">—</div>
+        </div>
+    </div>
+
+    <!-- CENTER COLUMN -->
+    <div class="center-col">
+        <div class="text-scroll">
+            <div class="scene-header">
+                <div class="scene-label" id="scene-number">SCENE — / —</div>
+                <div class="scene-title" id="scene-title">Loading...</div>
+                <div class="scene-sub" id="scene-sub">—</div>
+            </div>
+            <div class="beat-container" id="beat-container">
+                <div class="story-text" id="story-text"><p>Loading narrative...<span class="typewriter-cursor"></span></p></div>
+            </div>
+        </div>
+        <div class="timeline-footer">
+            <div class="timeline-label"><span>JOURNEY TIMELINE</span><span id="timeline-percent">0%</span></div>
+            <div class="timeline-track" id="timeline-track">
+                <div class="timeline-fill" id="timeline-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+        <div class="splits-panel">
+            <div class="panel-header">Canon Splits</div>
+            <div class="splits-scroll" id="splits-scroll">
+                <div class="split-item"><span class="split-name">Loading...</span></div>
+            </div>
+        </div>
+        <div class="stats-panel">
+            <div class="stat-row">Scenes seen <b id="stat-scenes">—</b></div>
+            <div class="stat-row">Journey day <b id="stat-day">—</b></div>
+            <div class="stat-row">Scene duration <b id="stat-duration">—</b></div>
+            <div class="stat-row">Stream time <b id="stat-stream">—</b></div>
+            <div class="stat-row">Progress <b id="stat-progress">—</b></div>
+            <div class="stat-row">Mode <b id="stat-mode">—</b></div>
+        </div>
+    </div>
+</div>
+
+<audio id="chapter-audio" crossorigin="anonymous"></audio>
+
+<div class="audio-indicator" id="audio-indicator">
+    <span class="dot"></span>
+    <span id="audio-text">Audio ready</span>
+</div>
+
+<script>
+const chColors = {
+    "An Unexpected Party": "#e6b045",
+    "Roast Mutton": "#d97a5e",
+    "A Short Rest": "#7dbf7a",
+    "Over Hill and Under Hill": "#6a9ce6",
+    "Riddles in the Dark": "#9a7ad4",
+    "Out of the Frying-Pan into the Fire": "#e6954a",
+    "Queer Lodgings": "#5ac9a6",
+    "Flies and Spiders": "#4a9a6a",
+    "Barrels Out of Bond": "#5ab8d4",
+    "A Warm Welcome": "#e67a6a",
+    "On the Doorstep": "#7a8ab8",
+    "Inside Information": "#c97a8a",
+    "Not at Home": "#5ad4d4",
+    "Fire and Water": "#e65a5a",
+    "The Gathering of the Clouds": "#8a7ad4",
+    "A Thief in the Night": "#8ac96a",
+    "The Clouds Burst": "#5a6ad4",
+    "The Return Journey": "#c9a66a",
+    "The Last Stage": "#c98a9a"
+};
+
+/* ───────── State ───────── */
+let state = {
+    scenes: [],
+    chapters: [],
+    estimatedDurations: {},
+    totalEstimatedHours: 0,
+    current: null,
+    isPlaying: false,
+    currentChapterNum: null,
+    typing: { active: false, index: 0, timer: null, fullText: '', element: null },
+    streamTimeStart: Date.now(),
+    totalScenesSeen: new Set(),
+    lastBeatIndex: -1,
+    accumulatedSceneProgress: 0
+};
+
+/* ───────── Helpers ───────── */
+const $ = id => document.getElementById(id);
+const fmtTime = ms => {
+    const s = Math.floor(ms / 1000);
+    const m = Math.floor(s / 60);
+    const h = Math.floor(m / 60);
+    return `${h}h ${m % 60}m`;
+};
+const countdownFromMs = ms => {
+    const s = Math.max(0, Math.floor(ms / 1000));
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    const sec = s % 60;
+    return `${h}h ${m}m ${sec}s`;
+};
+
+/* ───────── API ───────── */
+async function api(path, opts) {
+    const res = await fetch(path, opts);
+    if (!res.ok) throw new Error(`${path} ${res.status}`);
+    return res.json();
+}
+
+/* ───────── Load core data ───────── */
+async function init() {
+    try {
+        const [scenes, chapters, estDurations] = await Promise.all([
+            api('/api/scenes'),
+            api('/api/chapters'),
+            api('/api/estimated_durations')
+        ]);
+        state.scenes = scenes;
+        state.chapters = chapters;
+        state.estimatedDurations = estDurations || {};
+        state.totalEstimatedHours = Object.values(state.estimatedDurations)
+            .reduce((sum, d) => sum + (d.estimated_duration_hours || 0), 0);
+        renderSplits();
+        renderTimelineMarkers();
+        await refreshCurrent();
+        $('loading').classList.add('hidden');
+        $('app').style.opacity = '1';
+        setInterval(refreshCurrent, 1000);
+        setInterval(updateStreamTime, 60000);
+    } catch (e) {
+        console.error(e);
+        $('loading').querySelector('.loading-text').textContent = 'Error loading Middle-earth: ' + e.message;
+    }
+}
+
+/* ───────── Refresh current scene ───────── */
+async function refreshCurrent() {
+    try {
+        const data = await api('/api/current');
+        const changedScene = !state.current || state.current.scene_number !== data.scene_number;
+        const changedBeat = !state.current || state.current.current_beat !== data.current_beat;
+        state.current = data;
+        state.isPlaying = data.is_playing;
+
+        const scene = data.scene || {};
+        const sceneIdx = (data.scene_number || 1) - 1;
+        state.totalScenesSeen.add(sceneIdx);
+
+        // Canon / gap badge
+        const isCanon = scene.is_canonical;
+        const badge = $('canon-badge');
+        badge.classList.toggle('gap', !isCanon);
+        $('canon-dot').textContent = isCanon ? '●' : '○';
+        $('canon-text').textContent = isCanon ? 'Canon' : 'Gap';
+
+        // Play button
+        $('play-icon').textContent = data.is_playing ? '⏸' : '▶';
+        $('play-text').textContent = data.is_playing ? 'PAUSE' : 'PLAY';
+
+        // Meta
+        $('meta-date').textContent = scene.date || scene.date_iso || '—';
+        $('meta-location').textContent = scene.location || '—';
+        $('meta-time').textContent = scene.time || '—';
+        $('map-location').textContent = scene.location || '—';
+        const chPrefix = isCanon && scene.chapter_num ? `Ch. ${scene.chapter_num} — ` : '';
+        $('chapter-title').textContent = isCanon ? (chPrefix + (scene.chapter || 'Canon Scene')) : 'Gap Scene';
+
+        // Scene header
+        $('scene-number').textContent = `SCENE ${data.scene_number} / ${data.total_scenes}`;
+        $('scene-title').textContent = scene.title || 'Untitled';
+        $('scene-sub').textContent = isCanon ? (scene.chapter_num ? `Ch. ${scene.chapter_num} — ${scene.chapter}` : (scene.chapter || '')) : (scene.gap_type || 'Generated gap');
+
+        // Characters
+        const chars = scene.characters || [];
+        $('characters').innerHTML = chars.length
+            ? chars.map(c => `<span class="char-tag">${c}</span>`).join('')
+            : '<span class="char-tag" style="opacity:.6">None</span>';
+
+        // Image (if generative media exists)
+        updateImage(data);
+
+        // Chapter audio
+        updateAudio(scene, isCanon, data.is_playing);
+
+        // Splits highlight
+        updateSplits(scene, isCanon);
+
+        // Estimated duration
+        const est = data.estimated_duration_hours !== null ? data : state.estimatedDurations[scene.id];
+        const estHours = est ? est.estimated_duration_hours : null;
+        const estConf = est ? est.confidence || est.estimated_confidence : null;
+        $('stat-duration').textContent = estHours !== null && estHours !== undefined
+            ? `${estHours.toFixed(1)}h${estConf ? ' (' + estConf + ')' : ''}`
+            : '—';
+
+        // Stats
+        $('stat-scenes').textContent = `${state.totalScenesSeen.size} / ${data.total_scenes}`;
+        $('stat-day').textContent = scene.journey_day !== undefined ? `Day ${scene.journey_day}` : '—';
+        $('stat-stream').textContent = fmtTime(Date.now() - state.streamTimeStart);
+        $('stat-mode').textContent = (data.pacing || 'dramatic').toUpperCase();
+
+        // Next event
+        updateNextEvent(sceneIdx);
+
+        // Timeline fill using estimated durations for accurate story-time progress
+        let pct = 0;
+        if (state.totalEstimatedHours > 0 && estHours !== null) {
+            let elapsedHours = 0;
+            for (let i = 0; i < sceneIdx; i++) {
+                const sid = state.scenes[i].id;
+                const d = state.estimatedDurations[sid];
+                elapsedHours += d ? d.estimated_duration_hours : 2;
+            }
+            elapsedHours += estHours * (data.scene_progress || 0);
+            pct = (elapsedHours / state.totalEstimatedHours) * 100;
+        } else {
+            pct = data.total_scenes ? ((sceneIdx + (data.scene_progress || 0)) / data.total_scenes) * 100 : 0;
+        }
+        $('timeline-fill').style.width = `${pct}%`;
+        $('timeline-percent').textContent = `${Math.round(pct)}%`;
+        $('stat-progress').textContent = `${Math.round(pct)}%`;
+        updateTimelineCurrent(sceneIdx);
+
+        // Beat / text typing
+        if (changedScene || changedBeat) {
+            startTyping(data);
+        }
+    } catch (e) {
+        console.error('refresh error', e);
+    }
+}
+
+/* ───────── Typing effect ───────── */
+function startTyping(data) {
+    // Stop previous typing
+    if (state.typing.timer) clearInterval(state.typing.timer);
+
+    const beats = (data.beats && data.beats.beats) || [];
+    const beatIdx = data.current_beat || 0;
+    const beat = beats[beatIdx];
+    const text = beat ? beat.text : (data.narrative && data.narrative.text) || '...';
+
+    // If same text as currently shown, don't restart
+    const container = $('story-text');
+    if (container.dataset.lastText === text && beatIdx === state.lastBeatIndex) return;
+    state.lastBeatIndex = beatIdx;
+    container.dataset.lastText = text;
+
+    state.typing.fullText = text;
+    state.typing.index = 0;
+    state.typing.element = container;
+    container.innerHTML = '<span id="typed"></span><span class="typewriter-cursor"></span>';
+
+    // Word-wrap into paragraphs if needed, but type char-by-char for effect
+    state.typing.timer = setInterval(() => {
+        if (state.typing.index >= state.typing.fullText.length) {
+            clearInterval(state.typing.timer);
+            container.innerHTML = `<p>${escapeHtml(state.typing.fullText)}</p>`;
+            return;
+        }
+        state.typing.index += 2; // speed up slightly (2 chars per tick)
+        const visible = state.typing.fullText.slice(0, state.typing.index);
+        container.querySelector('#typed').innerHTML = formatText(visible);
+        // Auto-scroll if near bottom
+        const scroll = document.querySelector('.text-scroll');
+        if (scroll.scrollHeight - scroll.scrollTop - scroll.clientHeight < 100) {
+            scroll.scrollTop = scroll.scrollHeight;
+        }
+    }, 24);
+}
+
+function formatText(text) {
+    // Simple paragraph split on double newlines
+    const paragraphs = text.split(/\n\n+/).filter(Boolean);
+    if (paragraphs.length === 1) return `<p>${escapeHtml(paragraphs[0])}</p>`;
+    return paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('');
+}
+
+function escapeHtml(str) {
+    return str.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+}
+
+/* ───────── Image handling ───────── */
+function updateImage(data) {
+    const scene = data.scene || {};
+    const block = $('image-block');
+    const placeholder = $('image-placeholder');
+    // If generative system has image, it would be under /media/...
+    // We check narrative or generative status if available
+    // For now, keep placeholder or show scene-based gradient color
+    const locColors = {
+        'Hobbiton': '#2a3f2a', 'Rivendell': '#1a2a3a', 'Misty Mountains': '#2a2a3a',
+        'Lonely Mountain': '#3a2a1a', 'Mirkwood': '#1a3a1a'
+    };
+    const color = locColors[scene.location] || '#1a1a1a';
+    block.style.background = `linear-gradient(135deg, ${color} 0%, #0f0f0f 100%)`;
+    block.style.backgroundSize = 'cover';
+    block.style.backgroundPosition = 'center';
+}
+
+/* ───────── Audio handling ───────── */
+function updateAudio(scene, isCanon, isPlaying) {
+    const audio = $('chapter-audio');
+    const indicator = $('audio-indicator');
+
+    if (!isCanon) {
+        audio.pause();
+        indicator.classList.remove('playing');
+        $('audio-text').textContent = 'Gap — no audio';
+        return;
+    }
+
+    // Find chapter number from title
+    const ch = state.chapters.find(c => c.title === scene.chapter);
+    if (!ch) return;
+
+    const expectedSrc = ch.audio_url;
+    if (audio.src !== window.location.origin + expectedSrc && audio.src !== expectedSrc) {
+        audio.src = expectedSrc;
+        audio.load();
+    }
+
+    if (isPlaying && audio.paused) {
+        audio.play().catch(() => {});
+    } else if (!isPlaying && !audio.paused) {
+        audio.pause();
+    }
+
+    indicator.classList.toggle('playing', !audio.paused);
+    $('audio-text').textContent = audio.paused ? `Ch. ${ch.number} paused` : `Playing Ch. ${ch.number}`;
+}
+
+/* ───────── Splits ───────── */
+function renderSplits() {
+    const container = $('splits-scroll');
+    container.innerHTML = state.chapters.map((ch, idx) => `
+        <div class="split-item" id="split-${ch.number}" data-num="${ch.number}">
+            <span class="split-name"><span class="split-icon">○</span> ${shortTitle(ch.title)}</span>
+            <span class="split-time" id="split-time-${ch.number}"></span>
+        </div>
+    `).join('');
+}
+
+function shortTitle(title) {
+    // Shorten very long chapter titles for display
+    const map = {
+        'An Unexpected Party': 'Party',
+        'Roast Mutton': 'Mutton',
+        'A Short Rest': 'Rest',
+        'Over Hill and Under Hill': 'Hill',
+        'Riddles in the Dark': 'Riddles',
+        'Out of the Frying-Pan into the Fire': 'Frying-Pan',
+        'Queer Lodgings': 'Lodgings',
+        'Flies and Spiders': 'Spiders',
+        'Barrels Out of Bond': 'Barrels',
+        'A Warm Welcome': 'Welcome',
+        'On the Doorstep': 'Doorstep',
+        'Inside Information': 'Information',
+        'Not at Home': 'Not Home',
+        'Fire and Water': 'Fire & Water',
+        'The Gathering of the Clouds': 'Gathering',
+        'A Thief in the Night': 'Thief',
+        'The Clouds Burst': 'Clouds Burst',
+        'The Return Journey': 'Return',
+        'The Last Stage': 'Last Stage'
+    };
+    return map[title] || title;
+}
+
+function updateSplits(scene, isCanon) {
+    const currentCh = isCanon ? state.chapters.find(c => c.title === scene.chapter) : null;
+    state.chapters.forEach(ch => {
+        const el = $(`split-${ch.number}`);
+        if (!el) return;
+        const isDone = currentCh && ch.number < currentCh.number;
+        const isCurrent = currentCh && ch.number === currentCh.number;
+        el.className = 'split-item' + (isDone ? ' done' : '') + (isCurrent ? ' current' : '');
+        el.querySelector('.split-icon').textContent = isDone ? '✓' : (isCurrent ? '▶' : '○');
+    });
+}
+
+/* ───────── Next event ───────── */
+function updateNextEvent(currentIdx) {
+    // Find next canonical scene
+    for (let i = currentIdx + 1; i < state.scenes.length; i++) {
+        if (state.scenes[i].is_canonical) {
+            $('nextevent-title').textContent = state.scenes[i].title || 'Next canon scene';
+            // We don't have real ETA from client, just placeholder
+            $('nextevent-time').textContent = 'Ahead in journey';
+            return;
+        }
+    }
+    $('nextevent-title').textContent = 'Journey complete';
+    $('nextevent-time').textContent = 'The End';
+}
+
+/* ───────── Timeline markers ───────── */
+function renderTimelineMarkers() {
+    const track = $('timeline-track');
+    // keep fill, remove old markers
+    Array.from(track.querySelectorAll('.marker')).forEach(m => m.remove());
+    const total = state.scenes.length;
+    state.scenes.forEach((s, i) => {
+        const m = document.createElement('div');
+        m.className = `marker ${s.is_canonical ? 'canonical' : 'generated'}`;
+        m.style.left = `${(i / (total - 1)) * 100}%`;
+        if (s.is_canonical && s.chapter && chColors[s.chapter]) {
+            m.style.background = chColors[s.chapter];
+        }
+        m.title = s.title;
+        m.onclick = () => gotoScene(i);
+        track.appendChild(m);
+    });
+}
+
+function updateTimelineCurrent(idx) {
+    const markers = $('timeline-track').querySelectorAll('.marker');
+    markers.forEach((m, i) => m.classList.toggle('current', i === idx));
+}
+
+/* ───────── Controls ───────── */
+async function togglePlay() {
+    try {
+        await api('/api/play', { method: 'POST' });
+        await refreshCurrent();
+    } catch (e) { console.error(e); }
+}
+
+async function nextScene() {
+    try {
+        await api('/api/next', { method: 'POST' });
+        await refreshCurrent();
+    } catch (e) { console.error(e); }
+}
+
+async function prevScene() {
+    try {
+        await api('/api/prev', { method: 'POST' });
+        await refreshCurrent();
+    } catch (e) { console.error(e); }
+}
+
+async function gotoScene(index) {
+    try {
+        await api('/api/goto/' + index, { method: 'POST' });
+        await refreshCurrent();
+    } catch (e) { console.error(e); }
+}
+
+/* ───────── Keyboard shortcuts ───────── */
+document.addEventListener('keydown', e => {
+    if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
+    if (e.code === 'ArrowRight') nextScene();
+    if (e.code === 'ArrowLeft') prevScene();
+});
+
+function updateStreamTime() {
+    if (state.current) {
+        $('stat-stream').textContent = fmtTime(Date.now() - state.streamTimeStart);
+    }
+}
+
+/* ───────── Start ───────── */
+init();
+</script>
+</body>
+</html>

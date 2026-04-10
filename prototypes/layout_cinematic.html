@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype A — Cinematic</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; font-family: 'Georgia', serif; background: #0a0a0a; color: #e0d0b0; }
+
+/* Fullscreen background image */
+.bg-image {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2568&auto=format&fit=crop') center/cover no-repeat;
+    filter: blur(8px) brightness(0.35);
+    z-index: 0;
+}
+
+/* Top context bar */
+.top-bar {
+    position: absolute; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    z-index: 10;
+}
+.canon-badge {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(212,175,55,0.15);
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+}
+.canon-badge.gap { border-color: #5a9a3d; color: #5a9a3d; background: rgba(90,154,61,0.15); }
+.meta-line {
+    display: flex; gap: 24px; font-size: 14px; color: #a09070;
+}
+.meta-line span { color: #d4af37; }
+
+/* Central text panel */
+.center-stage {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%);
+    width: 60vw; max-width: 900px;
+    background: rgba(20,20,20,0.72);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 12px;
+    padding: 40px 50px;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+    display: flex; flex-direction: column; gap: 18px;
+}
+.chapter-title {
+    font-size: 12px; letter-spacing: 3px; color: #8b7355; text-transform: uppercase;
+}
+.scene-title {
+    font-size: 28px; color: #d4af37; font-weight: normal;
+}
+.story-text {
+    font-size: 20px; line-height: 1.7; color: #f0e8d8;
+}
+.characters-inline {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px;
+}
+.char-tag {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    padding: 4px 10px; border-radius: 12px; font-size: 13px; color: #c0b0a0;
+}
+
+/* Bottom cinematic drawer — ALL remaining elements */
+.bottom-drawer {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(0deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.85) 60%, transparent 100%);
+    padding: 24px 40px 30px;
+    z-index: 10;
+    display: flex; flex-direction: column; gap: 16px;
+}
+.drawer-row {
+    display: flex; gap: 30px; align-items: flex-start;
+}
+
+/* Timeline */
+.timeline-block { flex: 1; }
+.timeline-label { font-size: 11px; color: #8b7355; letter-spacing: 1px; margin-bottom: 6px; display: flex; justify-content: space-between; }
+.timeline-bar { height: 6px; background: #2a2520; border-radius: 3px; overflow: hidden; }
+.timeline-fill { height: 100%; background: linear-gradient(90deg, #8b6914, #d4af37); width: 34%; }
+
+/* Stats */
+.stats-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 28px;
+    font-size: 13px; color: #a09070; min-width: 240px;
+}
+.stats-grid b { color: #d4af37; display: block; font-size: 15px; margin-top: 2px; }
+
+/* Next event */
+.next-event {
+    min-width: 180px; font-size: 13px; color: #a09070;
+}
+.next-event b { color: #d4af37; font-size: 14px; display: block; margin-bottom: 4px; }
+
+/* Map thumbnail */
+.map-thumb {
+    width: 120px; height: 80px; background: #1a2015; border: 1px solid #3a3530; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center; font-size: 11px; color: #5a5045; overflow: hidden; position: relative;
+}
+.map-thumb::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 60% 40%, rgba(212,175,55,0.25) 0%, transparent 60%);
+}
+.map-label { position: relative; z-index: 1; text-align: center; }
+.map-label span { display: block; color: #d4af37; font-size: 13px; }
+
+/* Splits */
+.splits-block { flex: 1.2; }
+.splits-header { font-size: 11px; color: #8b7355; letter-spacing: 1px; margin-bottom: 8px; }
+.splits-list {
+    display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px;
+}
+.split-item {
+    flex-shrink: 0; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 12px; border-radius: 6px; font-size: 12px; color: #a09070; display: flex; align-items: center; gap: 6px;
+}
+.split-item.done { color: #5a9a3d; border-color: rgba(90,154,61,0.3); }
+.split-item.current { background: rgba(212,175,55,0.15); border-color: #d4af37; color: #d4af37; }
+.split-item .time { font-size: 10px; color: #8b7355; margin-left: 4px; }
+
+/* Scrollbar aesthetics */
+::-webkit-scrollbar { height: 6px; width: 6px; }
+::-webkit-scrollbar-thumb { background: #4a453d; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="bg-image"></div>
+
+<!-- Top bar -->
+<div class="top-bar">
+    <div class="canon-badge" id="canon-badge">
+        <span>●</span> Canon Moment
+    </div>
+    <div class="meta-line">
+        <div>📅 <span id="date">April 28, 2941 T.A.</span></div>
+        <div>📍 <span id="location">Rivendell</span></div>
+        <div>🌄 <span id="time-of-day">Late Morning</span></div>
+    </div>
+</div>
+
+<!-- Central story panel -->
+<div class="center-stage">
+    <div class="chapter-title" id="chapter">Chapter 3 — A Short Rest</div>
+    <div class="scene-title" id="scene-title">Elrond’s Counsel</div>
+    <div class="story-text" id="story-text">
+        The valley of Rivendell opened before them like a secret kept by the mountains. Waterfalls sang in the distance, and the air smelled of pine and old magic. Elrond stood at the threshold of the Last Homely House, his eyes holding the memory of ages.
+    </div>
+    <div class="characters-inline" id="characters">
+        <span class="char-tag">🧙‍♂️ Gandalf</span>
+        <span class="char-tag">🧝 Elrond</span>
+        <span class="char-tag">🧔‍♂️ Thorin</span>
+        <span class="char-tag">🍃 Bilbo</span>
+    </div>
+</div>
+
+<!-- Bottom drawer: ALL remaining elements -->
+<div class="bottom-drawer">
+    <div class="drawer-row">
+        <div class="timeline-block">
+            <div class="timeline-label"><span>JOURNEY TIMELINE</span><span>Scene 23 / 170</span></div>
+            <div class="timeline-bar"><div class="timeline-fill" style="width: 13.5%"></div></div>
+        </div>
+        <div class="stats-grid">
+            <div>Scenes seen <b>23</b></div>
+            <div>Journey day <b>Day 4</b></div>
+            <div>Stream time <b>6h 12m</b></div>
+            <div>Canon / Gap <b>14 / 9</b></div>
+            <div>Words read <b>8,420</b></div>
+            <div>Progress <b>13.5%</b></div>
+        </div>
+        <div class="next-event">
+            <b>NEXT EVENT</b>
+            <div id="next-event-text">Crossing the Misty Mountains</div>
+            <div style="margin-top:4px; color:#d4af37;">in 3h 45m</div>
+        </div>
+        <div class="map-thumb">
+            <div class="map-label">MAP<br><span>Rivendell</span></div>
+        </div>
+    </div>
+    <div class="drawer-row">
+        <div class="splits-block">
+            <div class="splits-header">CANON SPLITS</div>
+            <div class="splits-list" id="splits-list">
+                <div class="split-item done">✓ Party <span class="time">2h 04m</span></div>
+                <div class="split-item done">✓ Mutton <span class="time">1h 33m</span></div>
+                <div class="split-item current">▶ Rest <span class="time">—</span></div>
+                <div class="split-item">Hill</div>
+                <div class="split-item">Riddles</div>
+                <div class="split-item">Frying-Pan</div>
+                <div class="split-item">Lodgings</div>
+                <div class="split-item">Spiders</div>
+                <div class="split-item">Barrels</div>
+                <div class="split-item">Welcome</div>
+                <div class="split-item">Doorstep</div>
+                <div class="split-item">Information</div>
+                <div class="split-item">Not at Home</div>
+                <div class="split-item">Fire and Water</div>
+                <div class="split-item">Gathering</div>
+                <div class="split-item">Thief</div>
+                <div class="split-item">Clouds Burst</div>
+                <div class="split-item">Return</div>
+                <div class="split-item">Last Stage</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const modes = ['canon','gap'];
+let modeIdx = 0;
+setInterval(() => {
+    modeIdx = (modeIdx+1)%2;
+    const badge = document.getElementById('canon-badge');
+    if(modes[modeIdx]==='gap'){
+        badge.classList.add('gap');
+        badge.innerHTML = '<span>○</span> Non-Canon Gap';
+        document.getElementById('scene-title').textContent = 'Preparations in the Valley';
+        document.getElementById('story-text').textContent = 'While the dwarves sharpen their axes, Bilbo wanders the gardens of Rivendell. The elves sing songs of the Elder Days, and the hobbit feels, for the first time, the true weight of the road ahead.';
+    } else {
+        badge.classList.remove('gap');
+        badge.innerHTML = '<span>●</span> Canon Moment';
+        document.getElementById('scene-title').textContent = 'Elrond’s Counsel';
+        document.getElementById('story-text').textContent = 'The valley of Rivendell opened before them like a secret kept by the mountains. Waterfalls sang in the distance, and the air smelled of pine and old magic. Elrond stood at the threshold of the Last Homely House, his eyes holding the memory of ages.';
+    }
+}, 8000);
+</script>
+</body>
+</html>

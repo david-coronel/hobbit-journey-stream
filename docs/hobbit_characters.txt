@@ -1,0 +1,71 @@
+# Characters in The Hobbit
+
+**Total: 49 characters**
+
+| # | Character | Mentions |
+|---|-----------|----------|
+| 1 | **Bilbo** | 643 |
+| 2 | **Thorin** | 268 |
+| 3 | **Gandalf** | 212 |
+| | *Also: Gandalf, The Gandalf* | |
+| 4 | **the Baggins** | 170 |
+| | *Also: the Baggins, a Baggins, Baggins, The Baggins* | |
+| 5 | **Gollum** | 100 |
+| 6 | **Smaug** | 93 |
+| 7 | **Beorn** | 75 |
+| 8 | **Balin** | 73 |
+| 9 | **the Master** | 70 |
+| | *Also: The Master, the Master, Master* | |
+| 10 | **Bombur** | 69 |
+| 11 | **Bard** | 62 |
+| 12 | **Fili** | 58 |
+| 13 | **King** | 48 |
+| | *Also: the King, King, The King* | |
+| 14 | **the Elvenking** | 45 |
+| | *Also: Elvenking, The Elvenking, the Elvenking* | |
+| 15 | **Kili** | 41 |
+| 16 | **the Eagles** | 41 |
+| | *Also: the Eagles, The Eagles, Eagles* | |
+| 17 | **Wargs** | 38 |
+| | *Also: Wargs, the Wargs, The Wargs* | |
+| 18 | **Dori** | 37 |
+| 19 | **the Arkenstone** | 36 |
+| | *Also: the Arkenstone, Arkenstone, The Arkenstone* | |
+| 20 | **Bert** | 33 |
+| 21 | **William** | 31 |
+| 22 | **Dain** | 31 |
+| 23 | **The Lord** | 28 |
+| | *Also: The Lord, Lord, the Lord* | |
+| 24 | **Bofur** | 28 |
+| 25 | **the Great Goblin** | 28 |
+| | *Also: The Great Goblin, the Great Goblin, Great Goblin* | |
+| 26 | **Gloin** | 27 |
+| 27 | **Bifur** | 26 |
+| 28 | **the Goblin** | 26 |
+| | *Also: Goblin, the Goblin* | |
+| 29 | **Oin** | 25 |
+| 30 | **Elrond** | 25 |
+| 31 | **Dwalin** | 23 |
+| 32 | **Tom** | 23 |
+| 33 | **Thror** | 22 |
+| 34 | **Thrain** | 22 |
+| 35 | **Goblins** | 22 |
+| | *Also: Goblins, the Goblins, The Goblins* | |
+| 36 | **Bilbo Baggins** | 19 |
+| 37 | **Nori** | 19 |
+| 38 | **the Dragon** | 19 |
+| | *Also: the Dragon, Dragon* | |
+| 39 | **Elves** | 17 |
+| | *Also: Elves, the Elves* | |
+| 40 | **Ori** | 14 |
+| 41 | **Oakenshield** | 13 |
+| 42 | **Dwarves** | 11 |
+| 43 | **Thorin Oakenshield** | 10 |
+| 44 | **Girion** | 10 |
+| 45 | **the Necromancer** | 8 |
+| | *Also: Necromancer, the Necromancer* | |
+| 46 | **Trolls** | 7 |
+| 47 | **the Bowman** | 4 |
+| | *Also: the Bowman, Bowman* | |
+| 48 | **Galion** | 3 |
+| 49 | **Ponies** | 2 |

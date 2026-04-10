@@ -1,0 +1,49 @@
+# Places in The Hobbit
+
+**Total: 28 places**
+
+| # | Place | Mentions |
+|---|-------|----------|
+| 1 | **the Mountain** | 245 |
+| | *Also: The Mountain, Mountain, the Mountain* | |
+| 2 | **the Lake** | 71 |
+| | *Also: Lake, the Lake* | |
+| 3 | **Dale** | 35 |
+| 4 | **Forest** | 33 |
+| | *Also: The Forest, Forest, the Forest* | |
+| 5 | **the Misty Mountains** | 32 |
+| | *Also: the Misty Mountains, Misty Mountains* | |
+| 6 | **Mirkwood** | 28 |
+| 7 | **River** | 28 |
+| 8 | **the Lonely Mountain** | 26 |
+| | *Also: The Lonely Mountain, the Lonely Mountain, Lonely Mountain* | |
+| 9 | **the Carrock** | 25 |
+| | *Also: the Carrock, Carrock* | |
+| 10 | **the Forest River** | 24 |
+| | *Also: Forest River, the Forest River* | |
+| 11 | **the Running River** | 20 |
+| | *Also: the Running River, Running River* | |
+| 12 | **the Long Lake** | 16 |
+| | *Also: The Long Lake, Long Lake, the Long Lake* | |
+| 13 | **the Front Gate** | 16 |
+| | *Also: Front Gate, the Front Gate* | |
+| 14 | **the Last Homely House** | 10 |
+| | *Also: the Last Homely House, Last Homely House* | |
+| 15 | **Esgaroth** | 10 |
+| 16 | **the Iron Hills** | 10 |
+| | *Also: Iron Hills, the Iron Hills* | |
+| 17 | **Moria** | 7 |
+| 18 | **Ravenhill** | 7 |
+| 19 | **Rivendell** | 4 |
+| 20 | **the Great River** | 4 |
+| | *Also: Great River, the Great River* | |
+| 21 | **the Grey Mountains** | 4 |
+| | *Also: the Grey Mountains, Grey Mountains* | |
+| 22 | **the Desolation** | 4 |
+| | *Also: Desolation, the Desolation* | |
+| 23 | **Bywater** | 3 |
+| 24 | **Erebor** | 2 |
+| 25 | **Keep** | 2 |
+| 26 | **Land** | 2 |
+| 27 | **The Men of Dale** | 2 |
+| 28 | **Hobbiton** | 2 |

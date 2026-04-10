@@ -1,0 +1,619 @@
+{
+  "count": 49,
+  "characters": {
+    "Bilbo": {
+      "name": "Bilbo",
+      "mentions": 643,
+      "contexts": [
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "The mother of our particular hobbit ... what is a hobbit? I suppose hobbits need some description nowadays, since they have become rare and shy of the Big People, as they call us. They are (or were) a little people, about half our height, and smaller than the bearded Dwarves. Hobbits have no beards. There is little or no magic about them, except the ordinary everyday sort which helps them to disappear quietly and quickly when large stupid folk like you and me come blundering along, making a noise like elephants which they can hear a mile off. They are inclined to be at in the stomach; they dress in bright colours (chiefly green and yellow); wear no shoes, because their feet grow natural leathery soles and thick warm brown hair like the stuff on their heads (which is curly); have long clever brown fingers, good-natured faces, and laugh deep fruity laughs (especially after dinner, which they have twice a day when they can get it). Now you know enough to go on with. As I was saying, the mother of this hobbit - of Bilbo Baggins, that is - was the fabulous Belladonna Took, one of the three remarkable daughters of the Old Took, head of the hobbits who lived across The Water, the small river that ran at the foot of The Hill. It was often said (in other families) that long ago one of the Took ancestors must have taken a fairy wife. That was, of course, absurd, but certainly there was still something not entirely hobbit-like about them, - and once in a while members of the Took-clan would go and have adventures. They discreetly disappeared, and the family hushed it up; but the fact remained that the Tooks were not as respectable as the Bagginses, though they were undoubtedly richer. Not that Belladonna Took ever had any adventures after she became Mrs. Bungo Baggins. Bungo, that was Bilbo's father, built the most luxurious hobbit-hole for her (and partly with her money) that was to be found either under The Hill or over The Hill or across The Water, and there they remained to the end of their days. Still it is probable that Bilbo, her only son, although he looked and behaved exactly like a second edition of his solid and comfortable father, got something a bit queer in his makeup from the Took side, something that only waited for a chance to come out. The chance never arrived, until Bilbo Baggins was grown up, being about fifty years old or so, and living in the beautiful hobbit-hole built by his father, which I have just described for you, until he had in fact apparently settled down immovably."
+      ],
+      "forms": [
+        "Bilbo"
+      ]
+    },
+    "Thorin": {
+      "name": "Thorin",
+      "mentions": 268,
+      "contexts": [
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning.",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning."
+      ],
+      "forms": [
+        "Thorin"
+      ]
+    },
+    "Gandalf": {
+      "name": "Gandalf",
+      "mentions": 212,
+      "contexts": [
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "By some curious chance one morning long ago in the quiet of the world, when there was less noise and more green, and the hobbits were still numerous and prosperous, and Bilbo Baggins was standing at his door after breakfast smoking an enormous long wooden pipe that reached nearly down to his woolly toes (neatly brushed) - Gandalf came by. Gandalf! If you had heard only a quarter of what I have heard about him, and I have only heard very little of all there is to hear, you would be prepared for any sort I of remarkable tale. Tales and adventures sprouted up all over the place wherever he went, in the most extraordinary fashion. He had not been down that way under The Hill for ages and ages, not since his friend the Old Took died, in fact, and the hobbits had almost forgotten what he looked like. He had been away over The Hill and across The Water on business of his own since they were all small hobbit-boys and hobbit-girls.",
+        "By some curious chance one morning long ago in the quiet of the world, when there was less noise and more green, and the hobbits were still numerous and prosperous, and Bilbo Baggins was standing at his door after breakfast smoking an enormous long wooden pipe that reached nearly down to his woolly toes (neatly brushed) - Gandalf came by. Gandalf! If you had heard only a quarter of what I have heard about him, and I have only heard very little of all there is to hear, you would be prepared for any sort I of remarkable tale. Tales and adventures sprouted up all over the place wherever he went, in the most extraordinary fashion. He had not been down that way under The Hill for ages and ages, not since his friend the Old Took died, in fact, and the hobbits had almost forgotten what he looked like. He had been away over The Hill and across The Water on business of his own since they were all small hobbit-boys and hobbit-girls."
+      ],
+      "forms": [
+        "Gandalf",
+        "The Gandalf"
+      ]
+    },
+    "the Baggins": {
+      "name": "the Baggins",
+      "mentions": 170,
+      "contexts": [
+        "This hobbit was a very well-to-do hobbit, and his name was Baggins. The Bagginses had lived in the neighbourhood of The Hill for time out of mind, and people considered them very respectable, not only because most of them were rich, but also because they never had any adventures or did anything unexpected: you could tell what a Baggins would say on any question without the bother of asking him. This is a story of how a Baggins had an adventure, found himself doing and saying things altogether unexpected. He may have lost the neighbours' respect, but he gained-well, you will see whether he gained anything in the end.",
+        "This hobbit was a very well-to-do hobbit, and his name was Baggins. The Bagginses had lived in the neighbourhood of The Hill for time out of mind, and people considered them very respectable, not only because most of them were rich, but also because they never had any adventures or did anything unexpected: you could tell what a Baggins would say on any question without the bother of asking him. This is a story of how a Baggins had an adventure, found himself doing and saying things altogether unexpected. He may have lost the neighbours' respect, but he gained-well, you will see whether he gained anything in the end.",
+        "This hobbit was a very well-to-do hobbit, and his name was Baggins. The Bagginses had lived in the neighbourhood of The Hill for time out of mind, and people considered them very respectable, not only because most of them were rich, but also because they never had any adventures or did anything unexpected: you could tell what a Baggins would say on any question without the bother of asking him. This is a story of how a Baggins had an adventure, found himself doing and saying things altogether unexpected. He may have lost the neighbours' respect, but he gained-well, you will see whether he gained anything in the end."
+      ],
+      "forms": [
+        "the Baggins",
+        "a Baggins",
+        "Baggins",
+        "The Baggins"
+      ]
+    },
+    "Gollum": {
+      "name": "Gollum",
+      "mentions": 100,
+      "contexts": [
+        "Then they wanted to know all about his adventures after they had lost him, and he sat down and told them everything-except about the finding of the ring (\"not just now\" he thought). They were particularly interested in the riddle-competition, and shuddered most appreciatively at his description of Gollum.",
+        "The dwarves looked at him with quite a new respect, when he talked about dodging guards, jumping over Gollum, and squeezing through, as if it was not very difficult or very alarming.",
+        "Deep down here by the dark water lived old Gollum, a small slimy creature. I don't know where he came from, nor who or what he was. He was Gollum - as dark as darkness, except for two big round pale eyes in his thin face. He had a little boat, and he rowed about quite quietly on the lake; for lake it was, wide and deep and deadly cold. He paddled it with large feet dangling over the side, but never a ripple did he make. Not he. He was looking out of his pale lamp-like eyes for blind fish, which he grabbed with his long fingers as quick as thinking. He liked meat too. Goblin he thought good, when he could get it; but he took care they never found him out. He just throttled them from behind, if they ever came down alone anywhere near the edge of the water, while he was prowling about. They very seldom did, for they had a feeling that something unpleasant was lurking down there, down at the very roots of the mountain. They had come on the lake, when they were tunnelling down long ago, and they found they could go no further; so there their road ended in that direction, and there was no reason to go that way-unless the Great Goblin sent them. Sometimes he took a fancy for fish from the lake, and sometimes neither goblin nor fish came back."
+      ],
+      "forms": [
+        "Gollum"
+      ]
+    },
+    "Smaug": {
+      "name": "Smaug",
+      "mentions": 93,
+      "contexts": [
+        "\"It may have been secret once,\" said Thorin, \"but how do we know that it is secret any longer? Old Smaug had lived there long enough now to find out anything there is to know about those caves.\"",
+        "\"Because it is too small. 'Five feet high the door and three may walk abreast' say the runes, but Smaug could not creep into a hole that size, not even when he was a young dragon, certainly not after devouring so many of the dwarves and men of Dale.\"",
+        "\"Undoubtedly that was what brought the dragon. Dragons steal gold and jewels, you know, from men and elves and dwarves, wherever they can find them; and they guard their plunder as long as they live (which is practically forever, unless they are killed), and never enjoy a brass ring of it. Indeed they hardly know a good bit of work from a bad, though they usually have a good notion of the current market value; and they can't make a thing for themselves, not even mend a little loose scale of their armour. There were lots of dragons in the North in those days, and gold was probably getting scarce up there, with the dwarves flying south or getting killed, and all the general waste and destruction that dragons make going from bad to worse. There was a most specially greedy, strong and wicked worm called Smaug. One day he flew up into the air and came south. The first we heard of it was a noise like a hurricane coming from the North, and the pine-trees on the Mountain creaking and cracking in the wind. Some of the dwarves who happened to be outside (I was one luckily -a fine adventurous lad in those days, always wandering about, and it saved my life that day)-well, from a good way off we saw the dragon settle on our mountain in a spout of flame. Then he came down the slopes and when he reached the woods they all went up in fire. By that time all the bells were ringing in Dale and the warriors were arming. The dwarves rushed out of their great gate; but there was the dragon waiting for them. None escaped that way. The river rushed up in steam and a fog fell on Dale, and in the fog the dragon came on them and destroyed most of the warriors-the usual unhappy story, it was only too common in those days. Then he went back and crept in through the Front Gate and routed out all the halls, and lanes, and tunnels, alleys, cellars, mansions and passages. After that there were no dwarves left alive inside, and he took all their wealth for himself. Probably, for that is the dragons' way, he has piled it all up in a great heap far inside, and sleeps on it for a bed. Later he used to crawl out of the great gate and come by night to Dale, and carry away people, especially maidens, to eat, until Dale was ruined, and all the people dead or gone. What goes on there now I don't know for certain, but I don't suppose anyone lives nearer to the Mountain than the far edge of the Long Lake now-a-days."
+      ],
+      "forms": [
+        "Smaug"
+      ]
+    },
+    "Beorn": {
+      "name": "Beorn",
+      "mentions": 75,
+      "contexts": [
+        "\"Yes it certainly is! No I could not! And I was explaining very carefully,\" answered the wizard crossly. \"If you must know more, his name is Beorn. He is very strong, and he is a skin-changer.\"",
+        "\"Yes; not a bad fellow as wizards go, I believe. I used to see him now and again,\" said Beorn. \"Well, now I know who you are, or who you say you are. What do you want?\"",
+        "\"Or two? I can only see one, and a little one at that,\" said Beorn."
+      ],
+      "forms": [
+        "Beorn"
+      ]
+    },
+    "Balin": {
+      "name": "Balin",
+      "mentions": 73,
+      "contexts": [
+        "\"A little beer would suit me better, if it is all the same to you, my good sir,\" said Balin with the white beard. \"But I don't mind some cake-seed-cake, if you have any.\"",
+        "When he got back Balin and Dwalin were talking at the table like old friends (as a matter of fact they were brothers). Bilbo plumped down the beer and the cake in front of them, when loud came a ring at the bell again, and then another ring.",
+        "\"Dwalin and Balin here already, I see,\" said Kili. \"Let us join the throng!\""
+      ],
+      "forms": [
+        "Balin"
+      ]
+    },
+    "the Master": {
+      "name": "the Master",
+      "mentions": 70,
+      "contexts": [
+        "\"My birthday-present! It came to me on my birthday, my precious,\" So he had always said to himself. But who knows how Gollum came by that present, ages ago in the old days when such rings were still at large in the world? Perhaps even the Master who ruled them could not have said. Gollum used to wear it at first, till it tired him; and then he kept it in a pouch next his skin, till it galled him; and now usually he hid it in a hole in the rock on his island, and was always going back to look at it. And still sometimes he put it on, when he could not bear to be parted from it any longer, or when he was very, very, hungry, and tired of fish. Then he would creep along dark passages looking for stray goblins. He might even venture into places where the torches were lit and made his eyes blink and smart; for he would be safe. Oh yes, quite safe. No one would see him, no one would notice him, till he had his fingers on their throat. Only a few hours ago he had worn it, and caught a small goblin-imp. How it squeaked! He still had a bone or two left to gnaw, but he wanted something softer.",
+        "\"Thorin son of Thrain son of Thror King under the Mountain!\" said the dwarf in a loud voice, and he looked it, in spite of his torn clothes and draggled hood. The gold gleamed on his neck and waist: his eyes were dark and deep. \"I have come back. I wish to see the Master of your town!\"",
+        "\"I am Thorin son of Thrain son of Thror King under the Mountain! I return!\" cried Thorin in a loud voice from the door, before the captain could say anything. All leaped to their feet. The Master of the town sprang from his great chair. But none rose in greater surprise than the raft-men of the elves who were sitting at the lower end of the hall. Pressing forward before the Master's table they cried:"
+      ],
+      "forms": [
+        "The Master",
+        "the Master",
+        "Master"
+      ]
+    },
+    "Bombur": {
+      "name": "Bombur",
+      "mentions": 69,
+      "contexts": [
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning."
+      ],
+      "forms": [
+        "Bombur"
+      ]
+    },
+    "Bard": {
+      "name": "Bard",
+      "mentions": 62,
+      "contexts": [
+        "Fire leaped from thatched roofs and wooden beam-ends as he hurtled down and past and round again, though all had been drenched with water before he came. Once more water was flung by a hundred hands wherever a spark appeared. Back swirled the dragon. A sweep of his tail and the roof of the Great House crumbled and smashed down. Flames unquenchable sprang high into the night. Another swoop and another, and another house and then another sprang afire and fell; and still no arrow hindered Smaug or hurt him more than a fly from the marshes. Already men were jumping into the water on every side. Women and children were being huddled into laden boats in the market-pool. Weapons were flung down. There was mourning and weeping, where but a little time ago the old songs of mirth to come had been sung about the dwarves. Now men cursed their names. The Master himself was turning to his great gilded boat, hoping to row away in the confusion and save himself. Soon all the town would be deserted and burned down to the surface of the lake. That was the dragon's hope. They could all get into boats for all he cared. There he could have fine sport hunting them, or they could stop till they starved. Let them try to get to land and he would be ready. Soon he would set all the shoreland woods ablaze and wither every field and pasture. Just now he was enjoying the sport of town-baiting more than he had enjoyed anything for years. But there was still a company of archers that held their ground among the burning houses. Their captain was Bard, grim-voiced and grim-faced, whose friends had accused him of prophesying floods and poisoned fish, though they knew his worth and courage. He was a descendant in long line of Girion, Lord of Dale, whose wife and child had escaped down the Running River from the ruin long ago. Now he shot with a great yew bow, till all his arrows but one were spent. The flames were near him. His companions were leaving him. He bent his bow for the last time. Suddenly out of the dark something fluttered to his shoulder. He started-but it was only an old thrush. Unafraid it perched by his ear and it brought him news. Marvelling he found he could understand its tongue, for he was of the race of Dale.",
+        "\"Wait! Wait!\" it said to him. \"The moon is rising. Look for the hollow of the left breast as he flies and turns above you!\" And while Bard paused in wonder it told him of tidings up in the Mountain and of all that it had heard. Then Bard drew his bow-string to his ear. The dragon was circling back, flying low, and as he came the moon rose above the eastern shore and silvered his great wings.",
+        "\"Wait! Wait!\" it said to him. \"The moon is rising. Look for the hollow of the left breast as he flies and turns above you!\" And while Bard paused in wonder it told him of tidings up in the Mountain and of all that it had heard. Then Bard drew his bow-string to his ear. The dragon was circling back, flying low, and as he came the moon rose above the eastern shore and silvered his great wings."
+      ],
+      "forms": [
+        "Bard"
+      ]
+    },
+    "Fili": {
+      "name": "Fili",
+      "mentions": 58,
+      "contexts": [
+        "\"What can I do for you, my dwarves?\" he said. \"Kili at your service!\" said the one. \"And Fili!\" added the other; and they both swept off their blue hoods and bowed.",
+        "\"Throng!\" thought Mr. Baggins. \"I don't like the sound of that. I really must sit down for a minute and collect my wits, and have a drink.\" He had only just had a sip-in the corner, while the four dwarves sat around the table, and talked about mines and gold and troubles with the goblins, and the depredations of dragons, and lots of other things which he did not understand, and did not want to, for they sounded much too adventurous-when, ding-dong-a-ling-' dang, his bell rang again, as if some naughty little hobbit-boy was trying to pull the handle off. \"Someone at the door!\" he said, blinking. \"Some four, I should say by the sound,\" said Fili. \"Be-sides, we saw them coming along behind us in the distance.\"",
+        "\"Confusticate and bebother these dwarves!\" he said aloud. \"Why don't they come and lend a hand?\" Lo and behold! there stood Balin and Dwalin at the door of the kitchen, and Fili and Kili behind them, and before he could say knife they had whisked the trays and a couple of small tables into the parlour and set out everything afresh."
+      ],
+      "forms": [
+        "Fili"
+      ]
+    },
+    "King": {
+      "name": "King",
+      "mentions": 48,
+      "contexts": [
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North.",
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North.",
+        "\"O very well,\" said Thorin. \"Long ago in my grandfather Thror's time our family was driven out of the far North, and came back with all their wealth and their tools to this Mountain on the map. It had been discovered by my far ancestor, Thrain the Old, but now they mined and they tunnelled and they made huger halls and greater workshops -and in addition I believe they found a good deal of gold and a great many jewels too. Anyway they grew immensely rich and famous, and my grandfather was King under the Mountain again and treated with great reverence by the mortal men, who lived to the South, and were gradually spreading up the Running River as far as the valley overshadowed by the Mountain. They built the merry town of Dale there in those days. Kings used to send for our smiths, and reward even the least skilful most richly. Fathers would beg us to take their sons as apprentices, and pay us handsomely, especially in food-supplies, which we never bothered to grow or find for ourselves. Altogether those were good days for us, and the poorest of us had money to spend and to lend, and leisure to make beautiful things just for the. fun of it, not to speak of the most marvellous and magical toys, the like of which is not to be found in the world now-a-days. So my grandfather's halls became full of armour and jewels and carvings and cups, and the toy-market of Dale was the wonder of the North."
+      ],
+      "forms": [
+        "the King",
+        "King",
+        "The King"
+      ]
+    },
+    "the Elvenking": {
+      "name": "the Elvenking",
+      "mentions": 45,
+      "contexts": [
+        "Inside the passages were lit with red torch-light, and the elf-guards sang as they marched along the twisting, crossing, and echoing paths. These were not like those of the goblin-cities: they were smaller, less deep underground, and filled with a cleaner air. In a great hall with pillars hewn out of the living stone sat the Elvenking on a chair of carven wood. On his head was a crown of berries and red leaves, for the autumn was come again. In the spring he wore a crown of woodland flowers. In his hand he held a carven staff of oak.",
+        "The Elvenking had received news from his own messengers and from the birds that loved his folk, and already knew much of what had happened. Very great indeed was the commotion among all things with wings that dwelt on the borders of the Desolation of the Dragon. The air was filled with circling flocks, and their swift-flying messengers flew here and there across the sky. Above the borders of the Forest there was whistling, crying and piping. Far over Mirkwood tidings spread: \"Smaug is dead!\" Leaves rustled and startled ears were lifted. Even before the Elvenking rode forth the news had passed west right to the pinewoods of the Misty Mountains; Beorn had heard it in his wooden house, and the goblins were at council in their caves.",
+        "\"That will be the last we shall hear of Thorin Oakenshield, I fear,\" said the king. \"He would have done better to have remained my guest. It is an ill wind, all the same,\" he added, \"that blows no one any good.\" For he too had not forgotten the legend of the wealth of Thror. So it was that Bard's messengers found him now marching with many spearmen and bowmen; and crows were gathered thick, above him, for they thought that war was awakening again, such as had not been in those parts for a long age. But the king, when he received the prayers of Bard, had pity, for he was the lord of a good and kindly people; so turning his march, which had at first been direct towards the Mountain, he hastened now down the river to the Long Lake. He had not boats or rafts enough for his host, and they were forced to go the slower way by foot; but great store of goods he sent ahead by water. Still elves are light-footed, and though they were not in these days much used to the marches and the treacherous lands between the Forest and the Lake, their going was swift. Only five days after the death of the dragon they came upon the shores and looked on the ruins of the town. Their welcome was good, as may be expected, and the men and their Master were ready to make any bargain for the future in return for the Elvenking's aid."
+      ],
+      "forms": [
+        "Elvenking",
+        "The Elvenking",
+        "the Elvenking"
+      ]
+    },
+    "Kili": {
+      "name": "Kili",
+      "mentions": 41,
+      "contexts": [
+        "\"Dwalin and Balin here already, I see,\" said Kili. \"Let us join the throng!\"",
+        "\"Confusticate and bebother these dwarves!\" he said aloud. \"Why don't they come and lend a hand?\" Lo and behold! there stood Balin and Dwalin at the door of the kitchen, and Fili and Kili behind them, and before he could say knife they had whisked the trays and a couple of small tables into the parlour and set out everything afresh.",
+        "Kili and Fili rushed for their bags and brought back little fiddles; Dori, Nori, and Ori brought out flutes from somewhere inside their coats; Bombur produced a drum from the hall; Bifur and Bofur went out too, and came back with clarinets that they had left among the walking-sticks Dwalin and Balin said: \"Excuse me, I left mine in the porch!\" \"Just bring mine in with you,\" said Thorin. They came back with viols as big as themselves, and with Thorin's harp wrapped in a green cloth. It was a beautiful gold-en harp, and when Thorin struck it the music began all at once, so sudden and sweet that Bilbo forgot everything else, and was swept away into dark lands under strange moons, far over The Water and very far from his hobbit-hole under The Hill."
+      ],
+      "forms": [
+        "Kili"
+      ]
+    },
+    "the Eagles": {
+      "name": "the Eagles",
+      "mentions": 41,
+      "contexts": [
+        "\"What's all this uproar in the forest tonight?\" said the Lord of the Eagles. He was sitting, black in the moonlight, on the top of a lonely pinnacle of rock at the eastern edge of the mountains. \"I hear wolves' voices! Are the goblins at mischief in the woods?\"",
+        "Tonight the Lord of the Eagles was filled with curiosity to know what was afoot; so he summoned many other eagles to him, and they flew away from the mountains, and slowly circling ever round and round they came down, down, down towards the ring of the wolves and the meeting-place of the goblins.",
+        "Just at that moment the Lord of the Eagles swept down from above, seized him in his talons, and was gone."
+      ],
+      "forms": [
+        "the Eagles",
+        "The Eagles",
+        "Eagles"
+      ]
+    },
+    "Wargs": {
+      "name": "Wargs",
+      "mentions": 38,
+      "contexts": [
+        "But even the wild Wargs (for so the evil wolves over the Edge of the Wild were named) cannot climb trees. For a time they were safe. 'Luckily it was warm and not windy. Trees are not very comfortable to sit in for long at any time; but in the cold and the wind, with wolves all round below waiting for you, they can be perfectly miserable places.",
+        "This glade in the ring of trees was evidently a meeting-place of the wolves. More and more kept coming in. They left guards at the foot of the tree in which Dori and Bilbo were, and then went sniffling about till they had smelt out every tree that had anyone in it. These they guarded too, while all the rest (hundreds and hundreds it seemed) went and sat in a great circle in the glade; and in the middle of the circle was a great grey wolf. He spoke to them in the dreadful language of the Wargs. Gandalf understood it. Bilbo did not, but it sounded terrible to him, and as if all their talk was about cruel and wicked things, as it was. Every now and then all the Wargs in the circle would answer their grey chief all together, and their dreadful clamour almost made the hobbit fall out of his pine-tree.",
+        "This glade in the ring of trees was evidently a meeting-place of the wolves. More and more kept coming in. They left guards at the foot of the tree in which Dori and Bilbo were, and then went sniffling about till they had smelt out every tree that had anyone in it. These they guarded too, while all the rest (hundreds and hundreds it seemed) went and sat in a great circle in the glade; and in the middle of the circle was a great grey wolf. He spoke to them in the dreadful language of the Wargs. Gandalf understood it. Bilbo did not, but it sounded terrible to him, and as if all their talk was about cruel and wicked things, as it was. Every now and then all the Wargs in the circle would answer their grey chief all together, and their dreadful clamour almost made the hobbit fall out of his pine-tree."
+      ],
+      "forms": [
+        "Wargs",
+        "the Wargs",
+        "The Wargs"
+      ]
+    },
+    "Dori": {
+      "name": "Dori",
+      "mentions": 37,
+      "contexts": [
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "Kili and Fili rushed for their bags and brought back little fiddles; Dori, Nori, and Ori brought out flutes from somewhere inside their coats; Bombur produced a drum from the hall; Bifur and Bofur went out too, and came back with clarinets that they had left among the walking-sticks Dwalin and Balin said: \"Excuse me, I left mine in the porch!\" \"Just bring mine in with you,\" said Thorin. They came back with viols as big as themselves, and with Thorin's harp wrapped in a green cloth. It was a beautiful gold-en harp, and when Thorin struck it the music began all at once, so sudden and sweet that Bilbo forgot everything else, and was swept away into dark lands under strange moons, far over The Water and very far from his hobbit-hole under The Hill."
+      ],
+      "forms": [
+        "Dori"
+      ]
+    },
+    "the Arkenstone": {
+      "name": "the Arkenstone",
+      "mentions": 36,
+      "contexts": [
+        "From that the talk turned to the great hoard itself and to the things that Thorin and Balin remembered. They wondered if they were still lying there .unharmed in the hall below: the spears that were made for the armies of the great King Bladorthin (long since dead), each had a thrice-forged head and their shafts were inlaid with cunning gold, but they were never delivered or paid for; shields made for warriors long dead; the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels; coats of mail gilded and silvered and impenetrable; the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son in a coat of dwarf-linked rings the like of which had never been made before, for it was wrought of pure silver to the power and strength of triple steel. But fairest of all was the great white gem, which the dwarves had found beneath the roots of the Mountain, the Heart of the Mountain, the Arkenstone of Thrain.",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\"",
+        "\"The Arkenstone! The Arkenstone!\" murmured Thorin in the dark, half dreaming with his chin upon his knees. \"It was like a globe with a thousand facets; it shone like silver in the firelight, like water in the sun, like snow under the stars, like rain upon the Moon!\""
+      ],
+      "forms": [
+        "the Arkenstone",
+        "Arkenstone",
+        "The Arkenstone"
+      ]
+    },
+    "Bert": {
+      "name": "Bert",
+      "mentions": 33,
+      "contexts": [
+        "William choked. \"Shut yer mouth!\" he said as soon as he could. \"Yer can't expect folk to stop here for ever just to be et by you and Bert. You've et a village and a half between yer, since we come down from the mountains. How much more d'yer want? And time's been up our way, when yer'd have said 'thank yer Bill' for a nice bit o' fat valley mutton like what this is.\" He took a big bite off a sheep's leg he was toasting, and wiped his lips on his sleeve.",
+        "Bert and Tom went off to the barrel. William was having another drink. Then Bilbo plucked up courage and put his little hand in William's enormous pocket. There was a purse in it, as big as a bag to Bilbo. \"Ha!\" thought he warming to his new work as he lifted it carefully out, \"this is a beginning!\"",
+        "\"Blimey, Bert, look what I've copped!\" said William."
+      ],
+      "forms": [
+        "Bert"
+      ]
+    },
+    "William": {
+      "name": "William",
+      "mentions": 31,
+      "contexts": [
+        "\"Never a blinking bit of manflesh have we had for long enough,\" said a second. \"What the 'ell William was a-thinkin' of to bring us into these parts at all, beats me - and the drink runnin' short, what's more,\" he said jogging the elbow of William, who was taking a pull at his jug.",
+        "\"Never a blinking bit of manflesh have we had for long enough,\" said a second. \"What the 'ell William was a-thinkin' of to bring us into these parts at all, beats me - and the drink runnin' short, what's more,\" he said jogging the elbow of William, who was taking a pull at his jug.",
+        "William choked. \"Shut yer mouth!\" he said as soon as he could. \"Yer can't expect folk to stop here for ever just to be et by you and Bert. You've et a village and a half between yer, since we come down from the mountains. How much more d'yer want? And time's been up our way, when yer'd have said 'thank yer Bill' for a nice bit o' fat valley mutton like what this is.\" He took a big bite off a sheep's leg he was toasting, and wiped his lips on his sleeve."
+      ],
+      "forms": [
+        "William"
+      ]
+    },
+    "Dain": {
+      "name": "Dain",
+      "mentions": 31,
+      "contexts": [
+        "Then Thorin burst forth in anger: \"Our thanks, R(ac Carc's son. You and your people shall not be forgotten. But none of our gold shall thieves take or the violent carry off while we are alive. If you would earn our thanks still more, bring us news of any that draw near. Also I would beg of you, if any of you are still young and strong of wing, that you would send messengers to our kin in the mountains of the North, both west from here and east, and tell them of our plight. But go specially to my cousin Dain in the Iron Hills, for he has many people well-armed, and dwells nearest to this place. Bid him hasten!\"",
+        "This song appeared to please Thorin, and he smiled again and grew merry; and he began reckoning the distance to the Iron Hills and how long it would be before Dain could reach the Lonely Mountain, if he had set out as soon as the message reached him. But Bilbo's heart fell, both at the song and the talk: they sounded much too warlike. The next morning early a company of spearmen was seen crossing the river, and marching up the valley. They bore with them the green banner of the Elvenking and the blue banner of the Lake, and they advanced until they stood right before the wall at the Gate.",
+        "Things had gone on like this for some time, when the ravens brought news that Dain and more than five hundred dwarves, hurrying from the Iron Hills, were now within about two days' march of Dale, coming from the North-East."
+      ],
+      "forms": [
+        "Dain"
+      ]
+    },
+    "The Lord": {
+      "name": "The Lord",
+      "mentions": 28,
+      "contexts": [
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "Soon another eagle flew up. \"The Lord of the Eagles bids you to bring your prisoners to the Great Shelf,\" he cried and was off again. The other seized Dori in his claws and flew away with him into the night leaving Bilbo all alone. He had just strength to wonder what the messenger had meant by 'prisoners,' and to begin to think of being torn up for supper like a rabbit, when his own turn came. The eagle came back, seized him in his talons by the back of his coat, and swooped off. This time he flew only a short way. Very soon Bilbo was laid down, trembling with fear, on a wide shelf of rock on the mountain-side. There was no path down on to it save by flying; and no path down off it except by jumping over a precipice. There he found all the others sitting with their backs to the mountain wall. The Lord of the Eagles also was there and was speaking to Gandalf."
+      ],
+      "forms": [
+        "The Lord",
+        "Lord",
+        "the Lord"
+      ]
+    },
+    "Bofur": {
+      "name": "Bofur",
+      "mentions": 28,
+      "contexts": [
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning."
+      ],
+      "forms": [
+        "Bofur"
+      ]
+    },
+    "the Great Goblin": {
+      "name": "the Great Goblin",
+      "mentions": 28,
+      "contexts": [
+        "\"Who are these miserable persons?\" said the Great Goblin.",
+        "\"What do you mean by it?\" said the Great Goblin turning to Thorin. \"Up to no good, I'll warrant! Spying on the private business of my people, I guess! Thieves, I shouldn't be surprised to learn! Murderers and friends of Elves, not unlikely! Come! What have you got to say?\"",
+        "\"Urn!\" said the Great Goblin. \"So you say! Might I ask what you were doing up in the mountains at all, and where you were coming from, and where you were going to? In fact I should like to know all about you. Not that it willdo you much good, Thorin Oakenshield, I know too much about your folk already; but let's have the truth, or I will prepare something particularly uncomfortable for you!\""
+      ],
+      "forms": [
+        "The Great Goblin",
+        "the Great Goblin",
+        "Great Goblin"
+      ]
+    },
+    "Gloin": {
+      "name": "Gloin",
+      "mentions": 27,
+      "contexts": [
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "In the meanwhile, however, Bullroarer's gentler descendant was reviving in the drawing-room. After a while and a drink he crept nervously to the door of the parlour. This is what he heard, Gloin speaking: \"Humph!\" (or some snort more or less like that). \"Will he do, do you think? It is all very well for Gandalf to talk about this hobbit being fierce, but one shriek like that in a moment of excitement would be enough to wake the dragon and all his relatives, and kill the lot of us. I think it sounded more like fright than excitement! In fact, if it bad not been for the sign on the door, I should have been sure we had come to the wrong house. As soon as I clapped eyes on the little fellow bobbing and puffing on the mat, I had my doubts. He looks more like a grocer-than a burglar!\"",
+        "In the meanwhile, however, Bullroarer's gentler descendant was reviving in the drawing-room. After a while and a drink he crept nervously to the door of the parlour. This is what he heard, Gloin speaking: \"Humph!\" (or some snort more or less like that). \"Will he do, do you think? It is all very well for Gandalf to talk about this hobbit being fierce, but one shriek like that in a moment of excitement would be enough to wake the dragon and all his relatives, and kill the lot of us. I think it sounded more like fright than excitement! In fact, if it bad not been for the sign on the door, I should have been sure we had come to the wrong house. As soon as I clapped eyes on the little fellow bobbing and puffing on the mat, I had my doubts. He looks more like a grocer-than a burglar!\""
+      ],
+      "forms": [
+        "Gloin"
+      ]
+    },
+    "Bifur": {
+      "name": "Bifur",
+      "mentions": 26,
+      "contexts": [
+        "\"Carefully! Carefully!\" he said. \"It is not like you, Bilbo, to keep friends waiting on the mat, and then open the door like a pop-gun! Let me introduce Bifur, Bofur, Bombur, and especially Thorin!\"",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning.",
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning."
+      ],
+      "forms": [
+        "Bifur"
+      ]
+    },
+    "the Goblin": {
+      "name": "the Goblin",
+      "mentions": 26,
+      "contexts": [
+        "\"Your grandfather Thror was killed, you remember, in the mines of Moria by Azog the Goblin -\"",
+        "Elrond knew all about runes of every kind. That day he looked at the swords they had brought from the trolls' lair, and he said: \"These are not troll-make. They are old swords, very old swords of the High Elves of the West, my kin. They were made in Gondolin for the Goblin-wars. They must have come from a dragon's hoard or goblin plunder, for dragons and goblins destroyed that city many ages ago. This, Thorin, the runes name Orcrist, the Goblin-cleaver in the ancient tongue of Gondolin; it was a famous blade. This, Gandalf, was Glamdring, Foe-hammer that the king of Gondolin once wore. Keep them well!\"",
+        "Elrond knew all about runes of every kind. That day he looked at the swords they had brought from the trolls' lair, and he said: \"These are not troll-make. They are old swords, very old swords of the High Elves of the West, my kin. They were made in Gondolin for the Goblin-wars. They must have come from a dragon's hoard or goblin plunder, for dragons and goblins destroyed that city many ages ago. This, Thorin, the runes name Orcrist, the Goblin-cleaver in the ancient tongue of Gondolin; it was a famous blade. This, Gandalf, was Glamdring, Foe-hammer that the king of Gondolin once wore. Keep them well!\""
+      ],
+      "forms": [
+        "Goblin",
+        "the Goblin"
+      ]
+    },
+    "Oin": {
+      "name": "Oin",
+      "mentions": 25,
+      "contexts": [
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "\"Just when a wizard would have been most useful, too,\" groaned Dori and Nori (who shared the hobbit's views about regular meals, plenty and often). They decided in the end that they would have to camp where they were. So far they had not camped before on this journey, and though they knew that they soon would have to camp regularly, when they were among the Misty Mountains and far from the lands of respectable people, it seemed a bad wet evening to begin, on. They moved to a clump of trees, and though it was drier under them, the wind shook the rain off the leaves, and the drip, drip, was most annoying. Also the mischief seemed to have got into the fire. Dwarves can make a fire almost anywhere out of almost anything, wind or no wind; but they could not do it that night, not even Oin and Gloin, who were specially good at it."
+      ],
+      "forms": [
+        "Oin"
+      ]
+    },
+    "Elrond": {
+      "name": "Elrond",
+      "mentions": 25,
+      "contexts": [
+        "\"Don't interrupt!\" said Gandalf. \"You will get there in a few days now, if we're lucky, and find out all about it As I was saying I met two of Elrond's people. They were hurrying along for fear of the trolls. It was they who told me that three of them had come down from the mountains and settled in the woods not far from the road; they had frightened everyone away from the district, and they waylaid strangers.",
+        "They asked him where he was making for, and he answered: \"You are come to the very edge of the Wild, as some of you may know. Hidden somewhere ahead of us is the fair valley of Rivendell where Elrond lives in the Last Homely House. I sent a message by my friends, and we are expected.\"",
+        "The master of the house was an elf-friend-one of those people whose fathers came into the strange stories before the beginning of History, the wars of the evil goblins and the elves and the first men in the North. In those days of our tale there were still some people who had both elves and heroes of the North for ancestors, and Elrond the master of the house was their chief. He was as noble and as fair in face as an elf-lord, as strong as a warrior, as wise as a wizard, as venerable as a king of dwarves, and as kind as summer. He comes into. many tales, but his part in the story of Bilbo's great adventure is only a small one, though important, as you will see, if we ever get to the end of it. His house was perfect, whether you liked food, or sleep, or work, or story-telling, or singing, or just sitting and thinking best, or a pleasant mixture of them all. Evil things did not come into that valley."
+      ],
+      "forms": [
+        "Elrond"
+      ]
+    },
+    "Dwalin": {
+      "name": "Dwalin",
+      "mentions": 23,
+      "contexts": [
+        "\"I see they have begun to arrive already,\" he said when he caught sight of Dwalin's green hood hanging up. He hung his red one next to it, and \"Balin at your service!\" he said with his hand on his breast.",
+        "When he got back Balin and Dwalin were talking at the table like old friends (as a matter of fact they were brothers). Bilbo plumped down the beer and the cake in front of them, when loud came a ring at the bell again, and then another ring.",
+        "\"Confusticate and bebother these dwarves!\" he said aloud. \"Why don't they come and lend a hand?\" Lo and behold! there stood Balin and Dwalin at the door of the kitchen, and Fili and Kili behind them, and before he could say knife they had whisked the trays and a couple of small tables into the parlour and set out everything afresh."
+      ],
+      "forms": [
+        "Dwalin"
+      ]
+    },
+    "Tom": {
+      "name": "Tom",
+      "mentions": 23,
+      "contexts": [
+        "Bert and Tom went off to the barrel. William was having another drink. Then Bilbo plucked up courage and put his little hand in William's enormous pocket. There was a purse in it, as big as a bag to Bilbo. \"Ha!\" thought he warming to his new work as he lifted it carefully out, \"this is a beginning!\"",
+        "\"And can yer cook 'em?\" said Tom.",
+        "Then there was a gorgeous row. Bilbo had just enough wits left, when Bert dropped him on the ground, to scramble out of the way of their feet, before they were fighting like dogs, and calling one another all sorts of perfectly true and applicable names in very loud voices. Soon they were locked in one another's arms, and rolling nearly into the fire kicking and thumping, while Tom whacked at then both with a branch to bring them to their senses-and that of course only made them madder than ever. That would have been the time for Bilbo to have left. But his poor little feet had been very squashed in Bert's big paw, and he had no breath in his body, and his head was going round; so there he lay for a while panting, just outside the circle of firelight."
+      ],
+      "forms": [
+        "Tom"
+      ]
+    },
+    "Thror": {
+      "name": "Thror",
+      "mentions": 22,
+      "contexts": [
+        "The Hobbit In this reprint several minor inaccuracies, most of them noted by readers, have been corrected. For example, the text on pages 32 and 62 now corresponds exactly with the runes on Thror's Map. More important is the matter of Chapter Five. There the true story of the ending of the Riddle Game, as it was eventually revealed (under pressure) by Bilbo to Gandalf, is now given according to the Red Book, in place of the version Bilbo first gave to his friends, and actually set down in his diary. This departure from truth on the part of a most honest hobbit was a portent of great significance. It does not, however, concern the present story, and those who in this edition make their first acquaintance with hobbit-lore need not troupe about it. Its explanation lies in the history of the Ring, as it was set out in the chronicles of the Red Book of Westmarch, and is now told in The Lord of the Rings.",
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North.",
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North."
+      ],
+      "forms": [
+        "Thror"
+      ]
+    },
+    "Thrain": {
+      "name": "Thrain",
+      "mentions": 22,
+      "contexts": [
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North.",
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North.",
+        "A final note may be added, on a point raised by several students of the lore of the period. On Thror's Map is written Here of old was Thrain King under the Mountain; yet Thrain was the son of Thror, the last King under the Mountain before the coming of the dragon. The Map, however, is not in error. Names are often repeated in dynasties, and the genealogies show that a distant ancestor of Thror was referred to, Thrain I, a fugitive from Moria, who first discovered the Lonely Mountain, Erebor, and ruled there for a while, before his people moved on to the remoter mountains of the North."
+      ],
+      "forms": [
+        "Thrain"
+      ]
+    },
+    "Goblins": {
+      "name": "Goblins",
+      "mentions": 22,
+      "contexts": [
+        "While Goblins quaff, and Goblins laugh,",
+        "While Goblins quaff, and Goblins laugh,",
+        "\"Good heavens! Can you ask! Goblins fighting and biting in the dark, everybody falling over bodies and hitting one another! You nearly chopped off my head with Glamdring, and Thorin Was stabbing here there and everywhere with Orcrist. All of a sudden you gave one of your blinding flashes, and we saw the goblins running back yelping. You shouted 'follow me everybody!' and everybody ought to have followed. We thought everybody had. There was no time to count, as you know quite well, till we had dashed through the gate-guards, out of the lower door, and helter-skelter down here. And here we are-without the burglar, confusticate him!\""
+      ],
+      "forms": [
+        "Goblins",
+        "the Goblins",
+        "The Goblins"
+      ]
+    },
+    "Bilbo Baggins": {
+      "name": "Bilbo Baggins",
+      "mentions": 19,
+      "contexts": [
+        "The mother of our particular hobbit ... what is a hobbit? I suppose hobbits need some description nowadays, since they have become rare and shy of the Big People, as they call us. They are (or were) a little people, about half our height, and smaller than the bearded Dwarves. Hobbits have no beards. There is little or no magic about them, except the ordinary everyday sort which helps them to disappear quietly and quickly when large stupid folk like you and me come blundering along, making a noise like elephants which they can hear a mile off. They are inclined to be at in the stomach; they dress in bright colours (chiefly green and yellow); wear no shoes, because their feet grow natural leathery soles and thick warm brown hair like the stuff on their heads (which is curly); have long clever brown fingers, good-natured faces, and laugh deep fruity laughs (especially after dinner, which they have twice a day when they can get it). Now you know enough to go on with. As I was saying, the mother of this hobbit - of Bilbo Baggins, that is - was the fabulous Belladonna Took, one of the three remarkable daughters of the Old Took, head of the hobbits who lived across The Water, the small river that ran at the foot of The Hill. It was often said (in other families) that long ago one of the Took ancestors must have taken a fairy wife. That was, of course, absurd, but certainly there was still something not entirely hobbit-like about them, - and once in a while members of the Took-clan would go and have adventures. They discreetly disappeared, and the family hushed it up; but the fact remained that the Tooks were not as respectable as the Bagginses, though they were undoubtedly richer. Not that Belladonna Took ever had any adventures after she became Mrs. Bungo Baggins. Bungo, that was Bilbo's father, built the most luxurious hobbit-hole for her (and partly with her money) that was to be found either under The Hill or over The Hill or across The Water, and there they remained to the end of their days. Still it is probable that Bilbo, her only son, although he looked and behaved exactly like a second edition of his solid and comfortable father, got something a bit queer in his makeup from the Took side, something that only waited for a chance to come out. The chance never arrived, until Bilbo Baggins was grown up, being about fifty years old or so, and living in the beautiful hobbit-hole built by his father, which I have just described for you, until he had in fact apparently settled down immovably.",
+        "The mother of our particular hobbit ... what is a hobbit? I suppose hobbits need some description nowadays, since they have become rare and shy of the Big People, as they call us. They are (or were) a little people, about half our height, and smaller than the bearded Dwarves. Hobbits have no beards. There is little or no magic about them, except the ordinary everyday sort which helps them to disappear quietly and quickly when large stupid folk like you and me come blundering along, making a noise like elephants which they can hear a mile off. They are inclined to be at in the stomach; they dress in bright colours (chiefly green and yellow); wear no shoes, because their feet grow natural leathery soles and thick warm brown hair like the stuff on their heads (which is curly); have long clever brown fingers, good-natured faces, and laugh deep fruity laughs (especially after dinner, which they have twice a day when they can get it). Now you know enough to go on with. As I was saying, the mother of this hobbit - of Bilbo Baggins, that is - was the fabulous Belladonna Took, one of the three remarkable daughters of the Old Took, head of the hobbits who lived across The Water, the small river that ran at the foot of The Hill. It was often said (in other families) that long ago one of the Took ancestors must have taken a fairy wife. That was, of course, absurd, but certainly there was still something not entirely hobbit-like about them, - and once in a while members of the Took-clan would go and have adventures. They discreetly disappeared, and the family hushed it up; but the fact remained that the Tooks were not as respectable as the Bagginses, though they were undoubtedly richer. Not that Belladonna Took ever had any adventures after she became Mrs. Bungo Baggins. Bungo, that was Bilbo's father, built the most luxurious hobbit-hole for her (and partly with her money) that was to be found either under The Hill or over The Hill or across The Water, and there they remained to the end of their days. Still it is probable that Bilbo, her only son, although he looked and behaved exactly like a second edition of his solid and comfortable father, got something a bit queer in his makeup from the Took side, something that only waited for a chance to come out. The chance never arrived, until Bilbo Baggins was grown up, being about fifty years old or so, and living in the beautiful hobbit-hole built by his father, which I have just described for you, until he had in fact apparently settled down immovably.",
+        "By some curious chance one morning long ago in the quiet of the world, when there was less noise and more green, and the hobbits were still numerous and prosperous, and Bilbo Baggins was standing at his door after breakfast smoking an enormous long wooden pipe that reached nearly down to his woolly toes (neatly brushed) - Gandalf came by. Gandalf! If you had heard only a quarter of what I have heard about him, and I have only heard very little of all there is to hear, you would be prepared for any sort I of remarkable tale. Tales and adventures sprouted up all over the place wherever he went, in the most extraordinary fashion. He had not been down that way under The Hill for ages and ages, not since his friend the Old Took died, in fact, and the hobbits had almost forgotten what he looked like. He had been away over The Hill and across The Water on business of his own since they were all small hobbit-boys and hobbit-girls."
+      ],
+      "forms": [
+        "Bilbo Baggins"
+      ]
+    },
+    "Nori": {
+      "name": "Nori",
+      "mentions": 19,
+      "contexts": [
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "Kili and Fili rushed for their bags and brought back little fiddles; Dori, Nori, and Ori brought out flutes from somewhere inside their coats; Bombur produced a drum from the hall; Bifur and Bofur went out too, and came back with clarinets that they had left among the walking-sticks Dwalin and Balin said: \"Excuse me, I left mine in the porch!\" \"Just bring mine in with you,\" said Thorin. They came back with viols as big as themselves, and with Thorin's harp wrapped in a green cloth. It was a beautiful gold-en harp, and when Thorin struck it the music began all at once, so sudden and sweet that Bilbo forgot everything else, and was swept away into dark lands under strange moons, far over The Water and very far from his hobbit-hole under The Hill."
+      ],
+      "forms": [
+        "Nori"
+      ]
+    },
+    "the Dragon": {
+      "name": "the Dragon",
+      "mentions": 19,
+      "contexts": [
+        "\"Thinking it unnecessary to disturb your esteemed repose, we have proceeded in advance to make requisite preparations, and shall await your respected person at the Green Dragon Inn, Bywater, at II a.m. sharp. Trusting that you will be punctual.",
+        "But men remembered little of all that, though some still sang old songs of the dwarf-kings of the Mountain, Thror and Thrain of the race of Durin, and of the coming of the Dragon, and the fall of the lords of Dale. Some sang too that Thror and Thrain would come back one day and gold would flow in rivers through the mountain-gates, and all that land would be filled with new song and new laughter. But this pleasant legend did not much affect their daily business.",
+        "\"Not at any rate until the songs have come true!\" said they. It was easier to believe in the Dragon and less easy to believe in Thorin in these wild parts. Indeed their stores had no need of any guard, for all the land was desolate and empty. So their escort left them, making off swiftly down the river and the shoreward paths, although the night was already drawing on."
+      ],
+      "forms": [
+        "the Dragon",
+        "Dragon"
+      ]
+    },
+    "Elves": {
+      "name": "Elves",
+      "mentions": 17,
+      "contexts": [
+        "\"Gandalf, Gandalf! Good gracious me! Not the wandering wizard that gave Old Took a pair of magic diamond studs that fastened themselves and never came undone till ordered? Not the fellow who used to tell such wonderful tales at parties, about dragons and goblins and giants and the rescue of princesses and the unexpected luck of widows' sons? Not the man that used to make such particularly excellent fireworks! I remember those! Old Took used to have them on Midsummer's Eve. Splendid! They used to go up like great lilies and snapdragons and laburnums of fire and hang in the twilight all evening!\" You will notice already that Mr. Baggins was not quite so prosy as he liked to believe, also that he was very fond of flowers. \"Dear me!\" she went on. \"Not the Gandalf who was responsible for so many quiet lads and lasses going off into the Blue for mad adventures. Anything from climbing trees to visiting Elves - or sailing in ships, sailing to other shores! Bless me, life used to be quite inter - I mean, you used to upset things badly in these parts once upon a time. I beg your pardon, but I had no idea you were still in business.\"",
+        "Tired as he was, Bilbo would have liked to stay awhile. Elvish singing is not a thing to miss, in June under the stars, not if you care for such things. Also he would have liked to have a few private words with these people that seemed to know his name and all about him, although he had never been them before. He thought their opinion of his adventure might be interesting. Elves know a lot and are wondrous folk for news, and know what is going on among the peoples of the land, as quick as water flows, or quicker. But the dwarves were all for supper as soon 'as possible just then, and would not stay. On they all went, leading their ponies, till they were brought to a good path and so at last to the very brink of the river. It was flowing fast and noisily, as mountain-streams do of a summer evening, when sun has been all day on the snow far up above. There was only a narrow bridge of stone without a parapet, as narrow as a pony could well walk on; and over that they had to go, slow and careful, one by one, each leading his pony by the bridle. The elves had brought bright lanterns to the shore, and they sang a merry song as the party went across.",
+        "Tired as he was, Bilbo would have liked to stay awhile. Elvish singing is not a thing to miss, in June under the stars, not if you care for such things. Also he would have liked to have a few private words with these people that seemed to know his name and all about him, although he had never been them before. He thought their opinion of his adventure might be interesting. Elves know a lot and are wondrous folk for news, and know what is going on among the peoples of the land, as quick as water flows, or quicker. But the dwarves were all for supper as soon 'as possible just then, and would not stay. On they all went, leading their ponies, till they were brought to a good path and so at last to the very brink of the river. It was flowing fast and noisily, as mountain-streams do of a summer evening, when sun has been all day on the snow far up above. There was only a narrow bridge of stone without a parapet, as narrow as a pony could well walk on; and over that they had to go, slow and careful, one by one, each leading his pony by the bridle. The elves had brought bright lanterns to the shore, and they sang a merry song as the party went across."
+      ],
+      "forms": [
+        "Elves",
+        "the Elves"
+      ]
+    },
+    "Ori": {
+      "name": "Ori",
+      "mentions": 14,
+      "contexts": [
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "The poor little hobbit sat down in the hall and put his head in his hands, and wondered what had happened, and what was going to happen, and whether they would all stay to supper. Then the bell rang again louder than ever, and he had to run to the door. It was not four after all, t was FIVE. Another dwarf had come along while he was wondering in the hall. He had hardly turned the knob, be-x)re they were all inside, bowing and saying \"at your service\" one after another. Dori, Nori, Ori, Oin, and Gloin were their names; and very soon two purple hoods, a grey hood, a brown hood, and a white hood were hanging on the pegs, and off they marched with their broad hands stuck in their gold and silver belts to join the others. Already it had almost become a throng. Some called for ale, and some for porter, and one for coffee, and all of them for cakes; so the hobbit was kept very busy for a while.",
+        "Kili and Fili rushed for their bags and brought back little fiddles; Dori, Nori, and Ori brought out flutes from somewhere inside their coats; Bombur produced a drum from the hall; Bifur and Bofur went out too, and came back with clarinets that they had left among the walking-sticks Dwalin and Balin said: \"Excuse me, I left mine in the porch!\" \"Just bring mine in with you,\" said Thorin. They came back with viols as big as themselves, and with Thorin's harp wrapped in a green cloth. It was a beautiful gold-en harp, and when Thorin struck it the music began all at once, so sudden and sweet that Bilbo forgot everything else, and was swept away into dark lands under strange moons, far over The Water and very far from his hobbit-hole under The Hill."
+      ],
+      "forms": [
+        "Ori"
+      ]
+    },
+    "Oakenshield": {
+      "name": "Oakenshield",
+      "mentions": 13,
+      "contexts": [
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning.",
+        "\"Urn!\" said the Great Goblin. \"So you say! Might I ask what you were doing up in the mountains at all, and where you were coming from, and where you were going to? In fact I should like to know all about you. Not that it willdo you much good, Thorin Oakenshield, I know too much about your folk already; but let's have the truth, or I will prepare something particularly uncomfortable for you!\"",
+        "\"Thorin Oakenshield, at your service! Dori at your service!\" said the two dwarves bowing again."
+      ],
+      "forms": [
+        "Oakenshield"
+      ]
+    },
+    "Dwarves": {
+      "name": "Dwarves",
+      "mentions": 11,
+      "contexts": [
+        "The mother of our particular hobbit ... what is a hobbit? I suppose hobbits need some description nowadays, since they have become rare and shy of the Big People, as they call us. They are (or were) a little people, about half our height, and smaller than the bearded Dwarves. Hobbits have no beards. There is little or no magic about them, except the ordinary everyday sort which helps them to disappear quietly and quickly when large stupid folk like you and me come blundering along, making a noise like elephants which they can hear a mile off. They are inclined to be at in the stomach; they dress in bright colours (chiefly green and yellow); wear no shoes, because their feet grow natural leathery soles and thick warm brown hair like the stuff on their heads (which is curly); have long clever brown fingers, good-natured faces, and laugh deep fruity laughs (especially after dinner, which they have twice a day when they can get it). Now you know enough to go on with. As I was saying, the mother of this hobbit - of Bilbo Baggins, that is - was the fabulous Belladonna Took, one of the three remarkable daughters of the Old Took, head of the hobbits who lived across The Water, the small river that ran at the foot of The Hill. It was often said (in other families) that long ago one of the Took ancestors must have taken a fairy wife. That was, of course, absurd, but certainly there was still something not entirely hobbit-like about them, - and once in a while members of the Took-clan would go and have adventures. They discreetly disappeared, and the family hushed it up; but the fact remained that the Tooks were not as respectable as the Bagginses, though they were undoubtedly richer. Not that Belladonna Took ever had any adventures after she became Mrs. Bungo Baggins. Bungo, that was Bilbo's father, built the most luxurious hobbit-hole for her (and partly with her money) that was to be found either under The Hill or over The Hill or across The Water, and there they remained to the end of their days. Still it is probable that Bilbo, her only son, although he looked and behaved exactly like a second edition of his solid and comfortable father, got something a bit queer in his makeup from the Took side, something that only waited for a chance to come out. The chance never arrived, until Bilbo Baggins was grown up, being about fifty years old or so, and living in the beautiful hobbit-hole built by his father, which I have just described for you, until he had in fact apparently settled down immovably.",
+        "\"Just when a wizard would have been most useful, too,\" groaned Dori and Nori (who shared the hobbit's views about regular meals, plenty and often). They decided in the end that they would have to camp where they were. So far they had not camped before on this journey, and though they knew that they soon would have to camp regularly, when they were among the Misty Mountains and far from the lands of respectable people, it seemed a bad wet evening to begin, on. They moved to a clump of trees, and though it was drier under them, the wind shook the rain off the leaves, and the drip, drip, was most annoying. Also the mischief seemed to have got into the fire. Dwarves can make a fire almost anywhere out of almost anything, wind or no wind; but they could not do it that night, not even Oin and Gloin, who were specially good at it.",
+        "\"Just when a wizard would have been most useful, too,\" groaned Dori and Nori (who shared the hobbit's views about regular meals, plenty and often). They decided in the end that they would have to camp where they were. So far they had not camped before on this journey, and though they knew that they soon would have to camp regularly, when they were among the Misty Mountains and far from the lands of respectable people, it seemed a bad wet evening to begin, on. They moved to a clump of trees, and though it was drier under them, the wind shook the rain off the leaves, and the drip, drip, was most annoying. Also the mischief seemed to have got into the fire. Dwarves can make a fire almost anywhere out of almost anything, wind or no wind; but they could not do it that night, not even Oin and Gloin, who were specially good at it."
+      ],
+      "forms": [
+        "Dwarves"
+      ]
+    },
+    "Thorin Oakenshield": {
+      "name": "Thorin Oakenshield",
+      "mentions": 10,
+      "contexts": [
+        "\"At your service!\" said Bifur, Bofur, and Bombur standing in a row. Then they hung up two yellow hoods and a pale green one; and also a sky-blue one with a long silver tassel. This last belonged to Thorin, an enormously important dwarf, in fact no other than the great Thorin Oakenshield himself, who was not at all pleased at falling flat on Bilbo's mat with Bifur, Bofur, and Bombur on top of him. For one thing Bombur was immensely fat and heavy. Thorin indeed was very haughty, and said nothing about service; but poor Mr. Baggins said he was sorry so many times, that at last he grunted \"pray don't mention it,\" and stopped frowning.",
+        "\"Urn!\" said the Great Goblin. \"So you say! Might I ask what you were doing up in the mountains at all, and where you were coming from, and where you were going to? In fact I should like to know all about you. Not that it willdo you much good, Thorin Oakenshield, I know too much about your folk already; but let's have the truth, or I will prepare something particularly uncomfortable for you!\"",
+        "\"Thorin Oakenshield, at your service! Dori at your service!\" said the two dwarves bowing again."
+      ],
+      "forms": [
+        "Thorin Oakenshield"
+      ]
+    },
+    "Girion": {
+      "name": "Girion",
+      "mentions": 10,
+      "contexts": [
+        "\"Revenge!\" he snorted, and the light of his eyes lit the the hall from floor to ceiling like scarlet lightning. \"Revenge! The King under the Mountain is dead and where are hi kin that dare seek revenge? Girion Lord of Dale is dead, and I have eaten his people like a wolf among sheep, and where are his sons' sons that dare approach me? I kill where I wish and none dare resist. I laid low the warriors of old and their like is not in the world today. Then I was but young and tender. Now I am old and strong, strong strong. Thief in the Shadows!\" he gloated. \"My armour is like tenfold shields, my teeth are swords, my claws spears, the shock of my tail a thunderbolt, my wings a hurricane, and my breath death!\"",
+        "\"Revenge!\" he snorted, and the light of his eyes lit the the hall from floor to ceiling like scarlet lightning. \"Revenge! The King under the Mountain is dead and where are hi kin that dare seek revenge? Girion Lord of Dale is dead, and I have eaten his people like a wolf among sheep, and where are his sons' sons that dare approach me? I kill where I wish and none dare resist. I laid low the warriors of old and their like is not in the world today. Then I was but young and tender. Now I am old and strong, strong strong. Thief in the Shadows!\" he gloated. \"My armour is like tenfold shields, my teeth are swords, my claws spears, the shock of my tail a thunderbolt, my wings a hurricane, and my breath death!\"",
+        "From that the talk turned to the great hoard itself and to the things that Thorin and Balin remembered. They wondered if they were still lying there .unharmed in the hall below: the spears that were made for the armies of the great King Bladorthin (long since dead), each had a thrice-forged head and their shafts were inlaid with cunning gold, but they were never delivered or paid for; shields made for warriors long dead; the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels; coats of mail gilded and silvered and impenetrable; the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son in a coat of dwarf-linked rings the like of which had never been made before, for it was wrought of pure silver to the power and strength of triple steel. But fairest of all was the great white gem, which the dwarves had found beneath the roots of the Mountain, the Heart of the Mountain, the Arkenstone of Thrain."
+      ],
+      "forms": [
+        "Girion"
+      ]
+    },
+    "the Necromancer": {
+      "name": "the Necromancer",
+      "mentions": 8,
+      "contexts": [
+        "\"Your grandfather,\" said the wizard slowly and grimly, \"gave the map to his son for safety before he went to the mines of Moria. Your father went away to try his luck with the map after your grandfather was killed; and lots of adventures of a most unpleasant sort he had, but he never got near the Mountain. How he got there I don't know, but I found him a prisoner in the dungeons of the Necromancer.\"",
+        "\"Never you mind. I was finding things out, as usual; and a nasty dangerous business it was. Even I, Gandalf, only just escaped. I tried to save your father, but it was too late. He was witless and wandering, and had forgotten almost everything except the map and the key.\" \"We have long ago paid the goblins of Moria,\" said Thorin; \"we must give a thought to the Necromancer.\" \"Don't be absurd! He is an enemy quite beyond the powers of all the dwarves put together, if they could all be collected again from the four corners of the world. The one thing your father wished was for his son to read the map and use the key. The dragon and the Mountain are more than big enough tasks for you!\"",
+        "\"There is, if you care to go two hundred miles or so out of your way north, and twice that south. But you wouldn't get a safe path even then. There are no safe paths in this part of the world. Remember you are over the Edge of the Wild now, and in for all sorts of fun wherever you go. Before you could get round Mirkwood in the North you would be right among the slopes of the Grey Mountains, and they are simply stiff with goblins, hobgoblins, and rest of the worst description. Before you could get round it in the South, you would get into the land of the Necromancer; and even you. Bilbo, won't need me to tell you tales of that black sorcerer. I don't advise you to go anywhere near the places overlooked by his dark tower! Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives, though I hope he is not expecting you.\""
+      ],
+      "forms": [
+        "Necromancer",
+        "the Necromancer"
+      ]
+    },
+    "Trolls": {
+      "name": "Trolls",
+      "mentions": 7,
+      "contexts": [
+        "It was! Trolls' purses are the mischief, and this was no exception. \" 'Ere, 'oo are you?\" it squeaked, as it left the pocket; and William turned round at once and grabbed Bilbo by the neck, before he could duck behind the tree.",
+        "It was! Trolls' purses are the mischief, and this was no exception. \" 'Ere, 'oo are you?\" it squeaked, as it left the pocket; and William turned round at once and grabbed Bilbo by the neck, before he could duck behind the tree.",
+        "\"A burrahobbit?\" said they a bit startled. Trolls are slow in the uptake, and mighty suspicious about anything new to them."
+      ],
+      "forms": [
+        "Trolls"
+      ]
+    },
+    "the Bowman": {
+      "name": "the Bowman",
+      "mentions": 4,
+      "contexts": [
+        "\"We will have King Bard!\" the people near at hand shouted in reply. \"We have had enough of the old men and the money-counters!\" And people further off took up the cry: \"Up the Bowman, and down with Moneybags,\" till the clamour echoed along the shore.",
+        "\"I am the last man to undervalue Bard the Bowman,\" said the Master warily (for Bard now stood close beside him). \"He has tonight earned an eminent place in the roll of the benefactors of our town; and he is worthy of many imperishable songs. But, why O People?\"-and here the Master rose to his feet and spoke very loud and clear - \"why do I get all your blame? For what fault am I to be deposed? Who aroused the dragon from his slumber, I might ask? Who obtained of us rich gifts and ample help, and led us to believe that old songs could come true? Who played on our soft hearts and our pleasant fancies? What sort of gold have they sent down the river to reward us? Dragon-fire and ruin! From whom should we claim the recompense of our damage, and aid for our widows and orphans?\"",
+        "\"We will have King Bard!\" the people near at hand shouted in reply. \"We have had enough of the old men and the money-counters!\" And people further off took up the cry: \"Up the Bowman, and down with Moneybags,\" till the clamour echoed along the shore."
+      ],
+      "forms": [
+        "the Bowman",
+        "Bowman"
+      ]
+    },
+    "Galion": {
+      "name": "Galion",
+      "mentions": 3,
+      "contexts": [
+        "It had not been a-bit too soon. Only a minute or two after Balin's lid had been fitted on there came the sound of voices and the flicker of lights. A number of elves came laughing and talking into the cellars and singing snatches of song. They had left a merry feast in one of the halls and were bent on returning as soon as they could. \"Where's old Galion, the butler?\" said one. \"I haven't seen him at the tables tonight. He ought to be here now to show us what is to be done.\"",
+        "Then they drank once round and became mighty merry all of a sudden. But they did not quite lose their wits. \"Save us, Galion!\" cried some, \"you began your feasting early and muddled your wits! You have stacked some full casks here instead of the empty ones, if there is anything in weight.\"",
+        "Then they drank once round and became mighty merry all of a sudden. But they did not quite lose their wits. \"Save us, Galion!\" cried some, \"you began your feasting early and muddled your wits! You have stacked some full casks here instead of the empty ones, if there is anything in weight.\""
+      ],
+      "forms": [
+        "Galion"
+      ]
+    },
+    "Ponies": {
+      "name": "Ponies",
+      "mentions": 2,
+      "contexts": [
+        "After he had seen that Mr. Baggins' one idea was to get away. \"Well, I really must not detain Your Magnificence any longer,\" he said, \"or keep you from much needed rest. Ponies take some catching, I believe, after a long start. And so do burglars,\" he added as a parting shot, as he darted back and fled up the tunnel.",
+        "After he had seen that Mr. Baggins' one idea was to get away. \"Well, I really must not detain Your Magnificence any longer,\" he said, \"or keep you from much needed rest. Ponies take some catching, I believe, after a long start. And so do burglars,\" he added as a parting shot, as he darted back and fled up the tunnel."
+      ],
+      "forms": [
+        "Ponies"
+      ]
+    }
+  }
+}

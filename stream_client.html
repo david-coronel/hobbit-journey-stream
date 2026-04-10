@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hobbit: An Unexpected Journey - Stream</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cinzel', 'Georgia', serif;
+            background: #1a1a1a;
+            color: #e0d0b0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, #2a2520 0%, #1a1510 100%);
+            border-bottom: 3px solid #8b7355;
+            padding: 15px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 3px;
+        }
+        
+        .header .subtitle {
+            font-size: 12px;
+            color: #a09070;
+            margin-top: 5px;
+        }
+        
+        /* Mode indicator */
+        .mode-badge {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #3a3020;
+            border: 1px solid #8b7355;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 11px;
+            color: #d4af37;
+        }
+        
+        /* Generative features indicator */
+        .ai-badge {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #2a2030;
+            border: 1px solid #8b55a0;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 10px;
+            color: #c090d0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .ai-badge:hover {
+            background: #3a3050;
+            border-color: #a070c0;
+        }
+        
+        .ai-badge.active {
+            background: #4a4080;
+            color: #e0c0ff;
+            border-color: #9060d0;
+        }
+        
+        /* Main container */
+        .main-container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: #252520;
+            border-right: 2px solid #3a3530;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .panel {
+            background: #2a2520;
+            border: 1px solid #4a453d;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            background: linear-gradient(180deg, #3a3530 0%, #2a2520 100%);
+            padding: 12px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #d4af37;
+            border-bottom: 1px solid #4a453d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .panel-content {
+            padding: 15px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #c0b090;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #3a3530;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: #8b7355;
+        }
+        
+        .stat-value {
+            color: #d4af37;
+            font-weight: bold;
+        }
+        
+        .character-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .character-tag {
+            background: #3a3025;
+            border: 1px solid #5a5045;
+            border-radius: 12px;
+            padding: 4px 10px;
+            font-size: 11px;
+            color: #d0c0a0;
+        }
+        
+        .event-list {
+            list-style: none;
+        }
+        
+        .event-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #3a3530;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .event-item:last-child {
+            border-bottom: none;
+        }
+        
+        .event-time {
+            color: #8b7355;
+            font-size: 10px;
+            min-width: 50px;
+        }
+        
+        .event-text {
+            color: #c0b090;
+        }
+        
+        /* Content area */
+        .content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Scene header */
+        .scene-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #3a3530;
+        }
+        
+        .scene-number {
+            font-size: 12px;
+            color: #8b7355;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .scene-title {
+            font-size: 28px;
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .scene-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 13px;
+            color: #a09070;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .meta-icon {
+            color: #d4af37;
+        }
+        
+        /* Media section - Image */
+        .media-section {
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #252520;
+            border: 1px solid #3a3530;
+        }
+        
+        .media-header {
+            background: linear-gradient(180deg, #2a2520 0%, #1f1f1a 100%);
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3a3530;
+        }
+        
+        .media-title {
+            font-size: 12px;
+            color: #a09070;
+            letter-spacing: 1px;
+        }
+        
+        .generate-btn {
+            background: #3a3025;
+            border: 1px solid #5a5045;
+            color: #d0c0a0;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        
+        .generate-btn:hover {
+            background: #4a4035;
+            border-color: #8b7355;
+        }
+        
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .generate-btn.generating {
+            background: #2a3050;
+            border-color: #5a70a0;
+            color: #90a0d0;
+        }
+        
+        .scene-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            display: block;
+            background: #1a1a1a;
+        }
+        
+        .scene-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #252520 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #5a5045;
+            font-size: 12px;
+        }
+        
+        .scene-image-placeholder .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+        
+        /* Audio controls */
+        .audio-controls {
+            display: flex;
+            gap: 10px;
+            padding: 10px 15px;
+            background: #1f1f1a;
+            border-top: 1px solid #3a3530;
+        }
+        
+        .audio-btn {
+            background: #3a3530;
+            border: 1px solid #5a5045;
+            color: #d0c0a0;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .audio-btn:hover {
+            background: #4a4538;
+            border-color: #8b7355;
+        }
+        
+        .audio-btn.active {
+            background: #2d5016;
+            border-color: #5a9a3d;
+            color: #90d070;
+        }
+        
+        .volume-slider {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #a09070;
+            font-size: 11px;
+        }
+        
+        .volume-slider input {
+            flex: 1;
+            accent-color: #8b7355;
+        }
+        
+        /* Countdown */
+        .countdown-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .countdown-label {
+            font-size: 11px;
+            color: #8b7355;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-display {
+            font-size: 48px;
+            font-family: 'Courier New', monospace;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212,175,55,0.3);
+            letter-spacing: 8px;
+        }
+        
+        /* Progress bars */
+        .progress-section {
+            margin-bottom: 30px;
+        }
+        
+        .progress-container {
+            margin-bottom: 15px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #a09070;
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #2a2520;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #3a3530;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.1s linear;
+        }
+        
+        .scene-progress .progress-fill {
+            background: linear-gradient(90deg, #8b6914, #d4af37);
+        }
+        
+        .beat-progress .progress-fill {
+            background: linear-gradient(90deg, #2d5016, #5a9a3d);
+        }
+        
+        /* Narrative content */
+        .narrative-section {
+            flex: 1;
+            background: #252520;
+            border: 1px solid #3a3530;
+            border-radius: 8px;
+            padding: 25px;
+            overflow-y: auto;
+        }
+        
+        .beat-marker {
+            font-size: 11px;
+            color: #8b7355;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .narrative-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #e0d5c0;
+        }
+        
+        .narrative-text p {
+            margin-bottom: 15px;
+        }
+        
+        /* Voice narration button */
+        .narration-controls {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+        
+        .narrate-btn {
+            background: #3a3025;
+            border: 1px solid #5a5045;
+            color: #d0c0a0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .narrate-btn:hover {
+            background: #4a4035;
+            border-color: #8b7355;
+        }
+        
+        .narrate-btn.playing {
+            background: #2a3050;
+            border-color: #5a70a0;
+            color: #90a0d0;
+        }
+        
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #3a3530;
+        }
+        
+        .control-btn {
+            background: linear-gradient(180deg, #3a3530 0%, #2a2520 100%);
+            border: 2px solid #5a5045;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-family: inherit;
+            font-size: 14px;
+            color: #d0c0a0;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .control-btn:hover {
+            background: linear-gradient(180deg, #4a4538 0%, #3a3530 100%);
+            border-color: #8b7355;
+            color: #f0e0c0;
+        }
+        
+        .control-btn:active {
+            transform: translateY(2px);
+        }
+        
+        .control-btn.primary {
+            background: linear-gradient(180deg, #5a4a20 0%, #3a3020 100%);
+            border-color: #d4af37;
+            color: #d4af37;
+            padding: 15px 40px;
+            font-size: 16px;
+        }
+        
+        .control-btn.primary:hover {
+            background: linear-gradient(180deg, #6a5a30 0%, #4a4025 100%);
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin-top: 20px;
+            padding: 15px;
+            background: #1f1f1a;
+            border-radius: 8px;
+            border: 1px solid #3a3530;
+        }
+        
+        .timeline-label {
+            font-size: 11px;
+            color: #8b7355;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .timeline-bar {
+            height: 6px;
+            background: #2a2520;
+            border-radius: 3px;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            top: -4px;
+            width: 14px;
+            height: 14px;
+            background: #5a5045;
+            border: 2px solid #3a3530;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .timeline-marker.canonical {
+            background: #d4af37;
+        }
+        
+        .timeline-marker.generated {
+            background: #5a9a3d;
+        }
+        
+        .timeline-marker.current {
+            box-shadow: 0 0 10px #d4af37;
+            transform: translateX(-50%) scale(1.3);
+        }
+        
+        .timeline-marker:hover {
+            transform: translateX(-50%) scale(1.2);
+        }
+        
+        /* Modal for AI settings */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        
+        .modal-overlay.show {
+            display: flex;
+        }
+        
+        .modal {
+            background: #2a2520;
+            border: 2px solid #4a453d;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            background: linear-gradient(180deg, #3a3530 0%, #2a2520 100%);
+            padding: 15px 20px;
+            border-bottom: 1px solid #4a453d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 16px;
+            color: #d4af37;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: #a09070;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .modal-close:hover {
+            color: #d0c0a0;
+        }
+        
+        .modal-content {
+            padding: 20px;
+        }
+        
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #3a3530;
+        }
+        
+        .setting-row:last-child {
+            border-bottom: none;
+        }
+        
+        .setting-label {
+            color: #c0b090;
+        }
+        
+        .setting-desc {
+            font-size: 11px;
+            color: #8b7355;
+            margin-top: 2px;
+        }
+        
+        .toggle {
+            width: 44px;
+            height: 24px;
+            background: #3a3530;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .toggle.active {
+            background: #5a9a3d;
+        }
+        
+        .toggle::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #d0c0a0;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.2s;
+        }
+        
+        .toggle.active::after {
+            transform: translateX(20px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar {
+                width: 280px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #3a3530;
+            }
+        }
+        
+        /* Loading overlay */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .loading-text {
+            color: #d4af37;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #3a3530;
+            border-top-color: #d4af37;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Typewriter cursor */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: #d4af37;
+            margin-left: 2px;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading Middle-earth...</div>
+    </div>
+    
+    <div class="header">
+        <div class="ai-badge" id="ai-badge" onclick="openSettings()">
+            <span>✨</span> AI
+        </div>
+        <h1>THE HOBBIT: AN UNEXPECTED JOURNEY</h1>
+        <div class="subtitle">Real-Time Narrative Stream</div>
+        <div class="mode-badge" id="mode-badge">DRAMATIC MODE</div>
+    </div>
+    
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📊</span> Journey Info
+                </div>
+                <div class="panel-content">
+                    <div class="stat-row">
+                        <span class="stat-label">Scenes:</span>
+                        <span class="stat-value" id="stat-scenes">- / -</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Story Time:</span>
+                        <span class="stat-value" id="stat-story-time">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Stream Time:</span>
+                        <span class="stat-value" id="stat-stream-time">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Pacing:</span>
+                        <span class="stat-value" id="stat-pacing">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <span>👥</span> Present
+                </div>
+                <div class="panel-content">
+                    <div class="character-list" id="character-list">
+                        <span class="character-tag">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <span>⏱️</span> Next Events
+                </div>
+                <div class="panel-content">
+                    <ul class="event-list" id="event-list">
+                        <li class="event-item">
+                            <span class="event-time">--:--</span>
+                            <span class="event-text">Loading...</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel" id="live-event-panel">
+                <div class="panel-header">
+                    <span>✨</span> Live Event
+                </div>
+                <div class="panel-content">
+                    <div id="live-event-meta" style="font-size: 10px; color: #a09070; margin-bottom: 6px;">Waiting for events...</div>
+                    <div id="live-event-text" style="font-size: 12px; line-height: 1.5; color: #e0d0b0; max-height: 200px; overflow-y: auto;">No generated events available yet.</div>
+                </div>
+            </div>
+
+            <!-- Generation Status Panel -->
+            <div class="panel" id="gen-status-panel" style="display: none;">
+                <div class="panel-header">
+                    <span>🎨</span> Generation Status
+                </div>
+                <div class="panel-content" id="gen-status-content">
+                    <div class="stat-row">
+                        <span class="stat-label">Image:</span>
+                        <span class="stat-value" id="gen-image-status">Ready</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Audio:</span>
+                        <span class="stat-value" id="gen-audio-status">Ready</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Voice:</span>
+                        <span class="stat-value" id="gen-voice-status">Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="scene-header">
+                <div class="scene-number" id="scene-number">SCENE -- / --</div>
+                <h2 class="scene-title" id="scene-title">Loading...</h2>
+                <div class="scene-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span id="meta-day">Day -</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">🌄</span>
+                        <span id="meta-time">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📍</span>
+                        <span id="meta-location">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">🎯</span>
+                        <span id="meta-type">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scene Image Section -->
+            <div class="media-section" id="image-section" style="display: none;">
+                <div class="media-header">
+                    <span class="media-title">🎨 Scene Illustration</span>
+                    <button class="generate-btn" id="gen-image-btn" onclick="generateImage()">
+                        Generate
+                    </button>
+                </div>
+                <div id="image-container">
+                    <div class="scene-image-placeholder">
+                        <span class="icon">🖼️</span>
+                        <span>Click "Generate" to create AI illustration</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audio Controls Section -->
+            <div class="media-section" id="audio-section" style="display: none;">
+                <div class="media-header">
+                    <span class="media-title">🔊 Ambient Soundscape</span>
+                    <button class="generate-btn" id="gen-audio-btn" onclick="generateAudio()">
+                        Generate
+                    </button>
+                </div>
+                <div class="audio-controls">
+                    <button class="audio-btn" id="ambient-btn" onclick="toggleAmbient()">
+                        <span>🔊</span> Ambient
+                    </button>
+                    <button class="audio-btn" id="effects-btn" onclick="toggleEffects()">
+                        <span>🎵</span> Effects
+                    </button>
+                    <div class="volume-slider">
+                        <span>Vol:</span>
+                        <input type="range" min="0" max="100" value="30" id="volume-slider" onchange="updateVolume()">
+                    </div>
+                </div>
+                <audio id="ambient-audio" loop></audio>
+                <audio id="narration-audio"></audio>
+            </div>
+            
+            <div class="countdown-section">
+                <div class="countdown-label">TIME REMAINING</div>
+                <div class="countdown-display" id="countdown">--:--:--</div>
+            </div>
+            
+            <div class="progress-section">
+                <div class="progress-container scene-progress">
+                    <div class="progress-label">
+                        <span>Scene Progress</span>
+                        <span id="scene-progress-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="scene-progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="progress-container beat-progress">
+                    <div class="progress-label">
+                        <span>Beat Progress</span>
+                        <span id="beat-progress-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="beat-progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="narrative-section">
+                <div class="narration-controls">
+                    <button class="narrate-btn" id="narrate-btn" onclick="generateNarration()">
+                        <span>🔊</span> Narrate Beat
+                    </button>
+                </div>
+                <div class="beat-marker" id="beat-marker">[BEAT -/-]</div>
+                <div class="narrative-text" id="narrative-text">
+                    Loading narrative...<span class="cursor"></span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" id="btn-prev" onclick="prevScene()">
+                    <span>◀</span> Previous
+                </button>
+                <button class="control-btn primary" id="btn-play" onclick="togglePlay()">
+                    <span id="play-icon">▶</span> <span id="play-text">PLAY</span>
+                </button>
+                <button class="control-btn" id="btn-next" onclick="nextScene()">
+                    Next <span>▶</span>
+                </button>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-label">JOURNEY TIMELINE (Click to navigate)</div>
+                <div class="timeline-bar" id="timeline-bar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AI Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="modal-title">✨ AI Generation Settings</span>
+                <button class="modal-close" onclick="closeSettings()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Scene Images</div>
+                        <div class="setting-desc">Generate AI illustrations for each scene</div>
+                    </div>
+                    <div class="toggle" id="toggle-images" onclick="toggleSetting('images')"></div>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Ambient Audio</div>
+                        <div class="setting-desc">Generate location-based soundscapes</div>
+                    </div>
+                    <div class="toggle" id="toggle-audio" onclick="toggleSetting('audio')"></div>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Voice Narration</div>
+                        <div class="setting-desc">Generate AI voice for narration</div>
+                    </div>
+                    <div class="toggle" id="toggle-voice" onclick="toggleSetting('voice')"></div>
+                </div>
+                <div class="setting-row">
+                    <div>
+                        <div class="setting-label">Auto-Generate</div>
+                        <div class="setting-desc">Automatically generate on scene change</div>
+                    </div>
+                    <div class="toggle" id="toggle-auto" onclick="toggleSetting('auto')"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // State
+        let currentState = null;
+        let allScenes = [];
+        let updateInterval = null;
+        let typingInterval = null;
+        let displayedText = '';
+        let targetText = '';
+        let currentChar = 0;
+        
+        // Generative content settings
+        let genSettings = {
+            images: false,
+            audio: false,
+            voice: false,
+            auto: false,
+            available: false
+        };
+        
+        // Audio state
+        let audioState = {
+            ambientPlaying: false,
+            effectsPlaying: false,
+            volume: 0.3
+        };
+        
+        // Current generation status
+        let genStatus = {
+            image: null,
+            audio: null,
+            voice: null
+        };
+        
+        // API functions
+        async function fetchCurrent() {
+            const res = await fetch('/api/current');
+            return await res.json();
+        }
+        
+        async function fetchScenes() {
+            const res = await fetch('/api/scenes');
+            return await res.json();
+        }
+        
+        async function fetchGenStatus() {
+            try {
+                const res = await fetch('/api/generate/status');
+                return await res.json();
+            } catch (e) {
+                return { enabled: false };
+            }
+        }
+
+        async function fetchCurrentEvent(timestamp) {
+            try {
+                const ts = timestamp || new Date().toISOString();
+                const res = await fetch(`/api/events/current?timestamp=${encodeURIComponent(ts)}`);
+                return await res.json();
+            } catch (e) {
+                return { event: null };
+            }
+        }
+
+        async function fetchNextEvent(timestamp) {
+            try {
+                const ts = timestamp || new Date().toISOString();
+                const res = await fetch(`/api/events/next?timestamp=${encodeURIComponent(ts)}`);
+                return await res.json();
+            } catch (e) {
+                return { event: null };
+            }
+        }
+        
+        async function nextScene() {
+            const res = await fetch('/api/next', {method: 'POST'});
+            const data = await res.json();
+            updateUI(data);
+        }
+        
+        async function prevScene() {
+            const res = await fetch('/api/prev', {method: 'POST'});
+            const data = await res.json();
+            updateUI(data);
+        }
+        
+        async function togglePlay() {
+            const res = await fetch('/api/play', {method: 'POST'});
+            const data = await res.json();
+            updateUI(data);
+        }
+        
+        async function gotoScene(index) {
+            const res = await fetch(`/api/goto/${index}`, {method: 'POST'});
+            const data = await res.json();
+            updateUI(data);
+        }
+        
+        // Generative content API
+        async function generateImage() {
+            if (!currentState) return;
+            const btn = document.getElementById('gen-image-btn');
+            btn.textContent = 'Generating...';
+            btn.classList.add('generating');
+            btn.disabled = true;
+            
+            try {
+                const res = await fetch('/api/generate/image', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        scene_id: currentState.scene.id,
+                        force: false
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.status === 'completed' && data.url) {
+                    showImage(data.url);
+                } else if (data.status === 'pending' || data.status === 'generating') {
+                    // Poll for completion
+                    pollGeneration('image', currentState.scene.id);
+                }
+            } catch (e) {
+                console.error('Image generation failed:', e);
+                btn.textContent = 'Failed - Retry';
+                btn.classList.remove('generating');
+                btn.disabled = false;
+            }
+        }
+        
+        async function generateAudio() {
+            if (!currentState) return;
+            const btn = document.getElementById('gen-audio-btn');
+            btn.textContent = 'Generating...';
+            btn.classList.add('generating');
+            btn.disabled = true;
+            
+            try {
+                const res = await fetch('/api/generate/audio', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        scene_id: currentState.scene.id,
+                        force: false
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.status === 'completed') {
+                    setupAudio(data.url);
+                    btn.textContent = 'Regenerate';
+                    btn.classList.remove('generating');
+                    btn.disabled = false;
+                }
+            } catch (e) {
+                console.error('Audio generation failed:', e);
+                btn.textContent = 'Failed - Retry';
+                btn.classList.remove('generating');
+                btn.disabled = false;
+            }
+        }
+        
+        async function generateNarration() {
+            if (!currentState) return;
+            const btn = document.getElementById('narrate-btn');
+            
+            // Get current beat text
+            const beatList = currentState.beats.beats || [];
+            const currentBeat = currentState.current_beat || 0;
+            const text = beatList[currentBeat] ? beatList[currentBeat].text : '';
+            
+            if (!text) return;
+            
+            btn.classList.add('playing');
+            
+            try {
+                const res = await fetch('/api/generate/voice', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        text: text,
+                        scene_id: currentState.scene.id
+                    })
+                });
+                const data = await res.json();
+                
+                if (data.status === 'completed' && data.url) {
+                    playNarration(data.url);
+                }
+            } catch (e) {
+                console.error('Voice generation failed:', e);
+            } finally {
+                btn.classList.remove('playing');
+            }
+        }
+        
+        function pollGeneration(type, sceneId) {
+            const interval = setInterval(async () => {
+                const status = await fetchGenStatus();
+                const items = status.status?.items || {};
+                
+                for (let [key, item] of Object.entries(items)) {
+                    if (item.scene_id === sceneId && item.content_type === type) {
+                        if (item.status === 'completed') {
+                            clearInterval(interval);
+                            if (type === 'image' && item.url) {
+                                showImage(item.url);
+                                const btn = document.getElementById('gen-image-btn');
+                                btn.textContent = 'Regenerate';
+                                btn.classList.remove('generating');
+                                btn.disabled = false;
+                            }
+                        } else if (item.status === 'error') {
+                            clearInterval(interval);
+                            const btn = document.getElementById(`gen-${type}-btn`);
+                            if (btn) {
+                                btn.textContent = 'Failed - Retry';
+                                btn.classList.remove('generating');
+                                btn.disabled = false;
+                            }
+                        }
+                    }
+                }
+            }, 2000);
+        }
+        
+        function showImage(url) {
+            const container = document.getElementById('image-container');
+            container.innerHTML = `<img src="${url}" class="scene-image" alt="Scene illustration">`;
+        }
+        
+        function setupAudio(url) {
+            const audio = document.getElementById('ambient-audio');
+            audio.src = url;
+            audio.volume = audioState.volume;
+        }
+        
+        function toggleAmbient() {
+            const audio = document.getElementById('ambient-audio');
+            const btn = document.getElementById('ambient-btn');
+            
+            if (audio.paused) {
+                audio.play();
+                btn.classList.add('active');
+                audioState.ambientPlaying = true;
+            } else {
+                audio.pause();
+                btn.classList.remove('active');
+                audioState.ambientPlaying = false;
+            }
+        }
+        
+        function toggleEffects() {
+            const btn = document.getElementById('effects-btn');
+            btn.classList.toggle('active');
+            audioState.effectsPlaying = !audioState.effectsPlaying;
+        }
+        
+        function updateVolume() {
+            const slider = document.getElementById('volume-slider');
+            audioState.volume = slider.value / 100;
+            document.getElementById('ambient-audio').volume = audioState.volume;
+            document.getElementById('narration-audio').volume = audioState.volume;
+        }
+        
+        function playNarration(url) {
+            const audio = document.getElementById('narration-audio');
+            audio.src = url;
+            audio.volume = audioState.volume;
+            audio.play();
+        }
+        
+        // Settings modal
+        function openSettings() {
+            document.getElementById('settings-modal').classList.add('show');
+            updateToggleUI();
+        }
+        
+        function closeSettings() {
+            document.getElementById('settings-modal').classList.remove('show');
+        }
+        
+        function toggleSetting(key) {
+            genSettings[key] = !genSettings[key];
+            updateToggleUI();
+            updateGenUI();
+        }
+        
+        function updateToggleUI() {
+            const toggles = {
+                'images': 'toggle-images',
+                'audio': 'toggle-audio',
+                'voice': 'toggle-voice',
+                'auto': 'toggle-auto'
+            };
+            
+            for (let [key, id] of Object.entries(toggles)) {
+                const el = document.getElementById(id);
+                if (genSettings[key]) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            }
+        }
+        
+        function updateGenUI() {
+            // Show/hide generative UI sections
+            const imageSection = document.getElementById('image-section');
+            const audioSection = document.getElementById('audio-section');
+            const statusPanel = document.getElementById('gen-status-panel');
+            const aiBadge = document.getElementById('ai-badge');
+            
+            const anyEnabled = genSettings.images || genSettings.audio || genSettings.voice;
+            
+            imageSection.style.display = genSettings.images ? 'block' : 'none';
+            audioSection.style.display = genSettings.audio ? 'block' : 'none';
+            statusPanel.style.display = anyEnabled ? 'block' : 'none';
+            
+            if (anyEnabled) {
+                aiBadge.classList.add('active');
+            } else {
+                aiBadge.classList.remove('active');
+            }
+        }
+        
+        // Typewriter effect
+        function startTyping(text) {
+            if (typingInterval) {
+                clearInterval(typingInterval);
+            }
+            
+            targetText = text || '';
+            displayedText = '';
+            currentChar = 0;
+            
+            const container = document.getElementById('narrative-text');
+            container.innerHTML = '<span class="cursor"></span>';
+            
+            typingInterval = setInterval(() => {
+                if (currentChar < targetText.length) {
+                    displayedText += targetText[currentChar];
+                    currentChar++;
+                    container.innerHTML = displayedText + '<span class="cursor"></span>';
+                } else {
+                    clearInterval(typingInterval);
+                    typingInterval = null;
+                    container.innerHTML = displayedText;
+                }
+            }, 20);
+        }
+        
+        // Update UI
+        function updateUI(data) {
+            if (!data) return;
+            currentState = data;
+            
+            const scene = data.scene;
+            const narrative = data.narrative || {};
+            const beats = data.beats || {};
+            
+            // Scene header
+            document.getElementById('scene-number').textContent = 
+                `SCENE ${data.scene_number} / ${data.total_scenes}`;
+            document.getElementById('scene-title').textContent = scene.title || 'Untitled';
+            document.getElementById('meta-day').textContent = `Day ${scene.journey_day || scene.day || 0}`;
+            document.getElementById('meta-time').textContent = scene.time || 'Unknown';
+            document.getElementById('meta-location').textContent = scene.location || 'Unknown';
+            document.getElementById('meta-type').textContent = 
+                scene.is_canonical ? 'Canonical' : 'Gap Scene';
+            
+            // Countdown
+            document.getElementById('countdown').textContent = data.countdown;
+            
+            // Progress bars
+            const scenePct = Math.round(data.scene_progress * 100);
+            const beatPct = Math.round(data.beat_progress * 100);
+            document.getElementById('scene-progress-bar').style.width = `${scenePct}%`;
+            document.getElementById('scene-progress-text').textContent = `${scenePct}%`;
+            document.getElementById('beat-progress-bar').style.width = `${beatPct}%`;
+            document.getElementById('beat-progress-text').textContent = `${beatPct}%`;
+            
+            // Beat marker
+            const beatList = beats.beats || [];
+            const currentBeat = data.current_beat || 0;
+            document.getElementById('beat-marker').textContent = 
+                `[BEAT ${currentBeat + 1}/${beatList.length}]`;
+            
+            // Narrative with typewriter
+            const beatText = beatList[currentBeat] ? beatList[currentBeat].text : '';
+            if (beatText && beatText !== targetText) {
+                startTyping(beatText);
+            }
+            
+            // Play button
+            const playIcon = document.getElementById('play-icon');
+            const playText = document.getElementById('play-text');
+            if (data.is_playing) {
+                playIcon.textContent = '⏸';
+                playText.textContent = 'PAUSE';
+            } else {
+                playIcon.textContent = '▶';
+                playText.textContent = 'PLAY';
+            }
+            
+            // Sidebar - Journey Info
+            document.getElementById('stat-scenes').textContent = 
+                `${data.scene_number} / ${data.total_scenes}`;
+            document.getElementById('stat-story-time').textContent = 
+                `${Math.round((scene.journey_day || 0) * 24 + (scene.hours || 0))}h`;
+            document.getElementById('stat-stream-time').textContent = 
+                formatDuration(data.remaining_ms);
+            document.getElementById('stat-pacing').textContent = 
+                (data.pacing || 'dramatic').toUpperCase();
+            
+            // Sidebar - Characters
+            const chars = narrative.characters || scene.characters || ['Bilbo'];
+            const charList = document.getElementById('character-list');
+            charList.innerHTML = chars.map(c => `<span class="character-tag">${c}</span>`).join('');
+            
+            // Sidebar - Events
+            const eventList = document.getElementById('event-list');
+            const events = narrative.next_events || scene.next_events || [];
+            if (events.length > 0) {
+                eventList.innerHTML = events.map(e => `
+                    <li class="event-item">
+                        <span class="event-time">${e.time || '--:--'}</span>
+                        <span class="event-text">${e.text || e}</span>
+                    </li>
+                `).join('');
+            } else {
+                eventList.innerHTML = `
+                    <li class="event-item">
+                        <span class="event-time">--:--</span>
+                        <span class="event-text">Journey continues...</span>
+                    </li>
+                `;
+            }
+            
+            // Update timeline marker
+            updateTimelineMarkers();
+            
+            // Auto-generate if enabled
+            if (genSettings.auto && genSettings.available) {
+                if (genSettings.images) generateImage();
+                if (genSettings.audio) generateAudio();
+            }
+        }
+        
+        function formatDuration(ms) {
+            if (!ms || ms < 0) return '--:--';
+            const sec = Math.round(ms / 1000);
+            if (sec < 60) return `${sec}s`;
+            if (sec < 3600) return `${Math.floor(sec/60)}m ${sec%60}s`;
+            return `${Math.floor(sec/3600)}h ${Math.floor((sec%3600)/60)}m`;
+        }
+        
+        // Build timeline
+        function buildTimeline() {
+            const bar = document.getElementById('timeline-bar');
+            bar.innerHTML = '';
+            
+            const total = allScenes.length;
+            allScenes.forEach((s, i) => {
+                const marker = document.createElement('div');
+                marker.className = `timeline-marker ${s.is_canonical ? 'canonical' : 'generated'}`;
+                marker.style.left = `${(i / (total - 1)) * 100}%`;
+                marker.title = `${s.title} (Day ${s.day})`;
+                marker.onclick = () => gotoScene(i);
+                marker.id = `marker-${i}`;
+                bar.appendChild(marker);
+            });
+        }
+        
+        function updateTimelineMarkers() {
+            if (!currentState) return;
+            const currentIdx = currentState.scene_number - 1;
+            allScenes.forEach((s, i) => {
+                const marker = document.getElementById(`marker-${i}`);
+                if (marker) {
+                    if (i === currentIdx) {
+                        marker.classList.add('current');
+                    } else {
+                        marker.classList.remove('current');
+                    }
+                }
+            });
+        }
+        
+        // Poll for updates
+        function updateLiveEvent(data) {
+            const metaEl = document.getElementById('live-event-meta');
+            const textEl = document.getElementById('live-event-text');
+            if (!data || !data.event) {
+                metaEl.textContent = 'No active event at this time.';
+                return;
+            }
+            const ev = data.event;
+            const ts = new Date(ev.timestamp).toLocaleString();
+            metaEl.textContent = `${ev.block_id} • ${ev.gap_id} • ${ts}`;
+            textEl.textContent = ev.content || '(empty content)';
+        }
+
+        async function pollEvents() {
+            const now = new Date().toISOString();
+            const current = await fetchCurrentEvent(now);
+            updateLiveEvent(current);
+        }
+
+        async function poll() {
+            const data = await fetchCurrent();
+            updateUI(data);
+        }
+
+        // Initialize
+        async function init() {
+            try {
+                // Check generative capabilities
+                const genStatusData = await fetchGenStatus();
+                genSettings.available = genStatusData.enabled;
+                if (genStatusData.enabled) {
+                    genSettings.images = genStatusData.config?.images_enabled || false;
+                    genSettings.audio = genStatusData.config?.audio_enabled || false;
+                    genSettings.voice = genStatusData.config?.voice_enabled || false;
+                }
+                
+                allScenes = await fetchScenes();
+                buildTimeline();
+                await poll();
+                
+                updateToggleUI();
+                updateGenUI();
+                
+                document.getElementById('loading').classList.add('hidden');
+                
+                // Start polling
+                updateInterval = setInterval(poll, 500);
+                setInterval(pollEvents, 5000);
+            } catch (e) {
+                console.error('Failed to initialize:', e);
+                document.querySelector('.loading-text').textContent = 
+                    'Failed to connect to server. Retrying...';
+                setTimeout(init, 2000);
+            }
+        }
+        
+        // Start
+        init();
+    </script>
+</body>
+</html>
