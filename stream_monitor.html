@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hobbit — Stream Monitor</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0f0f0f; }
+
+#stream-frame {
+    position: fixed; inset: 0; border: none; width: 100%; height: 100%;
+}
+
+#fallback-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: linear-gradient(180deg, #1a1712 0%, #0f0f0f 100%);
+    display: none; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.5s;
+}
+#fallback-overlay.active { display: flex; }
+#fallback-overlay img {
+    max-width: 100%; max-height: 100%; object-fit: contain;
+}
+
+#status-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10000;
+    height: 3px; background: #3a3530; transition: background 0.3s;
+}
+#status-bar.ok { background: #5a9a3d; }
+#status-bar.warn { background: #e6b045; }
+#status-bar.error { background: #e65a5a; }
+
+#health-dot {
+    position: fixed; top: 10px; right: 10px; z-index: 10001;
+    width: 10px; height: 10px; border-radius: 50%; background: #5a5045;
+    transition: background 0.3s;
+}
+#health-dot.ok { background: #5a9a3d; box-shadow: 0 0 6px #5a9a3d; }
+#health-dot.error { background: #e65a5a; box-shadow: 0 0 6px #e65a5a; }
+</style>
+</head>
+<body>
+
+<iframe id="stream-frame" src="http://localhost:5000/book" allow="autoplay"></iframe>
+
+<div id="fallback-overlay">
+    <img src="assets/fallback_tecnicas.png" alt="Experimentando dificultades técnicas">
+</div>
+
+<div id="status-bar"></div>
+<div id="health-dot"></div>
+
+<script>
+const CHECK_INTERVAL = 5000;   // ping cada 5 segundos
+const FAIL_THRESHOLD = 3;      // fallar 3 veces seguidas = fallback
+const RECOVER_THRESHOLD = 2;   // recuperar 2 veces seguidas = volver al stream
+
+let failCount = 0;
+let okCount = 0;
+let isFallback = false;
+
+const frame = document.getElementById('stream-frame');
+const fallback = document.getElementById('fallback-overlay');
+const statusBar = document.getElementById('status-bar');
+const healthDot = document.getElementById('health-dot');
+
+async function checkHealth() {
+    try {
+        const ctrl = new AbortController();
+        const timeout = setTimeout(() => ctrl.abort(), 3000);
+        const res = await fetch('http://localhost:5000/api/current', {
+            method: 'GET',
+            signal: ctrl.signal,
+            cache: 'no-store'
+        });
+        clearTimeout(timeout);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        okCount++;
+        failCount = 0;
+        healthDot.className = 'ok';
+        statusBar.className = 'ok';
+
+        if (isFallback && okCount >= RECOVER_THRESHOLD) {
+            recoverStream();
+        }
+    } catch (e) {
+        failCount++;
+        okCount = 0;
+        healthDot.className = 'error';
+        statusBar.className = failCount >= FAIL_THRESHOLD ? 'error' : 'warn';
+
+        if (!isFallback && failCount >= FAIL_THRESHOLD) {
+            showFallback();
+        }
+    }
+}
+
+function showFallback() {
+    isFallback = true;
+    fallback.classList.add('active');
+    // Try to reload iframe in background
+    frame.src = frame.src;
+}
+
+function recoverStream() {
+    isFallback = false;
+    fallback.classList.remove('active');
+    frame.src = frame.src;
+}
+
+// Initial check
+checkHealth();
+setInterval(checkHealth, CHECK_INTERVAL);
+
+// Also catch iframe load errors
+frame.addEventListener('error', () => {
+    failCount = FAIL_THRESHOLD;
+    showFallback();
+});
+</script>
+</body>
+</html>

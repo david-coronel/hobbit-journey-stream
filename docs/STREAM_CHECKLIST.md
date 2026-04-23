@@ -38,6 +38,9 @@ Deberías ver algo como:
 
 ### 2. Abrir el Stream Client (Navegador)
 
+Tenés dos opciones:
+
+**Opción A — Directa (más simple):**
 1. Abre tu navegador
 2. Ve a: **`http://localhost:5000/book`**
 3. Espera a que cargue (aparece "Loading Middle-earth...")
@@ -45,7 +48,39 @@ Deberías ver algo como:
 5. **Haz clic** en el overlay o en el botón **"BEGIN JOURNEY"**
 6. El audio empezará y el stream avanzará solo
 
+**Opción B — Con Monitor de Fallback (recomendado):**
+1. Abre tu navegador
+2. Ve a: **`http://localhost:5000/stream_monitor.html`**
+3. Clickeá para iniciar el stream dentro del iframe
+4. Si el servidor se cae, aparecerá automáticamente la imagen **"Experimentando dificultades técnicas"**
+5. Cuando el servidor vuelva, el stream se recupera solo
+
 > 💡 **Tip:** Abre el navegador en una ventana dedicada, sin otras pestañas. Ponlo en **pantalla completa** (F11).
+
+---
+
+## 🛡️ Fallback Técnico
+
+Si el servidor se cae durante el stream, tenés dos capas de protección:
+
+### Capa 1 — Monitor automático (stream_monitor.html)
+Si usás la Opción B, el monitor detecta cada 5 segundos si el servidor responde. Después de 3 fallos seguidos, muestra automáticamente la imagen de fallback:
+
+```
+assets/fallback_tecnicas.png
+```
+
+Cuando el servidor vuelve, el stream se recupera solo.
+
+### Capa 2 — Escena manual en OBS
+Si usás la Opción A (directa), creá una **escena de fallback** en OBS:
+1. En OBS, hacé clic en **+** en Escenas
+2. Llamala **"FALLBACK"**
+3. Agregá una fuente **"Imagen"**
+4. Seleccioná `assets/fallback_tecnicas.png`
+5. Ajustá a 1920x1080
+
+Si el stream principal se congela, cambiá manualmente a la escena **FALLBACK**. Cuando vuelva, volvé a la escena principal.
 
 ---
 

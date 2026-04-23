@@ -326,6 +326,10 @@ def index():
 def book_layout():
     return send_file(os.path.join(project_root, 'stream_book.html'))
 
+@app.route('/monitor')
+def stream_monitor():
+    return send_file(os.path.join(project_root, 'stream_monitor.html'))
+
 @app.route('/api/current')
 def get_current():
     return jsonify(engine.get_current_scene_data())
