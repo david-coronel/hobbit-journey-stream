@@ -21,7 +21,7 @@ import threading
 import time
 import queue
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 
 app = Flask(__name__, static_folder='.', template_folder='.')
 CORS(app)
@@ -118,8 +118,16 @@ class StreamEngine:
                 pos = int(pos_str.split('/')[0]) if '/' in pos_str else 1
             except:
                 pos = 1
+            # Calculate journey_day from date_iso (start of journey = 2941-04-25 = day 0)
+            try:
+                scene_date = date(year, month, day)
+                start_date = date(2941, 4, 25)
+                journey_day = (scene_date - start_date).days
+            except Exception:
+                journey_day = 0
+            s['journey_day'] = journey_day
             # Use same sort key structure: (day, progress/order, index)
-            s['sort_key'] = (year * 365 + month * 30 + day, pos, i + len(self.canonical_scenes))
+            s['sort_key'] = (journey_day, pos, i + len(self.canonical_scenes))
             self.scenes.append(s)
         self.scenes.sort(key=lambda x: x['sort_key'])
         
@@ -276,8 +284,12 @@ class StreamEngine:
         # Update scene progress
         self.scene_progress += (dt * 1000) / duration_ms
         if self.scene_progress >= 1.0:
-            self.scene_progress = 1.0
-            self.is_playing = False
+            if self.current_scene_idx < len(self.scenes) - 1:
+                self.current_scene_idx += 1
+                self.reset_scene_state()
+            else:
+                self.scene_progress = 1.0
+                self.is_playing = False
         
         # Update beat progress
         beat_data = self.beats.get(scene['id'], {'beats': []})
